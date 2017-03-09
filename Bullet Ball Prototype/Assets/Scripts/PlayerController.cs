@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour {
 
 	void FixedUpdate () {
 		// Player Movement
-		Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+		Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 		Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
 		float rayLength;
 		
