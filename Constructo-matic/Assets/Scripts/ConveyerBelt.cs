@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ConveyerBelt : MonoBehaviour {
 
-	Rigidbody obj;
+	Rigidbody rb;
 	public float speed = 3.0f;
+	public float maxSpeed = 50f;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +25,13 @@ public class ConveyerBelt : MonoBehaviour {
 	void OnCollisionStay(Collision obj)
 	{
 		float conveyorVelocity = speed * Time.deltaTime;
-		obj.gameObject.GetComponent<Rigidbody>().velocity = conveyorVelocity * transform.forward;
+		//obj.gameObject.GetComponent<Rigidbody>().velocity = conveyorVelocity * transform.forward;
+		rb = obj.gameObject.GetComponent<Rigidbody>();
+		rb.AddForce(transform.forward * speed);
+		if(rb.velocity.magnitude > maxSpeed)
+		{
+			rb.velocity = rb.velocity.normalized * maxSpeed;
+		}
+
 	}
 }
