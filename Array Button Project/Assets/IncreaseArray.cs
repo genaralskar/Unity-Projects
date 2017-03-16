@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class IncreaseArray : MonoBehaviour {
 
-	//public int[] list;
+	public int[] list;
 
-	public List<int> List = new List<int>();
+	//public List<int> List = new List<int>();
 	
 	// Use this for initialization
 	void Start () {
@@ -20,8 +20,27 @@ public class IncreaseArray : MonoBehaviour {
 
 	public void ArrayIncrease () {
 		//list = new int[list.Length + 1];
-		//list[list.Length - 1] = list.Length;
+		list = new int[1];
+		list[0]=10;
+		Debug.Log(list[0]);
+		Debug.Log(list.Length);
+		list = AddArrayLength(list);
+		list[list.Length - 1] = list.Length;
 
-		List.Add(List.Count);
+		//List.Add(List.Count);
+	}
+
+	static int[] AddArrayLength (int[] x) {
+		int[] y;
+		y = new int[x.Length + 1];
+		for(int i = 0; i < x.Length; i++)
+		{
+			
+			Debug.Log("x.Length = " + x.Length);
+			Debug.Log("i = " + i);
+			y[i] = x[i];
+			
+		}
+		return y;
 	}
 }
