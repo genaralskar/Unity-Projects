@@ -41,6 +41,6 @@ public class IncreaseArray : MonoBehaviour {
 			y[i] = x[i];
 			
 		}
-		return y;
+		list = y.clone();
 	}
 }
