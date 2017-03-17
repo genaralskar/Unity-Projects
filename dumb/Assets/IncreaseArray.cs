@@ -25,8 +25,12 @@ public class IncreaseArray : MonoBehaviour {
 
 	public void ArrayIncrease () {
 
-		Array.Resize(ref newList, newList.Length + 1);
-		newList[newList.Length] = newList.Length;
+		//Array.Resize(ref newList, newList.Length + 1);
+		//newList[newList.Length] = newList.Length;
+		int[] temp = new int[newList.Length + 1];
+		newList.CopyTo(temp, 0);
+		newList = temp;
+		newList[newList.Length - 1] = newList.Length - 1;
 
 		/* im bad at this, ignore this
 		list = new int[list.Length + 1];
