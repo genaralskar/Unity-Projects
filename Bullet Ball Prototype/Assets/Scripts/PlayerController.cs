@@ -8,31 +8,32 @@ public class PlayerController : MonoBehaviour {
 	public float moveSpeed;
 
 	private Vector3 moveVelocity;
-
-	private Camera mainCamera;
+	public Vector3 curVelocity;
 
 	public GunController Gun;
+
+	Vector3 mousePos;
+	Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
 
 	// Use this for initialization
 	void Start () {
 		myRigidBody = GetComponent<Rigidbody>();
-		mainCamera = FindObjectOfType<Camera>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
 		// Player Aim
-		Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
-		Plane groundPlane= new Plane(Vector3.up, Vector3.zero);
+		Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 		float rayLength;
 
 		if(groundPlane.Raycast(cameraRay, out rayLength))
 		{
-			Vector3 pointToLook = cameraRay.GetPoint(rayLength);
-			Debug.DrawLine(cameraRay.origin, pointToLook, Color.blue);
+			mousePos = cameraRay.GetPoint(rayLength);
+			Debug.DrawLine(cameraRay.origin, mousePos, Color.blue);
+			Debug.DrawLine(transform.position, mousePos, Color.red);
 
-			transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+			transform.LookAt(new Vector3(mousePos.x, transform.position.y, mousePos.z));
 		}
 
 		//Player Firing
@@ -44,26 +45,24 @@ public class PlayerController : MonoBehaviour {
 		{
 			Gun.isFiring= false;
 		}
+		Debug.Log("mousePos = " + mousePos);
+		Debug.Log("Position = " + transform.position);
 	}
 
 	void FixedUpdate () {
 		// Player Movement
-		Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-		Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
-		float rayLength;
-		
-		if(groundPlane.Raycast(cameraRay, out rayLength))
+		Vector3 curPosition = transform.position;
+		if(Input.GetMouseButton(0))
 		{
-			Vector3 pointToLook = cameraRay.GetPoint(rayLength);
-			Debug.Log(cameraRay.GetPoint(rayLength));
-			if(Input.GetMouseButton(0))
-			{
-				myRigidBody.AddForce(Vector3.MoveTowards(transform.position, pointToLook, -moveSpeed));
-			}
-			if(Input.GetMouseButton(1))
-			{
-				
-			}
+			myRigidBody.AddForce(transform.forward * -moveSpeed);
+			//myRigidBody.AddForce(Vector3.MoveTowards(curPosition, mousePos, -moveSpeed), ForceMode.Acceleration);
 		}
+		if(Input.GetMouseButton(1))
+		{	
+	
+		}
+		curVelocity = myRigidBody.velocity;
+		//Vector3 oppositeForce = myRigidBody.velocity;
+		//myRigidBody.AddRelativeForce(oppositeForce);
 	}
 }

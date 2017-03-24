@@ -14,6 +14,7 @@ public class GunController : MonoBehaviour {
 
 	public Transform firePoint;
 
+	public float parentSpeed;
 	// Use this for initialization
 	void Start () {
 		
@@ -33,7 +34,8 @@ public class GunController : MonoBehaviour {
 			{
 				shotCounter = timeBetweenShots;
 				BulletController newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation) as BulletController;
-				newBullet.speed = bulletSpeed;
+				parentSpeed = transform.parent.GetComponent<Rigidbody>().velocity.magnitude;
+				newBullet.speed = parentSpeed + bulletSpeed;
 			}
 		}
 		
