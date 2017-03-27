@@ -5,21 +5,18 @@ using UnityEngine;
 public class GunController : MonoBehaviour {
 
 	public bool isFiring;
-
 	public BulletController bullet;
 	public float bulletSpeed;
-
 	public float timeBetweenShots;
 	private float shotCounter;
-
 	public Transform firePoint;
-
 	public float parentSpeed;
+
 	// Use this for initialization
 	void Start () {
-		
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		// Reset time between shots when not firing
@@ -33,11 +30,22 @@ public class GunController : MonoBehaviour {
 			if(shotCounter <= 0)
 			{
 				shotCounter = timeBetweenShots;
-				BulletController newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation) as BulletController;
-				parentSpeed = transform.parent.GetComponent<Rigidbody>().velocity.magnitude;
-				newBullet.speed = parentSpeed + bulletSpeed;
+				// BulletController newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation) as BulletController;
+				// parentSpeed = transform.parent.GetComponent<Rigidbody>().velocity.magnitude;
+				// newBullet.speed = parentSpeed + bulletSpeed;
+				// newBullet.velocity = transform.parent.GetComponent<Rigidbody>().velocity;
+				// newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
+				SpawnBullet();
 			}
 		}
-		
+	}
+
+	void SpawnBullet ()
+	{
+		BulletController newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation) as BulletController;
+		parentSpeed = transform.parent.GetComponent<Rigidbody>().velocity.magnitude;
+		newBullet.speed = parentSpeed + bulletSpeed;
+		newBullet.velocity = transform.parent.GetComponent<Rigidbody>().velocity;
+		newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
 	}
 }
