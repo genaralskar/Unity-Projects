@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class GunController : MonoBehaviour {
 
+	//changed from PlayerController to check if player is pressing Attack button
 	public bool isFiring;
 	public BulletController bullet;
-	public float bulletSpeed;
-	public float timeBetweenShots;
-	private float shotCounter;
+
+	public float
+		bulletSpeed,
+		timeBetweenShots,
+		shotCounter,
+		parentSpeed;
+		
+	//get transform of where the bullets will spawn
 	public Transform firePoint;
-	public float parentSpeed;
 
 	// Use this for initialization
 	void Start () {
@@ -42,10 +47,19 @@ public class GunController : MonoBehaviour {
 
 	void SpawnBullet ()
 	{
+		//make new bullet
 		BulletController newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation) as BulletController;
 		parentSpeed = transform.parent.GetComponent<Rigidbody>().velocity.magnitude;
+		
+		//newBullet.speed is bulletSpeed plus parent velocity so it does not run into parent object on spawn
+		//might not need it
 		newBullet.speed = parentSpeed + bulletSpeed;
+
+		//New bullet velocity equals parent velocity
+		//might not need it
 		newBullet.velocity = transform.parent.GetComponent<Rigidbody>().velocity;
+
+		//move newBullet forward * bulletSpeed
 		newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
 	}
 }

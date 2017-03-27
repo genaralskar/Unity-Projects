@@ -6,23 +6,33 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour {
 
 	private Rigidbody playerRigidBody;
+	public GunController Gun;
 	private Renderer rend;
 	private Collider collide;
-	public float moveSpeed;
-	public float slowSpeed;
 	public Vector3 curVelocity;
-	public GunController Gun;
-	private bool isHit = false;
-	public float timeBetweenFlashes = 0.01f;
-	public bool useController;
+
+	public float
+		moveSpeed,
+		slowSpeed,
+		timeBetweenFlashes = 0.01f;
+
+	private bool
+		isHit = false,
+		useController;
 
 	//public GUIText scoreText;
 	public Text scoreText;
 	private int score;
 
+	// stings for player controls
+	public string
+		Attack = "Fire1_P1",
+		Slow = "Fire2_P1",
+		Horiz = "Horizontal_P1",
+		Vert = "Vertical_P1";
 
+	//Mouse control stuff
 	int floorMask;		//A layer mask so that a ray can be cast just at gameobjects on the floor layer
-	float camRayLength = 100f;		//Length of the ray from the camera into the scene
 
 	Vector3 mousePos;
 	Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
@@ -30,6 +40,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 
 	void Start () {
+		//set initial score value to zero, update gui
 		score = 0;
 		UpdateScore();
 	}
@@ -65,7 +76,9 @@ public class PlayerController : MonoBehaviour {
 		// Player Movement
 		//Movement();
 		curVelocity = playerRigidBody.velocity;
-		if(Input.GetButton("Fire2"))
+
+		//slow player when slow button is pressed
+		if(Input.GetButton(Slow))
 		{	
 			playerRigidBody.velocity = playerRigidBody.velocity * slowSpeed;
 		}
@@ -73,6 +86,7 @@ public class PlayerController : MonoBehaviour {
 
 	public void Movement()
 	{
+		//pushes player opposite direction they're facing
 		playerRigidBody.AddForce(transform.forward * -moveSpeed);
 	}
 
@@ -98,7 +112,7 @@ public class PlayerController : MonoBehaviour {
 		//Rotate with controller
 		else
 		{
-			Vector3 playerDirection = Vector3.right * Input.GetAxisRaw("Horizontal") + Vector3.forward * Input.GetAxisRaw("Vertical");
+			Vector3 playerDirection = Vector3.right * Input.GetAxisRaw(Horiz) + Vector3.forward * Input.GetAxisRaw(Vert);
 			if(playerDirection.sqrMagnitude > 0.1f)
 			{
 				transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
@@ -109,6 +123,7 @@ public class PlayerController : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision)
 	{
+		//if player is hit by bullet, run PlayerHit()
 		if(collision.gameObject.tag == "Bullet")
 		{
 			StartCoroutine(PlayerHit());
@@ -117,13 +132,17 @@ public class PlayerController : MonoBehaviour {
 
 	IEnumerator PlayerHit ()
 	{
+		//if the player is not already hit
 		if(!isHit)
 		{
+			//make the player being hit true
 			isHit = true;
+			//reduce score and update gui
 			AddScore(-10);
 			UpdateScore();
 			for(int i = 10; i > 0; i--)
 			{
+				//disable and enabled render of player i times
 				rend.enabled = false;
 				//Debug.Log("Render enabled " + rend.enabled);
 				yield return new WaitForSeconds(timeBetweenFlashes);
@@ -131,28 +150,33 @@ public class PlayerController : MonoBehaviour {
 				rend.enabled = true;
 				yield return new WaitForSeconds(timeBetweenFlashes);
 			}
+			//set player being hit to false so player can be hit again
 			isHit = false;
 		}
 	}
 
 	void UpdateScore ()
 	{
+		//update gui with new score
 		scoreText.text =  "Score: " + score;
 	}
 
 	public void AddScore (int newScoreValue)
 	{
+		//add newScoreValue to current score, update gui
 		score += newScoreValue;
 		UpdateScore();
 	}
 
 	public void Firing ()
 	{
-		if(Input.GetButton("Fire1"))
+		//sets isFiring to true if player is pressing Attack button
+		//lets GunController know the player is firing
+		if(Input.GetButton(Attack))
 		{
 			Gun.isFiring = true;
 		}
-		if(Input.GetButtonUp("Fire1"))
+		if(Input.GetButtonUp(Attack))
 		{
 			Gun.isFiring= false;
 		}
