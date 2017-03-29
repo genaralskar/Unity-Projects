@@ -17,7 +17,9 @@ public class PlayerController : MonoBehaviour {
 		timeBetweenFlashes = 0.01f;
 
 	private bool
-		isHit = false,
+		isHit = false;
+
+	public bool
 		useController;
 
 	//public GUIText scoreText;

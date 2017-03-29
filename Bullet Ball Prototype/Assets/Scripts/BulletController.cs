@@ -9,6 +9,7 @@ public class BulletController : MonoBehaviour {
 	public Vector3 velocity;
 	public GameObject Smoke;
 	private PlayerController playerController;
+	public string bulletType = "1";
 
 	// Use this for initialization
 	void Start () {
@@ -25,7 +26,7 @@ public class BulletController : MonoBehaviour {
 		playerController.AddScore(1);
 		//add force to the player when object spawns
 		//this way the player only moves when a bullet gets spawned and it's not a constant force being applied
-		playerController.Movement();
+		//playerController.Movement();
 	}
 	
 	// Update is called once per frame

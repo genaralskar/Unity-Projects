@@ -17,6 +17,9 @@ public class GunController : MonoBehaviour {
 	//get transform of where the bullets will spawn
 	public Transform firePoint;
 
+	public PlayerController playerController;
+
+
 	// Use this for initialization
 	void Start () {
 
@@ -61,5 +64,24 @@ public class GunController : MonoBehaviour {
 
 		//move newBullet forward * bulletSpeed
 		newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
+
+		string bulletType = newBullet.bulletType;
+
+		//setup switch for instantiating different bullet types
+		switch (bulletType)
+		{
+			case "1":
+			playerController.Movement();
+				break;
+			case "2":
+
+				break;
+			case "3":
+			
+				break;
+
+			default:
+				break;
+		}
 	}
 }
