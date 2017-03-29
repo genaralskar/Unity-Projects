@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour {
 	private Renderer rend;
 	private Collider collide;
 	public Vector3 curVelocity;
+	public GameController gameController;
 
 	public float
 		moveSpeed,
@@ -42,9 +43,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 
 	void Start () {
-		//set initial score value to zero, update gui
-		score = 0;
-		UpdateScore();
+
 	}
 	void Awake () {
 		floorMask = LayerMask.GetMask("Floor");
@@ -140,8 +139,7 @@ public class PlayerController : MonoBehaviour {
 			//make the player being hit true
 			isHit = true;
 			//reduce score and update gui
-			AddScore(-10);
-			UpdateScore();
+			gameController.AddScore(-10);
 			for(int i = 10; i > 0; i--)
 			{
 				//disable and enabled render of player i times
@@ -157,18 +155,18 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	void UpdateScore ()
-	{
-		//update gui with new score
-		scoreText.text =  "Score: " + score;
-	}
+	// void UpdateScore ()
+	// {
+	// 	//update gui with new score
+	// 	scoreText.text =  "Score: " + score;
+	// }
 
-	public void AddScore (int newScoreValue)
-	{
-		//add newScoreValue to current score, update gui
-		score += newScoreValue;
-		UpdateScore();
-	}
+	// public void AddScore (int newScoreValue)
+	// {
+	// 	//add newScoreValue to current score, update gui
+	// 	score += newScoreValue;
+	// 	UpdateScore();
+	// }
 
 	public void Firing ()
 	{
