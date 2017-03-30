@@ -10,6 +10,7 @@ public class BulletController : MonoBehaviour {
 	public GameObject Smoke;
 	private GameController gameController;
 	public string bulletType = "1";
+	
 
 	// Use this for initialization
 	void Start () {
@@ -59,5 +60,4 @@ public class BulletController : MonoBehaviour {
 		Instantiate(Smoke, transform.position, Smoke.transform.rotation);
 		Destroy (gameObject);
 	}
-
 }
