@@ -32,10 +32,12 @@ public class PlayerController : MonoBehaviour {
 		Attack = "Fire1_P1",
 		Slow = "Fire2_P1",
 		Horiz = "Horizontal_P1",
-		Vert = "Vertical_P1";
+		Vert = "Vertical_P1",
+		player;
+		
 
 	//Mouse control stuff
-	int floorMask;		//A layer mask so that a ray can be cast just at gameobjects on the floor layer
+	//int floorMask;		//A layer mask so that a ray can be cast just at gameobjects on the floor layer
 
 	Vector3 mousePos;
 	Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
@@ -46,7 +48,7 @@ public class PlayerController : MonoBehaviour {
 
 	}
 	void Awake () {
-		floorMask = LayerMask.GetMask("Floor");
+		//floorMask = LayerMask.GetMask("Floor");
 		playerRigidBody = GetComponent<Rigidbody>();
 		rend = GetComponent<Renderer>();
 		collide = GetComponent<Collider>();
@@ -124,14 +126,50 @@ public class PlayerController : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision)
 	{
-		//if player is hit by bullet, run PlayerHit()
+		BulletController bullet = collision.gameObject.GetComponent<BulletController>();
+		//if tag is Bullet, default bullet
 		if(collision.gameObject.tag == "Bullet")
 		{
-			StartCoroutine(PlayerHit());
+			//player gets hit
+			StartCoroutine(PlayerHit(0));
 		}
+
+		if(bullet.player != gameObject.tag)
+		{
+			StartCoroutine(PlayerHit(1));
+			bullet.AddScore(1);
+		}
+		//check what kind of bullet hits player
+		// switch (collision.gameObject.tag)
+		// {
+		// 	case "Bullet":
+		// 		StartCoroutine(PlayerHit());
+		// 		break;
+		// 	//if tag is Bullet_P1, player 1 bullet
+		// 	case "Bullet_P1":
+		// 		//and player == p1
+		// 		if(gameObject.tag == "Player_1")
+		// 		{
+		// 			//player gets hit
+		// 			StartCoroutine(PlayerHit());
+		// 		}
+		// 		break;
+		// 	//if tag is Bullet_P2, player 2 bullet
+		// 	case "Bullet_P2":
+		// 		//and player == p2
+		// 		if(gameObject.tag == "Player_2")
+		// 		{
+		// 			//player gets hit
+		// 			StartCoroutine(PlayerHit());
+		// 		}
+		// 		break;
+		// 	default:
+		// 		break;
+		// }
+
 	}
 
-	IEnumerator PlayerHit ()
+	IEnumerator PlayerHit (int j)
 	{
 		//if the player is not already hit
 		if(!isHit)
@@ -139,7 +177,7 @@ public class PlayerController : MonoBehaviour {
 			//make the player being hit true
 			isHit = true;
 			//reduce score and update gui
-			gameController.AddScore(-10);
+			//gameController.AddScore(gameObject.tag, -10);
 			for(int i = 10; i > 0; i--)
 			{
 				//disable and enabled render of player i times
@@ -153,6 +191,18 @@ public class PlayerController : MonoBehaviour {
 			//set player being hit to false so player can be hit again
 			isHit = false;
 		}
+
+		switch (j)
+		{
+			//when bullet matches
+			case 0:
+
+				break;
+			//when bullet doesnt match
+			case 1:
+
+				break;
+		}
 	}
 
 	// void UpdateScore ()
@@ -161,12 +211,12 @@ public class PlayerController : MonoBehaviour {
 	// 	scoreText.text =  "Score: " + score;
 	// }
 
-	// public void AddScore (int newScoreValue)
-	// {
-	// 	//add newScoreValue to current score, update gui
-	// 	score += newScoreValue;
-	// 	UpdateScore();
-	// }
+	public void AddScore (int newScoreValue)
+	{
+		//add newScoreValue to current score, update gui
+		score += newScoreValue;
+		gameController.UpdateScore();
+	}
 
 	public void Firing ()
 	{

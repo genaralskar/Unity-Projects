@@ -6,8 +6,15 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour {
 
 	//score stuff
-	public Text scoreText;
+	//public Text scoreText;
+	public Text scoreTextP1;
+	public Text scoreTextP2;
 	private int score;
+	private int scoreP1;
+	private int scoreP2;
+
+	public PlayerController player1;
+	public PlayerController player2;
 
 	// Use this for initialization
 	void Start () {
@@ -21,16 +28,34 @@ public class GameController : MonoBehaviour {
 		
 	}
 
-	void UpdateScore()
+	public void UpdateScore()
 	{
 		//update UI with new score
-		scoreText.text = "Score: " + score;
+		//scoreText.text = "Score: " + score;
+		scoreTextP1.text = "Player 1 Score: " + scoreP1;
+		scoreTextP2.text = "Player 2 Score: " + scoreP2;
+
 	}
 
-	public void AddScore (int newScoreValue)
+	public void AddScore (string score, int newScoreValue)
 	{
 		//add newScoreValue to current score, update UI
-		score += newScoreValue;
+		switch (gameObject.tag)
+		{
+			case "Player_1":
+				scoreP1 += newScoreValue;
+				break;
+			case "Player_2":
+				scoreP2 += newScoreValue;
+				break;
+			default:
+				break;
+		}
 		UpdateScore();
+	}
+
+	public void CollisionCheck()
+	{
+		
 	}
 }

@@ -8,14 +8,17 @@ public class BulletController : MonoBehaviour {
 	public float lifetime = 5f;
 	public Vector3 velocity;
 	public GameObject Smoke;
-	private GameController gameController;
+	public GameController gameController;
+	public PlayerController playerController;
 	public string bulletType = "1";
+	public string player;
 	
 
 	// Use this for initialization
 	void Start () {
 
 		//get GameController to access score functions
+		GameObject playerControllerObject = GameObject.FindWithTag(player);
 		GameObject gameControllerObject = GameObject.FindWithTag("GameController");
 		if(gameControllerObject != null)
 		{
@@ -25,8 +28,19 @@ public class BulletController : MonoBehaviour {
 		{
 			Debug.Log("Cannot find 'GameController' script");
 		}
+		if(playerControllerObject != null)
+		{
+			playerController = playerControllerObject.GetComponent<PlayerController>();
+			player = playerController.gameObject.tag;
+		}
+		else
+		{
+			Debug.Log("Cannot find 'PlayerController' script");
+		}
 		//increase score by one when object spawns
-		gameController.AddScore(1);
+		//gameController.AddScore(1);
+
+		player = playerController.tag;
 
 		//wait lifetime, run spawnSmoke
 		Invoke("spawnSmoke", lifetime);
@@ -59,5 +73,10 @@ public class BulletController : MonoBehaviour {
 		//Spawn smoke particle system and then destory object
 		Instantiate(Smoke, transform.position, Smoke.transform.rotation);
 		Destroy (gameObject);
+	}
+
+	public void AddScore(int i)
+	{
+		playerController.AddScore(i);
 	}
 }

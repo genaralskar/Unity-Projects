@@ -7,6 +7,7 @@ public class GunController : MonoBehaviour {
 	//changed from PlayerController to check if player is pressing Attack button
 	public bool isFiring;
 	public BulletController bullet;
+	public GameController gameController;
 
 	public float
 		bulletSpeed,
@@ -66,6 +67,9 @@ public class GunController : MonoBehaviour {
 		newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
 
 		string bulletType = newBullet.bulletType;
+
+		//gameController.AddScore(playerController.player, 1);
+		
 
 		//setup switch for instantiating different bullet types
 		switch (bulletType)

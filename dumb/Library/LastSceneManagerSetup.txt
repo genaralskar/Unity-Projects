@@ -1,4 +1,5 @@
 sceneSetups:
-- path: Assets/dumb.unity
+- path: D:/GIT/Unity-Projects/Bullet Ball Prototype/Assets/Scenes/Bullet Ball Movement
+    Test.unity
   isLoaded: 1
   isActive: 1
