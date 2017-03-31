@@ -31,7 +31,6 @@ public class BulletController : MonoBehaviour {
 		if(playerControllerObject != null)
 		{
 			playerController = playerControllerObject.GetComponent<PlayerController>();
-			player = playerController.gameObject.tag;
 		}
 		else
 		{
@@ -39,8 +38,6 @@ public class BulletController : MonoBehaviour {
 		}
 		//increase score by one when object spawns
 		//gameController.AddScore(1);
-
-		player = playerController.tag;
 
 		//wait lifetime, run spawnSmoke
 		Invoke("spawnSmoke", lifetime);
@@ -75,8 +72,8 @@ public class BulletController : MonoBehaviour {
 		Destroy (gameObject);
 	}
 
-	public void AddScore(int i)
-	{
-		playerController.AddScore(i);
-	}
+	// public void AddScore(int i)
+	// {
+	// 	playerController.AddScore(i);
+	// }
 }

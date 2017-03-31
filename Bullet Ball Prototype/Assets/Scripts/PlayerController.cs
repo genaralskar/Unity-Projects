@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 
 	void Start () {
-
+		player = gameObject.tag;
 	}
 	void Awake () {
 		//floorMask = LayerMask.GetMask("Floor");
@@ -78,6 +78,7 @@ public class PlayerController : MonoBehaviour {
 	void FixedUpdate () {
 		// Player Movement
 		//Movement();
+		//debug purposes
 		curVelocity = playerRigidBody.velocity;
 
 		//slow player when slow button is pressed
@@ -100,6 +101,8 @@ public class PlayerController : MonoBehaviour {
 		//Rotate with mouse
 		if(!useController)
 		{
+			//some mumbo jumbo about ray casting onto a plane and getting a vector from the intersection of the plane
+			//and that's where the mouse is pointing
 			Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 			float rayLength;
 
@@ -115,9 +118,12 @@ public class PlayerController : MonoBehaviour {
 		//Rotate with controller
 		else
 		{
+			//new vector 3 from combination of horizontal and vertical inputs
 			Vector3 playerDirection = Vector3.right * Input.GetAxisRaw(Horiz) + Vector3.forward * Input.GetAxisRaw(Vert);
+			//if player is moving the control stick
 			if(playerDirection.sqrMagnitude > 0.1f)
 			{
+				//change rotation of player
 				transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
 			}
 		}
@@ -126,18 +132,35 @@ public class PlayerController : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision)
 	{
-		BulletController bullet = collision.gameObject.GetComponent<BulletController>();
-		//if tag is Bullet, default bullet
+		//check if collision is tagged bullet first
 		if(collision.gameObject.tag == "Bullet")
 		{
-			//player gets hit
-			StartCoroutine(PlayerHit(0));
-		}
+			BulletController bullet = collision.gameObject.GetComponent<BulletController>();
 
-		if(bullet.player != gameObject.tag)
-		{
-			StartCoroutine(PlayerHit(1));
-			bullet.AddScore(1);
+			//if tag of the player the bullet came from does not equal current player tag
+			//ie, the bullet came from another player
+			if((bullet.player != gameObject.tag) && (isHit == false))
+			{
+				StartCoroutine(PlayerHit(1));
+
+				//add score the the player the bullet came from
+				//because they deserve it, not you
+				//because you're the one that got hit
+				//stupid
+				gameController.AddScore(1, bullet.player);
+			}
+			
+			//if tag of the player the bullet game from equals current player tag
+			//ie, the bullet came from the player that shot it
+			else if((bullet.player == gameObject.tag) && (isHit == false))
+			{
+				StartCoroutine(PlayerHit(1));
+
+				//subtract score from the player
+				//cause they got hit by their own bullet
+				//stupid
+				gameController.AddScore(-2, player);
+			}
 		}
 		//check what kind of bullet hits player
 		// switch (collision.gameObject.tag)
@@ -211,12 +234,23 @@ public class PlayerController : MonoBehaviour {
 	// 	scoreText.text =  "Score: " + score;
 	// }
 
-	public void AddScore (int newScoreValue)
-	{
-		//add newScoreValue to current score, update gui
-		score += newScoreValue;
-		gameController.UpdateScore();
-	}
+	// public void AddScore (int newScoreValue, string player)
+	// {
+	// 	//add newScoreValue to current score, update gui
+	// 	//score += newScoreValue;
+
+	// 	switch (player)
+	// 	{
+	// 		case "Player_1":
+	// 			gameController.scoreP1 += newScoreValue;
+	// 			break;
+	// 		case "Player_2":
+	// 			gameController.scoreP2 += newScoreValue;
+	// 			break;
+	// 		default:
+	// 			break;
+	// 	}
+	// }
 
 	public void Firing ()
 	{

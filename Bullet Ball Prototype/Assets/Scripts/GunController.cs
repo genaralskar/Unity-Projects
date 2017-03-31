@@ -29,7 +29,7 @@ public class GunController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		// Reset time between shots when not firing
-		if(shotCounter != 0)
+		if(shotCounter > 0)
 		{
 			shotCounter -= Time.deltaTime;
 		}

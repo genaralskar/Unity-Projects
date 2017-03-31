@@ -37,10 +37,12 @@ public class GameController : MonoBehaviour {
 
 	}
 
-	public void AddScore (string score, int newScoreValue)
+	public void AddScore (int newScoreValue, string player)
 	{
-		//add newScoreValue to current score, update UI
-		switch (gameObject.tag)
+		//add newScoreValue to current score, update gui
+		//score += newScoreValue;
+
+		switch (player)
 		{
 			case "Player_1":
 				scoreP1 += newScoreValue;
