@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		Pause();
 	}
 
 	public void UpdateScore()
@@ -41,23 +41,40 @@ public class GameController : MonoBehaviour {
 	{
 		//add newScoreValue to current score, update gui
 		//score += newScoreValue;
-
-		switch (player)
+		//check if game timer has started
+		if(Retainer.timerStart)
 		{
-			case "Player_1":
-				scoreP1 += newScoreValue;
-				break;
-			case "Player_2":
-				scoreP2 += newScoreValue;
-				break;
-			default:
-				break;
+			//checks player (should be an object tag) to see which score to increase
+			switch (player)
+			{
+				case "Player_1":
+					scoreP1 += newScoreValue;
+					Retainer.player1Score += newScoreValue;
+					break;
+				case "Player_2":
+					scoreP2 += newScoreValue;
+					Retainer.player2Score += newScoreValue;
+					break;
+				default:
+					break;
+			}
+			UpdateScore();
 		}
-		UpdateScore();
 	}
 
-	public void CollisionCheck()
+	public void Pause()
 	{
-		
+		if(Input.GetButtonDown("Pause"))
+		{
+			Retainer.isPaused = !Retainer.isPaused;
+		}
+		if(Retainer.isPaused)
+		{
+			Time.timeScale = 0;
+		}
+		else if(!Retainer.isPaused)
+		{
+			Time.timeScale = 1;
+		}
 	}
 }

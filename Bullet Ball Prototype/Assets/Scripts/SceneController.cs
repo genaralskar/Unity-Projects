@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour {
 
-	public void LoadScene(int scene)
+	public void LoadScene()
 	{
-		SceneManager.LoadScene(scene);
+		SceneManager.LoadScene(Retainer.mapSelection);
 	}
 }

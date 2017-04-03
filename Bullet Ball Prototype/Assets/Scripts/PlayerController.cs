@@ -5,39 +5,42 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
-	private Rigidbody playerRigidBody;
-	public GunController Gun;
+	public Rigidbody playerRigidBody;
 	private Renderer rend;
-	private Collider collide;
+	//private Collider collide;
 	public Vector3 curVelocity;
 	public GameController gameController;
 
 	public float
+		//move speed of player
 		moveSpeed,
+		//amount the player is slowed when pressing Fire2 (slow button)
 		slowSpeed,
+		//how quickly the player flashes after being hit
+		//also affect invincibility time
 		timeBetweenFlashes = 0.01f;
 
 	private bool
+		//used to check if player has been hit
+		//so they can't be hit during invicibility
 		isHit = false;
 
 	public bool
-		useController;
+		useController = false;
 
 	//public GUIText scoreText;
 	public Text scoreText;
-	private int score;
+	public int playerType;
 
-	// stings for player controls
+	// stings for player inputs
 	public string
 		Attack = "Fire1_P1",
 		Slow = "Fire2_P1",
 		Horiz = "Horizontal_P1",
 		Vert = "Vertical_P1",
+		//game object tag for reference for other scripts
 		player;
 		
-
-	//Mouse control stuff
-	//int floorMask;		//A layer mask so that a ray can be cast just at gameobjects on the floor layer
 
 	Vector3 mousePos;
 	Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
@@ -46,12 +49,26 @@ public class PlayerController : MonoBehaviour {
 
 	void Start () {
 		player = gameObject.tag;
+
 	}
 	void Awake () {
-		//floorMask = LayerMask.GetMask("Floor");
 		playerRigidBody = GetComponent<Rigidbody>();
 		rend = GetComponent<Renderer>();
-		collide = GetComponent<Collider>();
+		switch (player)
+		{
+			case "Player_1":
+				playerType = Retainer.player1Type;
+				Debug.Log("Player_1 playerType set to "+ playerType);
+				break;
+			case "Player_2":
+				playerType = Retainer.player2Type;
+				Debug.Log("Player_2 playerType set to " + playerType);
+				break;
+			default:
+				Debug.Log("No player tag found");
+				break;
+		}
+		//collide = GetComponent<Collider>();
 	}
 	
 	// Update is called once per frame
@@ -61,18 +78,10 @@ public class PlayerController : MonoBehaviour {
 		Turning ();
 
 
-		//Player Firing
-		Firing();
-		// if(Input.GetMouseButtonDown(0))
-		// {
-		// 	Gun.isFiring = true;
-		// }
-		// if(Input.GetMouseButtonUp(0))
-		// {
-		// 	Gun.isFiring= false;
-		// }
 		//Debug.Log("mousePos = " + mousePos);
 		//Debug.Log("Position = " + transform.position);
+
+
 	}
 
 	void FixedUpdate () {
@@ -88,10 +97,32 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	public void Movement()
+	public void Movement(int playType)
 	{
-		//pushes player opposite direction they're facing
-		playerRigidBody.AddForce(transform.forward * -moveSpeed);
+		//Debug.Log("Movement method called");
+		//check if game timer has started
+		if(Retainer.timerStart)
+		{
+			//Debug.Log("Retainer.timerStart = true");
+			//Debug.Log("playerType is " + playerType);
+			switch (playerType)
+			{
+				case 1:
+					//Debug.Log("playerType is " + playerType);
+					playerRigidBody.AddForce(transform.forward * -moveSpeed);
+					break;
+				case 2:
+					//Debug.Log("playerType is " + playerType);
+					playerRigidBody.AddForce(transform.forward * -1000);
+					break;
+				case 3:
+					//Debug.Log("playerType is " + playerType);
+					playerRigidBody.AddForce(transform.forward * -150);
+					break;
+			}
+			//pushes player opposite direction they're facing
+
+		}
 	}
 
 	void Turning()
@@ -161,35 +192,9 @@ public class PlayerController : MonoBehaviour {
 				//stupid
 				gameController.AddScore(-2, player);
 			}
+			//spawn particle system and destroy bullet
+			bullet.spawnSmoke();
 		}
-		//check what kind of bullet hits player
-		// switch (collision.gameObject.tag)
-		// {
-		// 	case "Bullet":
-		// 		StartCoroutine(PlayerHit());
-		// 		break;
-		// 	//if tag is Bullet_P1, player 1 bullet
-		// 	case "Bullet_P1":
-		// 		//and player == p1
-		// 		if(gameObject.tag == "Player_1")
-		// 		{
-		// 			//player gets hit
-		// 			StartCoroutine(PlayerHit());
-		// 		}
-		// 		break;
-		// 	//if tag is Bullet_P2, player 2 bullet
-		// 	case "Bullet_P2":
-		// 		//and player == p2
-		// 		if(gameObject.tag == "Player_2")
-		// 		{
-		// 			//player gets hit
-		// 			StartCoroutine(PlayerHit());
-		// 		}
-		// 		break;
-		// 	default:
-		// 		break;
-		// }
-
 	}
 
 	IEnumerator PlayerHit (int j)
@@ -228,6 +233,7 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+	//moved to GameController
 	// void UpdateScore ()
 	// {
 	// 	//update gui with new score
@@ -252,17 +258,4 @@ public class PlayerController : MonoBehaviour {
 	// 	}
 	// }
 
-	public void Firing ()
-	{
-		//sets isFiring to true if player is pressing Attack button
-		//lets GunController know the player is firing
-		if(Input.GetButton(Attack))
-		{
-			Gun.isFiring = true;
-		}
-		if(Input.GetButtonUp(Attack))
-		{
-			Gun.isFiring= false;
-		}
-	}
 }

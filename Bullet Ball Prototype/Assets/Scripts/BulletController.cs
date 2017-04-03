@@ -7,10 +7,14 @@ public class BulletController : MonoBehaviour {
 	public float speed;
 	public float lifetime = 5f;
 	public Vector3 velocity;
+	//particle system to spawn after bullet lifetime
 	public GameObject Smoke;
 	public GameController gameController;
 	public PlayerController playerController;
+	//type of bullet, going to be used to check damage
+	//might change
 	public string bulletType = "1";
+	//tag of parent object
 	public string player;
 	
 
@@ -65,7 +69,7 @@ public class BulletController : MonoBehaviour {
 				break;
 		}
 	}
-	void spawnSmoke ()
+	public void spawnSmoke ()
 	{
 		//Spawn smoke particle system and then destory object
 		Instantiate(Smoke, transform.position, Smoke.transform.rotation);
