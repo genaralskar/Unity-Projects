@@ -130,24 +130,7 @@ public class PlayerController : MonoBehaviour {
 		//set if(!useController)
 
 		//Rotate with mouse
-		if(!useController)
-		{
-			//some mumbo jumbo about ray casting onto a plane and getting a vector from the intersection of the plane
-			//and that's where the mouse is pointing
-			Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-			float rayLength;
-
-			if(groundPlane.Raycast(cameraRay, out rayLength))
-			{
-				mousePos = cameraRay.GetPoint(rayLength);
-				Debug.DrawLine(cameraRay.origin, mousePos, Color.blue);
-				Debug.DrawLine(transform.position, mousePos, Color.red);
-
-				transform.LookAt(new Vector3(mousePos.x, transform.position.y, mousePos.z));
-			}
-		}
-		//Rotate with controller
-		else
+		if(!Retainer.isPaused)
 		{
 			//new vector 3 from combination of horizontal and vertical inputs
 			Vector3 playerDirection = Vector3.right * Input.GetAxisRaw(Horiz) + Vector3.forward * Input.GetAxisRaw(Vert);

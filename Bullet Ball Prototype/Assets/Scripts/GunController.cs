@@ -92,7 +92,7 @@ public class GunController : MonoBehaviour {
 		public void Firing ()
 	{
 		//check if game timer has started
-		if(Retainer.timerStart)
+		if(Retainer.timerStart && !Retainer.isPaused)
 		{
 			//sets isFiring to true if player is pressing Attack button
 			//lets GunController know the player is firing

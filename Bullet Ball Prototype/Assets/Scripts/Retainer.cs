@@ -37,7 +37,7 @@ public class Retainer : MonoBehaviour {
 		slowSpeed,
 
 		//how long the timer will last
-		timeLimit = 10f,
+		timeLimit = 90f,
 		j;
 	public static string
 		y;
