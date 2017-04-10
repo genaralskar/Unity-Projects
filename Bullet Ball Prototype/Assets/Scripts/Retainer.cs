@@ -6,17 +6,18 @@ public class Retainer : MonoBehaviour {
 
 	public static int
 
-		//1 - assault
-		//2 - shotgun
-		//3 - sniper
-		player1Type = 1,
-		player2Type = 1,
+		//0 - assault
+		//1 - shotgun
+		//2 - sniper
+		player1Type = 0,
+		player2Type = 0,
 		
-		//1 - multiplayer
-		//2 - singleplayer score
-		//3 - singleplayer target
-		//4 - singleplayer skill
+		//0 - multiplayer
+		//1 - singleplayer score
+		//2 - singleplayer target
+		//3 - singleplayer skill
 		gameType,
+
 
 		//score of players
 		player1Score = 0,

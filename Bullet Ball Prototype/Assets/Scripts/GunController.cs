@@ -6,11 +6,22 @@ public class GunController : MonoBehaviour {
 
 	//changed from PlayerController to check if player is pressing Attack button
 	public bool isFiring;
-	public BulletController bullet;
+	public BulletController bullet1;
+	public BulletController bullet2;
+	public BulletController bullet3;
+	private BulletController newBullet;
+
+	public AudioSource gunFire;
+	public int bulletType;
 
 	public float
 		bulletSpeed,
-		timeBetweenShots;
+		//shotgunSpeed,
+		//sniperSpeed,
+		timeBetweenShots,
+		TBSassault,
+		TBSshotgun,
+		TBSsniper;
 
 	private float
 		shotCounter;
@@ -23,7 +34,21 @@ public class GunController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		switch (playerController.playerType)
+		{
+			case 0:
+				timeBetweenShots = TBSassault;
+				break;
+			case 1:
+				timeBetweenShots = TBSshotgun;
+				break;
+			case 2:
+				timeBetweenShots = TBSsniper;
+				break;
+			default:
+				timeBetweenShots = TBSassault;
+				break;
+		}
 	}
 
 	// Update is called once per frame
@@ -52,8 +77,41 @@ public class GunController : MonoBehaviour {
 
 	void SpawnBullet ()
 	{
+		//BulletController newBullet;
+		//BulletController newBullet;
+		if(playerController.playerType == 0)
+		{
+			newBullet = Instantiate(bullet1, firePoint.position, firePoint.rotation) as BulletController;
+			//newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
+		}
+		else if(playerController.playerType == 1)
+		{
+			newBullet = Instantiate(bullet2, firePoint.position, firePoint.rotation) as BulletController;
+			//newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
+		}
+		else if(playerController.playerType == 2)
+		{
+			newBullet = Instantiate(bullet3, firePoint.position, firePoint.rotation) as BulletController;
+			//newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
+		}
+		newBullet.player = gameObject.tag;
+		gunFire.Play();
+		// switch (playerController.playerType)
+		// {
+		// 	case 0:
+		// 		BulletController newBullet = Instantiate(bullet1, firePoint.position, firePoint.rotation) as BulletController;
+		// 		break;
+		// 	case 1:
+		// 		BulletController newBullet = Instantiate(bullet2, firePoint.position, firePoint.rotation) as BulletController;
+		// 		break;
+		// 	case 2:
+		// 		BulletController newBullet = Instantiate(bullet3, firePoint.position, firePoint.rotation) as BulletController;
+		// 		break;
+		// 	default:
+		// 		break;
+		// }
 		//make new bullet
-		BulletController newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation) as BulletController;
+		//BulletController newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation) as BulletController;
 		
 		//newBullet.speed is bulletSpeed plus parent velocity so it does not run into parent object on spawn
 		//might not need it
@@ -64,9 +122,9 @@ public class GunController : MonoBehaviour {
 		//newBullet.velocity = playerController.playerRigidBody.velocity;
 
 		//move newBullet forward * bulletSpeed
-		newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
+		//newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
 
-		string bulletType = newBullet.bulletType;
+		//string bulletType = newBullet.bulletType;
 
 		//gameController.AddScore(playerController.player, 1);
 		

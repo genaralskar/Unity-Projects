@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour {
 	public float
 		//move speed of player
 		moveSpeed,
+		moveSpeed2,
+		moveSpeed3,
 		//amount the player is slowed when pressing Fire2 (slow button)
 		slowSpeed,
 		//how quickly the player flashes after being hit
@@ -107,17 +109,17 @@ public class PlayerController : MonoBehaviour {
 			//Debug.Log("playerType is " + playerType);
 			switch (playerType)
 			{
-				case 1:
+				case 0:
 					//Debug.Log("playerType is " + playerType);
 					playerRigidBody.AddForce(transform.forward * -moveSpeed);
 					break;
+				case 1:
+					//Debug.Log("playerType is " + playerType);
+					playerRigidBody.AddForce(transform.forward * -moveSpeed2);
+					break;
 				case 2:
 					//Debug.Log("playerType is " + playerType);
-					playerRigidBody.AddForce(transform.forward * -1000);
-					break;
-				case 3:
-					//Debug.Log("playerType is " + playerType);
-					playerRigidBody.AddForce(transform.forward * -150);
+					playerRigidBody.AddForce(transform.forward * -moveSpeed3);
 					break;
 			}
 			//pushes player opposite direction they're facing

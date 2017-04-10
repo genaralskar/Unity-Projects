@@ -13,9 +13,11 @@ public class BulletController : MonoBehaviour {
 	public PlayerController playerController;
 	//type of bullet, going to be used to check damage
 	//might change
-	public string bulletType = "1";
+	//public string bulletType = "1";
 	//tag of parent object
 	public string player;
+
+	private Rigidbody bulletRigidBody;
 	
 
 	// Use this for initialization
@@ -42,7 +44,8 @@ public class BulletController : MonoBehaviour {
 		}
 		//increase score by one when object spawns
 		//gameController.AddScore(1);
-
+		bulletRigidBody = GetComponent<Rigidbody>();
+		bulletRigidBody.AddForce(transform.forward * speed);
 		//wait lifetime, run spawnSmoke
 		Invoke("spawnSmoke", lifetime);
 	}
