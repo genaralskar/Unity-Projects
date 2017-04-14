@@ -14,6 +14,9 @@ public class UIController : MonoBehaviour {
 	public Image multiPlayerPanel;
 	public Image mapSelection;
 	public Button mapSelectionSelectButton;
+	
+	public Image pauseMenu;
+	public Button pauseMenuButton;
 	public int state = 0;
 
 	// Use this for initialization
@@ -45,6 +48,7 @@ public class UIController : MonoBehaviour {
 					break;
 			}
 		}
+		Pause();
 		
 	}
 
@@ -128,6 +132,34 @@ public class UIController : MonoBehaviour {
 			default:
 				break;
 		}
+	}
+
+	// public void TogglePauseMenu()
+	// {
+	// 	// if(Retainer.isPaused)
+	// 	// {
+	// 	// 	pauseMenu.gameObject.SetActive(true);
+	// 	// }
+
+	// 	pauseMenu.gameObject.SetActive(Retainer.isPaused);
+	// }
+
+	public void Pause()
+	{
+		if(Input.GetButtonDown("Pause"))
+		{
+			Retainer.isPaused = !Retainer.isPaused;
+			pauseMenuButton.Select();
+		}
+		if(Retainer.isPaused)
+		{
+			Time.timeScale = 0;
+		}
+		else if(!Retainer.isPaused)
+		{
+			Time.timeScale = 1;
+		}
+		pauseMenu.gameObject.SetActive(Retainer.isPaused);
 	}
 
 }

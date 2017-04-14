@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Pause();
+		//Pause();
 	}
 
 	public void UpdateScore()
@@ -62,19 +62,19 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	public void Pause()
-	{
-		if(Input.GetButtonDown("Pause"))
-		{
-			Retainer.isPaused = !Retainer.isPaused;
-		}
-		if(Retainer.isPaused)
-		{
-			Time.timeScale = 0;
-		}
-		else if(!Retainer.isPaused)
-		{
-			Time.timeScale = 1;
-		}
-	}
+	// public void Pause()
+	// {
+	// 	if(Input.GetButtonDown("Pause"))
+	// 	{
+	// 		Retainer.isPaused = !Retainer.isPaused;
+	// 	}
+	// 	if(Retainer.isPaused)
+	// 	{
+	// 		Time.timeScale = 0;
+	// 	}
+	// 	else if(!Retainer.isPaused)
+	// 	{
+	// 		Time.timeScale = 1;
+	// 	}
+	// }
 }

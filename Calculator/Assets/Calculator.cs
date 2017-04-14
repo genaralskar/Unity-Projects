@@ -8,10 +8,12 @@ public class Calculator : MonoBehaviour {
 	//use of list for using more than 2 numbers
 
 	public Text outputText;
-	private float sum = 0;
+	static public float sum = 0;
 
 	public float num1 = 0;
 	public float num2 = 0;
+
+	public static float total;
 
 	private string lastFunction = "Start";
 	//public bool firstNumber;
@@ -20,6 +22,7 @@ public class Calculator : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		outputText.text = "0";	
+		Debug.Log(Mathf.Floor(10F));
 	}
 	
 	// Update is called once per frame
