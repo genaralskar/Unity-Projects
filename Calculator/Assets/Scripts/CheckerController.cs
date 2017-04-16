@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class CheckerController : MonoBehaviour {
 
-	public float number = Calculator.sum;
+	// used to check against falling numbers, set externally
+	public float number;
+
 
 	// Use this for initialization
 	void Start () {
-		Destroy(gameObject, 1);
+		// used as a trigger, spawn object then destroy it
+		Destroy(gameObject, 1f);
+		Debug.Log("Checker.number = " + number);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		transform.Translate(Vector3.up * 100 * Time.deltaTime);
 	}
 }

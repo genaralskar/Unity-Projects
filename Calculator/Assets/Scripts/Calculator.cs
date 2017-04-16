@@ -8,7 +8,7 @@ public class Calculator : MonoBehaviour {
 	//use of list for using more than 2 numbers
 
 	public Text outputText;
-	static public float sum = 0;
+	public float sum = 0;
 
 	public float num1 = 0;
 	public float num2 = 0;
@@ -18,6 +18,10 @@ public class Calculator : MonoBehaviour {
 	private string lastFunction = "Start";
 	//public bool firstNumber;
 	public bool opperatorPressed = false;
+
+	public Button multiplyButton;
+	public Button divideButton;
+	public Button digitOneButton;
 
 	// Use this for initialization
 	void Start () {
@@ -32,20 +36,17 @@ public class Calculator : MonoBehaviour {
 
 	public void AddDigit(float digit)
 	{
-
-		// switch (stage)
-		// {
-		// 	case 0:
-		// 		num1 = (num1 * 10) + digit;
-		// 		sum = num1;
-		// 		break;
-		// 	case 1:
-		// 		num2 = (num2 * 10) + digit;
-		// 		sum = num2;
-		// 		break;
-		// 	default:
-		// 		break;
-		// }
+		if(digit == 1)
+		{
+			multiplyButton.interactable = false;
+			divideButton.interactable = false;
+		}
+		else
+		{
+			multiplyButton.interactable = true;
+			divideButton.interactable = true;
+		}
+		digitOneButton.interactable = true;
 		if(opperatorPressed)
 		{
 			num1 = 0;
@@ -98,6 +99,9 @@ public class Calculator : MonoBehaviour {
 		Function();
 		lastFunction = "Multiply";
 		Debug.Log(lastFunction);
+		digitOneButton.interactable = false;
+		
+		
 	}
 
 	public void DivideButton ()
@@ -119,6 +123,7 @@ public class Calculator : MonoBehaviour {
 		Function();
 		lastFunction = "Divide";
 		Debug.Log(lastFunction);
+		digitOneButton.interactable = false;
 	}
 
 	public void EqualButton ()
@@ -140,12 +145,28 @@ public class Calculator : MonoBehaviour {
 			case "Multiply":
 				sum = num1 * num2;
 				num1 = sum;
+				if(num2 == 0)
+				{
+					total = 0;
+				}
+				else
+				{
+					total = sum;
+				}
 				num2 = 0;
 				UpdateText();
 				break;
 			case "Divide":
 				sum = num1 / num2;
 				num1 = sum;
+				if(num2 == 0)
+				{
+					total = 0;
+				}
+				else
+				{
+					total = sum;
+				}
 				num2 = 0;
 				UpdateText();
 				break;
