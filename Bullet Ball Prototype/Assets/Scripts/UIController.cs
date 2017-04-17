@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour {
 
@@ -14,20 +15,29 @@ public class UIController : MonoBehaviour {
 	public Image multiPlayerPanel;
 	public Image mapSelection;
 	public Button mapSelectionSelectButton;
-	
+	public Image areYouSure;
 	public Image pauseMenu;
 	public Button pauseMenuButton;
 	public int state = 0;
+
+	//0 is restart
+	//1 is quit to main menu
+	public int confirmWindowState;
 
 	// Use this for initialization
 	void Start () {
 		
 	}
+
+	public static void ChangeScene(string sceneName)
+	{
+		SceneManager.LoadScene(sceneName);
+	}
 	
 	// Update is called once per frame
 	void Update () {
 		
-		if(Input.GetButtonDown("Cancel"))
+		if(Input.GetButtonDown("Cancel") && (SceneManager.GetActiveScene().name == "Title Screen" || Retainer.isPaused))
 		{
 			PlaySound("Cancel");
 			switch (state)
@@ -105,6 +115,36 @@ public class UIController : MonoBehaviour {
 
 	}
 
+	public void NeedConfirm(int type)
+	{
+		areYouSure.gameObject.SetActive(true);
+
+		confirmWindowState = type;
+	}
+
+	//called when interacting with are you sure window
+	public void AreYouSure()
+	{
+		//0 is resume
+		//1 is restart
+		//2 is quit
+		switch (confirmWindowState)
+		{
+			case 0:
+				areYouSure.gameObject.SetActive(false);
+				break;
+			case 1:
+				SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+				Retainer.isPaused = false;
+				break;
+			case 2:
+				//Retainer.mapSelection = 0;
+				ChangeScene("Title Screen");
+				Retainer.isPaused = false;
+				break;
+		}
+	}
+
 	public void SetPlayer1Type(int playerType)
 	{
 		Retainer.player1Type = playerType;
@@ -146,6 +186,7 @@ public class UIController : MonoBehaviour {
 
 	public void Pause()
 	{
+		// add a check to make sure you're not in the title screen
 		if(Input.GetButtonDown("Pause"))
 		{
 			Retainer.isPaused = !Retainer.isPaused;
