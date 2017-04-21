@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class GameController : MonoBehaviour {
 	// Stuff for the timer
 	public Text timerText;
 	public float timerStartTime;
+	float timerTime;
 
 	// number will spawn every timerCheckTime seconds, try to use whole numbers
 	public float timerCheckTime = 5;
@@ -17,18 +19,17 @@ public class GameController : MonoBehaviour {
 	public static float score;
 
 	// Number objects
-	public NumberController zero;
-	public NumberController one;
-	public NumberController two;
-	public NumberController three;
-	public NumberController four;
-	public NumberController five;
-	public NumberController six;
-	public NumberController seven;
-	public NumberController eight;
-	public NumberController nine;
+	// public NumberController zero;
+	// public NumberController one;
+	// public NumberController two;
+	// public NumberController three;
+	// public NumberController four;
+	// public NumberController five;
+	// public NumberController six;
+	// public NumberController seven;
+	// public NumberController eight;
+	// public NumberController nine;
 	public NumberController[] numbers;
-
 	public Transform numberSpawn;
 	
 	// Stuff from the number checker
@@ -38,6 +39,8 @@ public class GameController : MonoBehaviour {
 
 	public Text scoreText;
 	public Text livesText;
+
+	public Image gameOverScreen;
 
 	// Used so the timer only spawns one object instead of a bunch
 	private bool spawned = false;
@@ -65,6 +68,7 @@ public class GameController : MonoBehaviour {
 			timerText.gameObject.SetActive(true);
 			livesText.gameObject.SetActive(false);
 		}
+		timerTime = timerStartTime;
 	}
 	
 	// Update is called once per frame
@@ -109,8 +113,15 @@ public class GameController : MonoBehaviour {
 		newDigit = Instantiate (numbers[firstDigit], new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation);
 		newDigit.numberValue = number;
 
-		newDigit = Instantiate (numbers[secondDigit], new Vector3(xSpawn + -.225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation);
-		newDigit.numberValue = number;
+		if(secondDigit != 0)
+		{
+			newDigit = Instantiate (numbers[secondDigit], new Vector3(xSpawn + -.225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation);
+			newDigit.numberValue = number;
+		}
+		// newDigit = Instantiate (numbers[secondDigit], new Vector3(xSpawn + -.225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation);
+		// newDigit.numberValue = number;
+
+		//Ignore stuff below, because I discoved arrays!
 
 		// spawns proper number object for the firstDigit, and moves it a bit to make room for the second digit
 		// also checks if the number is below 10 because if it is the front zero does not spawn
@@ -296,21 +307,23 @@ public class GameController : MonoBehaviour {
 
 	void Timer()
 	{
+
+		
 		//decrements time
-		timerStartTime -= Time.deltaTime;
+		timerTime -= Time.deltaTime;
 		// displays the current time rounded down
-		timerText.text = Mathf.FloorToInt(timerStartTime).ToString("f0");
+		timerText.text = Mathf.FloorToInt(timerTime).ToString("f0");
 
 		//if the timer hits zero(cause of the way it is 1 = 0), 
-		if(timerStartTime <= 1 && !useLives)
+		if(timerTime <= 1 && !useLives)
 		{
 			gameOver = true;
 			spawned = true;
 			GameOver();
 		}
-		else if(timerStartTime <= 1 && useLives)
+		else if(timerTime <= 1 && useLives)
 		{
-			timerStartTime = 60;
+			timerTime = 60;
 		}
 
 		// if the timer ends in a 0, spawn a number, also check if already spawned so it only spawns one object
@@ -319,15 +332,15 @@ public class GameController : MonoBehaviour {
 		// but this doesn't mean the number after the % will always match the last digit of the timer, more a precentage thing
 		// 10 % 10 is zero, 10 % 5 is zero, 10 % 2.5 is 0, 10 % 1.25 is 0. i think you get the point or something
 		// lower number after % means faster spawns is really all that's important
-		if(Mathf.Floor(timerStartTime % timerCheckTime) == 0 && spawned == false)
+		if(Mathf.Floor(timerTime % timerCheckTime) == 0 && spawned == false)
 		{
-			Debug.Log(timerStartTime);
+			Debug.Log(timerTime);
 			SpawnNumber();
 			//sets spawned to true so it only spawns one object
 			spawned = true;
 			Debug.Log(spawned);
 		}
-		else if (Mathf.FloorToInt(timerStartTime % timerCheckTime) != 0)
+		else if (Mathf.FloorToInt(timerTime % timerCheckTime) != 0)
 		{
 			//sets spawned to false when we leave the desiered spawn number so numbers can spawn again
 			spawned = false;
@@ -384,8 +397,16 @@ public class GameController : MonoBehaviour {
 		timerText.gameObject.SetActive(false);
 		scoreText.gameObject.SetActive(false);
 		livesText.gameObject.SetActive(false);
-		gameOverText.gameObject.SetActive(true);
+		//gameOverText.gameObject.SetActive(true);
+		gameOverScreen.gameObject.SetActive(true);
 		CheckNumber();
-		gameOverText.text = "Game Over\nYour Score Is:\n" + score;
+		//gameOverText.text = "Game Over\nYour Score Is:\n" + score;
+	}
+
+	public void ChangeScene(string sceneName)
+	{
+		gameOver = false;
+		spawned = false;
+		SceneManager.LoadScene(sceneName);
 	}
 }
