@@ -34,18 +34,10 @@ public class Calculator : MonoBehaviour {
 		outputText.text = sum.ToString();
 	}
 
+
 	public void AddDigit(float digit)
 	{
-		if(digit == 1)
-		{
-			multiplyButton.interactable = false;
-			divideButton.interactable = false;
-		}
-		else
-		{
-			multiplyButton.interactable = true;
-			divideButton.interactable = true;
-		}
+		
 		digitOneButton.interactable = true;
 		if(opperatorPressed)
 		{
@@ -60,7 +52,16 @@ public class Calculator : MonoBehaviour {
 			num2 = (num2 * 10) + digit;
 			sum = num2;
 		}
-
+		if(digit == 1 && sum <= 10)
+		{
+			multiplyButton.interactable = false;
+			divideButton.interactable = false;
+		}
+		else
+		{
+			multiplyButton.interactable = true;
+			divideButton.interactable = true;
+		}
 		UpdateText();
 	}
 
@@ -99,7 +100,14 @@ public class Calculator : MonoBehaviour {
 		Function();
 		lastFunction = "Multiply";
 		Debug.Log(lastFunction);
-		digitOneButton.interactable = false;
+		if(sum <= 10)
+		{
+			digitOneButton.interactable = false;
+		}
+		else
+		{
+			digitOneButton.interactable = true;
+		}
 		
 		
 	}
@@ -186,6 +194,9 @@ public class Calculator : MonoBehaviour {
 		opperatorPressed = false;
 		lastFunction = "Start";
 		UpdateText();
+		digitOneButton.interactable = true;
+		multiplyButton.interactable = true;
+		divideButton.interactable = true;
 	}
 
 	public void Function ()

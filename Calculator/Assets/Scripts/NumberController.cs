@@ -12,6 +12,7 @@ public class NumberController : MonoBehaviour {
 	//how many points this number is worth, set externally
 	public int scoreValue = 5;
 	public int scoreLoseValue;
+	public bool useTimer;
 
 	// Use this for initialization
 	void Start () {
@@ -52,6 +53,15 @@ public class NumberController : MonoBehaviour {
 				GameController.score += scoreLoseValue;
 				SpawnParticle();
 				Destroy(gameObject);
+				if(numberValue < 10)
+				{
+					GameController.Lives -= 1;
+				}
+				else if(numberValue > 9)
+				{
+					GameController.Lives -= .5f;
+				}
+
 				break;
 			default:
 				break;

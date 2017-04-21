@@ -27,6 +27,8 @@ public class GameController : MonoBehaviour {
 	public NumberController seven;
 	public NumberController eight;
 	public NumberController nine;
+	public NumberController[] numbers;
+
 	public Transform numberSpawn;
 	
 	// Stuff from the number checker
@@ -35,6 +37,7 @@ public class GameController : MonoBehaviour {
 
 
 	public Text scoreText;
+	public Text livesText;
 
 	// Used so the timer only spawns one object instead of a bunch
 	private bool spawned = false;
@@ -42,6 +45,9 @@ public class GameController : MonoBehaviour {
 
 	public Text gameOverText;
 	public static bool gameOver = false;
+
+	public static float Lives = 3;
+	public static bool useLives = false;
 	
 	
 
@@ -49,6 +55,16 @@ public class GameController : MonoBehaviour {
 	void Start () {
 		//add one to start timer so it displays correctly because of how the timer works
 		timerStartTime += 1;
+		if(useLives)
+		{
+			timerText.gameObject.SetActive(false);
+			livesText.gameObject.SetActive(true);
+		}
+		else
+		{
+			timerText.gameObject.SetActive(true);
+			livesText.gameObject.SetActive(false);
+		}
 	}
 	
 	// Update is called once per frame
@@ -60,6 +76,11 @@ public class GameController : MonoBehaviour {
 		else
 		{
 			Timer();
+			
+			if(useLives)
+			{
+				CheckLives();
+			}
 			UpdateScore();
 		}
 	}
@@ -85,174 +106,179 @@ public class GameController : MonoBehaviour {
 		// random x axis spawn between two points so it still spawns in the right side of the screen
 		float xSpawn = Random.Range(.5f, 8.5f);
 
+		newDigit = Instantiate (numbers[firstDigit], new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation);
+		newDigit.numberValue = number;
+
+		newDigit = Instantiate (numbers[secondDigit], new Vector3(xSpawn + -.225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation);
+		newDigit.numberValue = number;
+
 		// spawns proper number object for the firstDigit, and moves it a bit to make room for the second digit
 		// also checks if the number is below 10 because if it is the front zero does not spawn
 		// this affects the scoring because the score is split between the two numbers because it seemed easier to do it that way than to...
 		// as i write this i realize the first digit will always spawn, so the score should be on that, and the second digit doesn't need any score
 		// will have to impement this at some point
-		switch (firstDigit)
-		{
+		// switch (firstDigit)
+		// {
 			
-			case 0:
-				newDigit = Instantiate(zero, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				newDigit.numberValue = number;
-				if(number < 10)
-				{
-					newDigit.scoreValue = 100;
-					newDigit.scoreLoseValue = -50;
-				}
-				Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
-				Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
-				break;
-			case 1:
-				newDigit = Instantiate(one, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				newDigit.numberValue = number;
-				if(number < 10)
-				{
-					newDigit.scoreValue = 100; 
-					newDigit.scoreLoseValue = -50;
-				}
-				Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
-				Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
-				break;
-			case 2:
-				newDigit = Instantiate(two, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				newDigit.numberValue = number;
-				if(number < 10)
-				{
-					newDigit.scoreValue = 100; 
-					newDigit.scoreLoseValue = -50;
-				}
-				Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
-				Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
-				break;
-			case 3:
-				newDigit = Instantiate(three, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				newDigit.numberValue = number;
-				if(number < 10)
-				{
-					newDigit.scoreValue = 100; 
-					newDigit.scoreLoseValue = -50;
-				}
-				Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
-				Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
-				break;
-			case 4:
-				newDigit = Instantiate(four, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				newDigit.numberValue = number;
-				if(number < 10)
-				{
-					newDigit.scoreValue = 100; 
-					newDigit.scoreLoseValue = -50;
-				}
-				Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
-				Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
-				break;
-			case 5:
-				newDigit = Instantiate(five, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				newDigit.numberValue = number;
-				if(number < 10)
-				{
-					newDigit.scoreValue = 100; 
-					newDigit.scoreLoseValue = -50;
-				}
-				Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
-				Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
-				break;
-			case 6:
-				newDigit = Instantiate(six, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				newDigit.numberValue = number;
-				if(number < 10)
-				{
-					newDigit.scoreValue = 100; 
-					newDigit.scoreLoseValue = -50;
-				}
-				Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
-				Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
-				break;
-			case 7:
-				newDigit = Instantiate(seven, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				newDigit.numberValue = number;
-				if(number < 10)
-				{
-					newDigit.scoreValue = 100;
- 					newDigit.scoreLoseValue = -50;
-				}
-				Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
-				Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
-				break;
-			case 8:
-				newDigit = Instantiate(eight, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				newDigit.numberValue = number;
-				if(number < 10)
-				{
-					newDigit.scoreValue = 100;
- 					newDigit.scoreLoseValue = -50;
-				}
-				Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
-				Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
-				break;
-			case 9:
-				newDigit = Instantiate(nine, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				newDigit.numberValue = number;
-				if(number < 10)
-				{
-					newDigit.scoreValue = 100;
- 					newDigit.scoreLoseValue = -50;
-				}
-				Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
-				Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
-				break;
-			default:
-				break;
-		}
-
+		// 	case 0:
+		// 		newDigit = Instantiate(zero, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		newDigit.numberValue = number;
+		// 		if(number < 10)
+		// 		{
+		// 			newDigit.scoreValue = 100;
+		// 			newDigit.scoreLoseValue = -50;
+		// 		}
+		// 		Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
+		// 		Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
+		// 		break;
+		// 	case 1:
+		// 		newDigit = Instantiate(one, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		newDigit.numberValue = number;
+		// 		if(number < 10)
+		// 		{
+		// 			newDigit.scoreValue = 100; 
+		// 			newDigit.scoreLoseValue = -50;
+		// 		}
+		// 		Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
+		// 		Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
+		// 		break;
+		// 	case 2:
+		// 		newDigit = Instantiate(two, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		newDigit.numberValue = number;
+		// 		if(number < 10)
+		// 		{
+		// 			newDigit.scoreValue = 100; 
+		// 			newDigit.scoreLoseValue = -50;
+		// 		}
+		// 		Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
+		// 		Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
+		// 		break;
+		// 	case 3:
+		// 		newDigit = Instantiate(three, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		newDigit.numberValue = number;
+		// 		if(number < 10)
+		// 		{
+		// 			newDigit.scoreValue = 100; 
+		// 			newDigit.scoreLoseValue = -50;
+		// 		}
+		// 		Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
+		// 		Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
+		// 		break;
+		// 	case 4:
+		// 		newDigit = Instantiate(four, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		newDigit.numberValue = number;
+		// 		if(number < 10)
+		// 		{
+		// 			newDigit.scoreValue = 100; 
+		// 			newDigit.scoreLoseValue = -50;
+		// 		}
+		// 		Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
+		// 		Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
+		// 		break;
+		// 	case 5:
+		// 		newDigit = Instantiate(five, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		newDigit.numberValue = number;
+		// 		if(number < 10)
+		// 		{
+		// 			newDigit.scoreValue = 100; 
+		// 			newDigit.scoreLoseValue = -50;
+		// 		}
+		// 		Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
+		// 		Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
+		// 		break;
+		// 	case 6:
+		// 		newDigit = Instantiate(six, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		newDigit.numberValue = number;
+		// 		if(number < 10)
+		// 		{
+		// 			newDigit.scoreValue = 100; 
+		// 			newDigit.scoreLoseValue = -50;
+		// 		}
+		// 		Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
+		// 		Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
+		// 		break;
+		// 	case 7:
+		// 		newDigit = Instantiate(seven, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		newDigit.numberValue = number;
+		// 		if(number < 10)
+		// 		{
+		// 			newDigit.scoreValue = 100;
+ 		// 			newDigit.scoreLoseValue = -50;
+		// 		}
+		// 		Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
+		// 		Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
+		// 		break;
+		// 	case 8:
+		// 		newDigit = Instantiate(eight, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		newDigit.numberValue = number;
+		// 		if(number < 10)
+		// 		{
+		// 			newDigit.scoreValue = 100;
+ 		// 			newDigit.scoreLoseValue = -50;
+		// 		}
+		// 		Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
+		// 		Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
+		// 		break;
+		// 	case 9:
+		// 		newDigit = Instantiate(nine, new Vector3(xSpawn + .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		newDigit.numberValue = number;
+		// 		if(number < 10)
+		// 		{
+		// 			newDigit.scoreValue = 100;
+ 		// 			newDigit.scoreLoseValue = -50;
+		// 		}
+		// 		Debug.Log("firstDigit.scoreValue = " + newDigit.scoreValue);
+		// 		Debug.Log("firstDigit.numberValue = " + newDigit.numberValue);
+		// 		break;
+		// 	default:
+		// 		break;
+		// }
 		// same as above but for second digit
-		switch (secondDigit)
-		{
-			case 0:
-				// the second digit doesn't have to appear if it's just a zero, which is what this case would be
-				//newDigit = Instantiate(zero, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				break;
-			case 1:
-				newDigit = Instantiate(one, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				newDigit.numberValue = number;
-				break;
-			case 2:
-				newDigit = Instantiate(two, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				newDigit.numberValue = number;
-				break;
-			case 3:
-				newDigit = Instantiate(three, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				newDigit.numberValue = number;
-				break;
-			case 4:
-				newDigit = Instantiate(four, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				newDigit.numberValue = number;
-				break;
-			case 5:
-				newDigit = Instantiate(five, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				newDigit.numberValue = number;
-				break;
-			case 6:
-				newDigit = Instantiate(six, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				newDigit.numberValue = number;
-				break;
-			case 7:
-				newDigit = Instantiate(seven, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				newDigit.numberValue = number;
-				break;
-			case 8:
-				newDigit = Instantiate(eight, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				newDigit.numberValue = number;
-				break;
-			case 9:
-				newDigit = Instantiate(nine, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
-				newDigit.numberValue = number;
-				break;
-			default:
-				break;
-		}
+		// switch (secondDigit)
+		// {
+		// 	case 0:
+		// 		// the second digit doesn't have to appear if it's just a zero, which is what this case would be
+		// 		//newDigit = Instantiate(zero, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		break;
+		// 	case 1:
+		// 		newDigit = Instantiate(one, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		newDigit.numberValue = number;
+		// 		break;
+		// 	case 2:
+		// 		newDigit = Instantiate(two, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		newDigit.numberValue = number;
+		// 		break;
+		// 	case 3:
+		// 		newDigit = Instantiate(three, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		newDigit.numberValue = number;
+		// 		break;
+		// 	case 4:
+		// 		newDigit = Instantiate(four, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		newDigit.numberValue = number;
+		// 		break;
+		// 	case 5:
+		// 		newDigit = Instantiate(five, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		newDigit.numberValue = number;
+		// 		break;
+		// 	case 6:
+		// 		newDigit = Instantiate(six, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		newDigit.numberValue = number;
+		// 		break;
+		// 	case 7:
+		// 		newDigit = Instantiate(seven, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		newDigit.numberValue = number;
+		// 		break;
+		// 	case 8:
+		// 		newDigit = Instantiate(eight, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		newDigit.numberValue = number;
+		// 		break;
+		// 	case 9:
+		// 		newDigit = Instantiate(nine, new Vector3(xSpawn - .225f, numberSpawn.position.y, numberSpawn.position.z), numberSpawn.rotation) as NumberController;
+		// 		newDigit.numberValue = number;
+		// 		break;
+		// 	default:
+		// 		break;
+		// }
 
 
 		//CheckNumber(number);
@@ -276,11 +302,15 @@ public class GameController : MonoBehaviour {
 		timerText.text = Mathf.FloorToInt(timerStartTime).ToString("f0");
 
 		//if the timer hits zero(cause of the way it is 1 = 0), 
-		if(timerStartTime <= 1)
+		if(timerStartTime <= 1 && !useLives)
 		{
 			gameOver = true;
 			spawned = true;
 			GameOver();
+		}
+		else if(timerStartTime <= 1 && useLives)
+		{
+			timerStartTime = 60;
 		}
 
 		// if the timer ends in a 0, spawn a number, also check if already spawned so it only spawns one object
@@ -304,6 +334,16 @@ public class GameController : MonoBehaviour {
 		}
 
 		
+	}
+
+	void CheckLives()
+	{
+		if(Lives <= 0)
+		{
+			GameOver();
+			gameOver = true;
+		}
+		livesText.text = Lives.ToString();
 	}
 
 	public bool IsPrime(float number) {
@@ -343,6 +383,7 @@ public class GameController : MonoBehaviour {
 	{
 		timerText.gameObject.SetActive(false);
 		scoreText.gameObject.SetActive(false);
+		livesText.gameObject.SetActive(false);
 		gameOverText.gameObject.SetActive(true);
 		CheckNumber();
 		gameOverText.text = "Game Over\nYour Score Is:\n" + score;
