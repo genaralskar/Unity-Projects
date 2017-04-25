@@ -33,7 +33,10 @@ public class UIController : MonoBehaviour {
 	{
 		SceneManager.LoadScene(sceneName);
 	}
-	
+	public void LoadSelectedMap()
+	{
+		SceneManager.LoadScene(Retainer.mapSelection);
+	}	
 	// Update is called once per frame
 	void Update () {
 		
@@ -154,7 +157,7 @@ public class UIController : MonoBehaviour {
 		Retainer.player2Type = playerType;
 	}
 
-	public void SetMap (int map)
+	public void SetMap (string map)
 	{
 		Retainer.mapSelection = map;
 	}
@@ -186,7 +189,8 @@ public class UIController : MonoBehaviour {
 
 	public void Pause()
 	{
-		// add a check to make sure you're not in the title screen
+		if(SceneManager.GetActiveScene().name != "Title Screen")
+		{// add a check to make sure you're not in the title screen
 		if(Input.GetButtonDown("Pause"))
 		{
 			Retainer.isPaused = !Retainer.isPaused;
@@ -200,7 +204,7 @@ public class UIController : MonoBehaviour {
 		{
 			Time.timeScale = 1;
 		}
-		pauseMenu.gameObject.SetActive(Retainer.isPaused);
+		pauseMenu.gameObject.SetActive(Retainer.isPaused);}
 	}
 
 }

@@ -30,7 +30,6 @@ public class Retainer : MonoBehaviour {
 		//how long a bullet will last
 		bulletLifetime,
 
-		mapSelection,
 
 		i;
 	public static float
@@ -41,6 +40,7 @@ public class Retainer : MonoBehaviour {
 		timeLimit = 90f,
 		j;
 	public static string
+		mapSelection,
 		y;
 
 	public static bool

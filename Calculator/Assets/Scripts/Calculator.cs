@@ -131,6 +131,8 @@ public class Calculator : MonoBehaviour {
 		Function();
 		lastFunction = "Divide";
 		Debug.Log(lastFunction);
+		
+		//For the game part, disable the one button so you can't divide by one because that would be too easy. Might get rid of this actually.
 		digitOneButton.interactable = false;
 	}
 
