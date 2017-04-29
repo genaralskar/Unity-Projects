@@ -38,6 +38,8 @@ public class Calculator : MonoBehaviour {
 	//these are the buttons we enable/disable depending on certain circumstances for the game
 	public Button multiplyButton;
 	public Button divideButton;
+	public Button addButton;
+	public Button subtractButton;
 	public Button digitOneButton;
 	public Button equalsButton;
 
@@ -69,23 +71,54 @@ public class Calculator : MonoBehaviour {
 		
 
 		//more checks for what buttons should be enabled/disabled in the game
+		//if input = 1 or is divisible by ten, disable functions
 		if((digit == 1 && sum < 10) || sum % 10 == 0)
 		{
 			multiplyButton.interactable = false;
 			divideButton.interactable = false;
+			addButton.interactable = false;
+			subtractButton.interactable = false;
 		}
 		else
 		{
 			multiplyButton.interactable = true;
 			divideButton.interactable = true;
+			addButton.interactable = true;
+			subtractButton.interactable = true;
 		}
-		if((digit == 1 || sum % 10 == 0) && (lastFunction == "Multiply" || lastFunction == "Divide"))
+		//if if button pressed is one and display number is a single digit
+		//so we cant multiply or divide by 1, but can still use 11
+		if(digit == 1 && (sum < 10 || sum % 10 == 0) && (lastFunction != "Start"))
+		{
+			equalsButton.interactable = false;
+		}
+		// if display number is multiple of 10, disable equals button
+		else if(sum % 10 == 0)
+		{
+			equalsButton.interactable = false;
+		}
+		// if display number is less than ten and last operator pressed was + or -, disable equals button
+		else if(sum < 10 && (lastFunction == "Add" || lastFunction == "Subtact"))
 		{
 			equalsButton.interactable = false;
 		}
 		else
 		{
 			equalsButton.interactable = true;
+		}
+
+
+		//if display number is less than 10, cant add or divide
+		if(sum < 10 || sum % 10 == 0)
+		{
+			addButton.interactable = false;
+			subtractButton.interactable = false;
+			//equalsButton.interactable = false;
+		}
+		else
+		{
+			addButton.interactable = true;
+			subtractButton.interactable = true;
 		}
 		//update the output text, because we changed some stuff
 		UpdateText();

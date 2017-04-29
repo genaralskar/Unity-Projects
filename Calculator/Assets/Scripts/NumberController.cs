@@ -84,13 +84,16 @@ public class NumberController : MonoBehaviour {
 				//similar to what happened with score
 				if(numberValue < 10 && GameController.useLives)
 				{
-					GameController.Lives -= 1;
+					GameController.lives -= 1;
 				}
 				else if(numberValue > 9)
 				{
-					GameController.Lives -= .5f;
+					GameController.lives -= .5f;
 				}
 
+				break;
+			case "TitleEnder":
+				Destroy(gameObject);
 				break;
 			default:
 				break;

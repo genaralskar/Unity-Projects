@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour {
 	// Stuff for the timer
 	public Text timerText;
 	// start time for the timer
-	public float timerStartTime;
+	public static float timerStartTime = 60;
 	// timer that we decrement
 	float timerTime;
 
@@ -40,6 +40,8 @@ public class GameController : MonoBehaviour {
 
 	// this is a ui panel that has buttons and stuff for when the game ends
 	public Image gameOverScreen;
+	//text to display final score on gameover
+	public Text gameOverText;
 
 	// Used so the timer only spawns one object instead of a bunch
 	private bool spawned = false;
@@ -48,9 +50,12 @@ public class GameController : MonoBehaviour {
 	public static bool gameOver = false;
 
 	// amount of lives the player starts with
-	public static float Lives = 3;
+	public static float lives = 3;
+	public static float startLives = 3;
 	// used to check if we want to use lives or not
 	public static bool useLives = false;
+
+	public static bool reloaded = false;
 	
 	
 
@@ -73,12 +78,20 @@ public class GameController : MonoBehaviour {
 		}
 		//set our timerTime to our timerStartTime so we can do time stuff but still have our initial start time
 		timerTime = timerStartTime;
+
+		lives = startLives;
+
+		reloaded = !reloaded;
+		if(!reloaded)
+		{
+			ChangeScene("Calculator");
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		//if gameOver is false, ie the game is not over, then run timer and stuff
-		if(!gameOver)
+		if(!gameOver && reloaded)
 		{
 			Timer();
 			
@@ -200,12 +213,12 @@ public class GameController : MonoBehaviour {
 	// also keeps livesText up to date
 	void CheckLives()
 	{
-		if(Lives <= 0)
+		if(lives <= 0)
 		{
 			GameOver();
 			gameOver = true;
 		}
-		livesText.text = Lives.ToString();
+		livesText.text = lives.ToString();
 	}
 
 	//check if a number is prime
@@ -214,7 +227,7 @@ public class GameController : MonoBehaviour {
 		if (number == 1) return false;
 		if (number == 2) return true;
 
-		//checks if the number is even first, as all even numbers are not prime, except 2 but whatever
+		//checks if the number is even first, as all even numbers are not prime, except 2 but that is done earlier
 		if (number % 2 == 0) return false; // Even number     
 
 		//divides all numbers from 2 to the number before the number we are checking
@@ -265,6 +278,7 @@ public class GameController : MonoBehaviour {
 		scoreText.gameObject.SetActive(false);
 		livesText.gameObject.SetActive(false);
 		gameOverScreen.gameObject.SetActive(true);
+		gameOverText.text = "Your Score Is: " + score;
 		CheckNumber();
 	}
 
@@ -273,6 +287,8 @@ public class GameController : MonoBehaviour {
 	{
 		gameOver = false;
 		spawned = false;
+		score = 0;
+		gameOverScreen.gameObject.SetActive(false);
 		SceneManager.LoadScene(sceneName);
 	}
 }
