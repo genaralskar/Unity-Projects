@@ -1,0 +1,68 @@
+[
+    {
+        "id" : 0,
+        "title" : "Coin",
+        "canEquip" : true,
+        "slug" : "coin"
+    },
+    {
+        "id" : 1,
+        "title" : "Arrow Shaft",
+        "canEquip" : true,
+        "slug" : "arrow_shaft"
+    },
+    {
+        "id" : 2,
+        "title" : "Feather",
+        "canEquip" : true,
+        "slug" : "feather"
+    },
+    {
+        "id" : 3,
+        "title" : "Iron Ore",
+        "canEquip" : true,
+        "slug" : "iron_ore"
+    },
+    {
+        "id" : 4,
+        "title" : "Iron Bar",
+        "canEquip" : true,
+        "slug" : "iron_bar"
+    },
+    {
+        "id" : 5,
+        "title" : "Flax",
+        "canEquip" : true,
+        "slug" : "flax"
+    },
+    {
+        "id" : 6,
+        "title" : "Iron Arrowhead",
+        "canEquip" : true,
+        "slug" : "iron_arrowhead"
+    },
+    {
+        "id" : 7,
+        "title" : "Bowstring",
+        "canEquip" : true,
+        "slug" : "bowstring"
+    },
+    {
+        "id" : 8,
+        "title" : "Unstrung Wood Bow",
+        "canEquip" : true,
+        "slug" : "unstrung_wood_bow"
+    },
+    {
+        "id" : 9,
+        "title" : "Iron Arrow",
+        "canEquip" : true,
+        "slug" : "iron_arrow"
+    },
+    {
+        "id" : 10,
+        "title" : "Wood Bow",
+        "canEquip" : true,
+        "slug" : "wood_bow"
+    }
+]
