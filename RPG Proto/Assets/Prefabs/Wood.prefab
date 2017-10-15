@@ -52,6 +52,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   title: Wood
-  amount: 10
+  amount: 1
   type: 0
   stackable: 1

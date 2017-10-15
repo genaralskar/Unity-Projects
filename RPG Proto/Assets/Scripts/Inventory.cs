@@ -25,15 +25,20 @@ public class Inventory : MonoBehaviour {
 
 	public void AddItem(Item _item, int _amount)
 	{
+		Item tempItem = _item;
 		if(_item.stackable && FindItem(_item) != null)
 		{
-			FindItem(_item).UpdateAmount(_amount);
+		//	tempItem.amount = FindItem(_item).amount + _amount;
+			if(FindItemIndex(_item) != -1)
+			{
+				inventory[FindItemIndex(_item)].amount += _amount;
+			}
 			print(_item.title + " stacked in inventory.");
-			print(FindItem(_item).amount);
+			print(inventory[FindItemIndex(_item)].amount);
 		}
 		else if(FindEmptySlot() != -1)
 		{
-			inventory[FindEmptySlot()] = _item;
+			inventory[FindEmptySlot()] = tempItem;
 			print(_item.title + " added to inventory.");
 			print(FindItem(_item).amount);
 		}
@@ -56,6 +61,18 @@ public class Inventory : MonoBehaviour {
 		}
 
 		return null;
+	}
+
+	public int FindItemIndex(Item _item)
+	{
+		for(int i = 0; i < inventory.Length; i++)
+		{
+			if(inventory[i].title == _item.title)
+			{
+				return i;
+			}
+		}
+		return -1;
 	}
 
 	public int FindEmptySlot()
