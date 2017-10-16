@@ -84,16 +84,6 @@ public class Inventory : MonoBehaviour {
 				return i;
 			}
 		}
-
-
-		// foreach(Item i in inventory)
-		// {
-		// 	if(i.title == "Empty")
-		// 	{
-		// 		return i;
-		// 	}
-		// }
-		
 		return -1;
 	}
 
