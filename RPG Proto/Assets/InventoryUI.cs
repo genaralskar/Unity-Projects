@@ -10,6 +10,7 @@ public class InventoryUI : MonoBehaviour {
 	int numberOfSlots;
 	public Image[] invSlots;
 
+
 	void Start()
 	{
 		inv.UpdateInventoryAction += UpdateInventory;
@@ -41,7 +42,7 @@ public class InventoryUI : MonoBehaviour {
 		}
 	}
 
-	void UpdateInventory()
+	public void UpdateInventory()
 	{
 		print("Update inventory");
 		for(int i = 0; i < numberOfSlots; i++)

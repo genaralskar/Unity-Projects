@@ -10,6 +10,15 @@ public class Item : MonoBehaviour {
 	public Item.ItemType type;
 	public bool stackable = false;
 
+	public void  SetItem (Item _item)
+	{
+		this.title = _item.title;
+	//	print("title is" + title);
+		this.amount = _item.amount;
+		this.type = _item.type;
+		this.stackable = _item.stackable;
+	}
+
 	public void UpdateAmount(int _amount)
 	{
 		this.amount += _amount;

@@ -25,6 +25,7 @@ public class OpenInventoryButton : MonoBehaviour {
 		}
 		else
 		{
+			inv.UpdateInventoryAction -= invImage.GetComponent<InventoryUI>().UpdateInventory;
 			Destroy(invImage.gameObject);
 			toggle = false;
 		}

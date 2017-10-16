@@ -108,4 +108,4 @@ MonoBehaviour:
   title: Stone
   amount: 1
   type: 0
-  stackable: 0
+  stackable: 1
