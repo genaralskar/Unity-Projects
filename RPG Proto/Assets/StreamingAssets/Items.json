@@ -1,0 +1,22 @@
+[
+    {
+        "title" : "Empty",
+        "stackable" : false,
+        "slug" : "empty"
+    },
+    {
+        "title" : "Coin",
+        "stackable" : true,
+        "slug" : "coin"
+    },
+    {
+        "title" : "Wood",
+        "stackable" : true,
+        "slug" : "wood"
+    },
+    {
+        "title" : "Stone",
+        "stackable" : true,
+        "slug" : "stone"
+    }
+]

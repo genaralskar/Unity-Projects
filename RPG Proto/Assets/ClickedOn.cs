@@ -8,7 +8,8 @@ public class ClickedOn : MonoBehaviour {
 
 	public void Clicked(GameObject player)
 	{
-		ClickedOnAction(player);
+		if(ClickedOnAction != null)
+			ClickedOnAction(player);
 	//	print("clicked");
 	}
 }

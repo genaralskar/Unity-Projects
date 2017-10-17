@@ -2,26 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour {
+public class Item {
 
-	public string title;
-	public int amount = 1;
-	public enum ItemType{ITEM, WEAPON, ARMOR};
-	public Item.ItemType type;
-	public bool stackable = false;
 
-	public void  SetItem (Item _item)
+	public string TITLE { get; set; }
+	public bool STACKABLE { get; set; }
+	public string SLUG { get; set; }
+
+	public int AMOUNT { get; set; }
+
+
+
+	public Item(string _title, bool _stackable, string _slug)
 	{
-		this.title = _item.title;
-	//	print("title is" + title);
-		this.amount = _item.amount;
-		this.type = _item.type;
-		this.stackable = _item.stackable;
+		this.TITLE = _title;
+		this.STACKABLE = _stackable;
+		this.SLUG = _slug;
+		this.AMOUNT = 1;
+	}
+
+	public Item(Item _item)
+	{
+		this.TITLE = _item.TITLE;
+		this.STACKABLE = _item.STACKABLE;
+		this.SLUG = _item.SLUG;
 	}
 
 	public void UpdateAmount(int _amount)
 	{
-		this.amount += _amount;
+		this.AMOUNT += _amount;
 	}
 
 }

@@ -12,18 +12,19 @@ public class InventorySlot : MonoBehaviour {
 	void Start()
 	{
 		amountText = transform.GetChild(0).GetComponent<Text>();
-		amountText.text = item.title;
+	//	print(item);
+		UpdateItem();
 	}
 
 	public void UpdateItem()
 	{
-		if(item.amount > 1)
+		if(item.AMOUNT > 1)
 		{
-			amountText.text = item.title +": " + item.amount;
+			amountText.text = item.TITLE +": " + item.AMOUNT;
 		}
 		else
 		{
-			amountText.text = item.title;
+			amountText.text = item.TITLE;
 		}
 	}
 

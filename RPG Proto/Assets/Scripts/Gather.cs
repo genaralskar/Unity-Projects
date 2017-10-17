@@ -8,7 +8,8 @@ public class Gather : MonoBehaviour {
 
 	GameObject player;
 	public float maxDistance = 2;
-	public Item item;
+	public string item;
+	public int amount;
 
 	void Start()
 	{
@@ -43,6 +44,6 @@ public class Gather : MonoBehaviour {
 
 	void StartGather()
 	{
-		player.GetComponent<Inventory>().AddItem(item, 1);
+		player.GetComponent<Inventory>().AddItem(item, amount);
 	}
 }

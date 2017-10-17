@@ -17,7 +17,7 @@ public class InventoryUI : MonoBehaviour {
 
 		numberOfSlots = inv.inventory.Length;
 		invSlots = new Image[inv.inventory.Length];
-		print(inv.inventory.Length);
+	//	print("Inventory size: " + inv.inventory.Length);
 		MakeSlots();
 	}
 
@@ -30,8 +30,9 @@ public class InventoryUI : MonoBehaviour {
 			temp.transform.SetParent(transform);
 			temp.GetComponent<InventorySlot>().item = inv.inventory[i];
 			invSlots[i] = temp;
-			print(inv.inventory[i]);
+		//	print(inv.inventory[i].TITLE);
 		}
+	//	UpdateInventory();
 	}
 
 	void FillSlots()

@@ -57,8 +57,8 @@ GameObject:
   - component: {fileID: 136963364459503952}
   - component: {fileID: 23256258226055566}
   - component: {fileID: 65587828627525002}
-  - component: {fileID: 114096322919283506}
   - component: {fileID: 114221861201329648}
+  - component: {fileID: 114844554833247674}
   m_Layer: 9
   m_Name: Tree
   m_TagString: Untagged
@@ -306,19 +306,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 3, z: 3}
   m_Center: {x: 0.000000059604645, y: 1.76, z: -0.00000008940696}
---- !u!114 &114096322919283506
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1348673798307584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1e289abfd7b1274982a21fb6cf8da26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxDistance: 2
-  item: {fileID: 114234424541835348, guid: 1a2abb110d1483f4082b75812b3d4863, type: 2}
 --- !u!114 &114221861201329648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -330,6 +317,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46ffa6b6cf499ca42a9a66d06ce9cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114844554833247674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1348673798307584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad822a61f6a5546bc0a1ba26a3faff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 2
+  item: wood
+  amount: 1
 --- !u!136 &136963364459503952
 CapsuleCollider:
   m_ObjectHideFlags: 1
