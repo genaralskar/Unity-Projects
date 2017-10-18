@@ -27,10 +27,11 @@ public class ClickToMove : MonoBehaviour {
 				if(hit.collider.GetComponent<ClickedOn>() != null)
 				{
 					prevDestination = destination;
-					print(prevDestination);
+				//	print(prevDestination);
 					hit.collider.GetComponent<ClickedOn>().Clicked(gameObject);
 					destination = hit.collider.transform;
-					if(!destinationSet || prevDestination != destination)
+
+					if(!destinationSet || prevDestination != destination) //clicking on object mutliple times keeps one destination
 					{
 						SetDestination(hit.point);
 						destinationSet = true;

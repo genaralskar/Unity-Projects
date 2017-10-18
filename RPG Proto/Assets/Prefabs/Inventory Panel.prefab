@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inv: {fileID: 0}
-  invSlot: {fileID: 114690786463653946, guid: a8d6352e68a30644cab704aaa392ffdd, type: 2}
+  invSlot: {fileID: 114957421676600916, guid: a8d6352e68a30644cab704aaa392ffdd, type: 2}
   invSlots: []
 --- !u!114 &114834207548453060
 MonoBehaviour:

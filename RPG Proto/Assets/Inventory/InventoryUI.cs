@@ -29,19 +29,14 @@ public class InventoryUI : MonoBehaviour {
 			temp = Instantiate(invSlot);
 			temp.transform.SetParent(transform);
 			temp.GetComponent<InventorySlot>().item = inv.inventory[i];
+			temp.GetComponent<InventorySlot>().id = i;
+			temp.GetComponent<InventorySlot>().inventory = inv;
 			invSlots[i] = temp;
 		//	print(inv.inventory[i].TITLE);
 		}
 	//	UpdateInventory();
 	}
 
-	void FillSlots()
-	{
-		for(int i = 0; i <numberOfSlots; i++)
-		{
-
-		}
-	}
 
 	public void UpdateInventory()
 	{
@@ -49,7 +44,7 @@ public class InventoryUI : MonoBehaviour {
 		for(int i = 0; i < numberOfSlots; i++)
 		{
 			invSlots[i].GetComponent<InventorySlot>().item = inv.inventory[i];
-			invSlots[i].GetComponent<InventorySlot>().UpdateItem();
+		//	invSlots[i].GetComponent<InventorySlot>().UpdateItem();
 		}
 	}
 	

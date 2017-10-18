@@ -18,10 +18,19 @@ public class Gather : MonoBehaviour {
 
 	void OnClick(GameObject _player)
 	{
-		player = _player;
-		print("Player set!");
-		StopAllCoroutines();
-		StartCoroutine(DistanceCheck());
+		if(Vector3.Distance(_player.transform.position, this.transform.position) < maxDistance)
+		{
+			StartGather();
+		}
+		else if(_player.GetComponent<ClickToMove>().destination != this.transform)
+		{
+			player = _player;
+			print("Player set!");
+			print("start thing");
+			StopAllCoroutines();
+			StartCoroutine(DistanceCheck());
+		}
+		
 	}
 
 	IEnumerator DistanceCheck()
