@@ -10,6 +10,7 @@ public class OpenInventoryButton : MonoBehaviour {
 	public Inventory inv;
 	bool toggle = false;
 	Image invImage;
+	public Transform inventorySpot;
 
 	public void OpenCloseInventory()
 	{
@@ -19,13 +20,14 @@ public class OpenInventoryButton : MonoBehaviour {
 			InventoryUI invUI = invImage.GetComponent<InventoryUI>();
 			invUI.inv = inv;
 		//	invUI.invSlot = invSlot;
-			invImage.transform.SetParent(transform.parent, false);
-			invImage.transform.localPosition = Vector2.zero;
+			invImage.transform.SetParent(inventorySpot, false);
+			invImage.transform.localPosition = Vector3.zero;
 			toggle = true;
+			inv.UpdateInventoryAction += invImage.GetComponent<InventoryUI>().UpdateInventory;
 		}
 		else
 		{
-			inv.UpdateInventoryAction -= invImage.GetComponent<InventoryUI>().UpdateInventory;
+			inv.UpdateInventoryAction = null;
 			Destroy(invImage.gameObject);
 			toggle = false;
 		}

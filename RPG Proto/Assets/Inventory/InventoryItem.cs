@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class InventoryItem : MonoBehaviour, IDragHandler, IEndDragHandler {
+public class InventoryItem : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler {
 
 	public Item item;
 //	public Sprite image;
 	public Text amountText;
+	public Transform origParent;
 
 	void Start()
 	{
@@ -31,14 +32,24 @@ public class InventoryItem : MonoBehaviour, IDragHandler, IEndDragHandler {
 		}
 	}
 
+	
+
     public void OnDrag(PointerEventData eventData)
     {
         this.transform.position = eventData.position;
-		GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+		transform.SetParent(origParent);
+		transform.localPosition = Vector3.zero;
         GetComponent<CanvasGroup>().blocksRaycasts = true;
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        origParent = transform.parent;
+		transform.parent = transform.parent.parent;
+		GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
 }

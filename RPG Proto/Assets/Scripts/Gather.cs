@@ -9,7 +9,9 @@ public class Gather : MonoBehaviour {
 	GameObject player;
 	public float maxDistance = 2;
 	public string item;
+	public int amountPerGather = 1;
 	public int amount;
+	public int maxAmount = 20;
 
 	void Start()
 	{
@@ -53,6 +55,16 @@ public class Gather : MonoBehaviour {
 
 	void StartGather()
 	{
-		player.GetComponent<Inventory>().AddItem(item, amount);
+		player.GetComponent<Inventory>().AddItem(item, amountPerGather);
+	}
+
+	IEnumerator GainResources()
+	{
+		while(amount < maxAmount)
+		{
+			float randWait = Random.Range(1, 10);
+			yield return new WaitForSeconds(randWait);
+			amount++;
+		}
 	}
 }

@@ -13,7 +13,7 @@ public class InventoryUI : MonoBehaviour {
 
 	void Start()
 	{
-		inv.UpdateInventoryAction += UpdateInventory;
+	//	inv.UpdateInventoryAction += UpdateInventory;
 
 		numberOfSlots = inv.inventory.Length;
 		invSlots = new Image[inv.inventory.Length];
