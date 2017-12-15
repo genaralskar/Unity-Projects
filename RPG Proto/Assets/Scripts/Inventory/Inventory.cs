@@ -25,38 +25,7 @@ public class Inventory : MonoBehaviour {
 			UpdateInventoryAction();
 	}
 
-	// public void AddItem(Item _item, int _amount)
-	// {
-	// 	//instanciate the item stupid
-	// 	Item tempItem = new Item();
-	// 	tempItem.SetItem(_item);
-	// 	print(tempItem);
-	// //	tempItem = _item;
-	// //	tempItem = Instantiate(_item);
-	// 	if(_item.STACKABLE && FindItemByTitle(_item.TITLE) != null)
-	// 	{
-	// 	//	tempItem.amount = FindItem(_item).amount + _amount;
-	// 	//	print("stacking item");
-	// 		if(FindItemIndex(_item) != -1)
-	// 		{
-	// 			inventory[FindItemIndex(_item)].AMOUNT += _amount;
-	// 	//		print(_item.title + " stacked in inventory.");
-	// 	//		print(inventory[FindItemIndex(_item)].amount);
-	// 		}
-	// 	}
-	// 	else if(FindEmptySlot() != -1)
-	// 	{
-	// 		inventory[FindEmptySlot()] = tempItem;
-	// 	//	print(_item.title + " added to inventory.");
-	// 	//	print(FindItem(_item).amount);
-	// 	}
-	// 	else
-	// 	{
-	// 		print("Inventory full");
-	// 	}
-	// 	if(UpdateInventoryAction != null)
-	// 		UpdateInventoryAction();
-	// }
+
 
 	public void AddItem(string _item, int _amount)
 	{

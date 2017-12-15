@@ -9,6 +9,7 @@ public class InventoryUI : MonoBehaviour {
 	public Image invSlot;
 	int numberOfSlots;
 	public Image[] invSlots;
+	public OpenInventoryButton openButton;
 
 
 	void Start()

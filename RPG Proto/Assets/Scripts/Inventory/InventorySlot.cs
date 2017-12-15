@@ -15,7 +15,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler {
 
 	void Start()
 	{
-		print(item.TITLE);
+	//	print(item.TITLE);
 		invItem.item = item;
 
 		inventory.UpdateInventoryAction += invItem.UpdateAmount;

@@ -49,7 +49,7 @@ public class InventoryItem : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
     public void OnBeginDrag(PointerEventData eventData)
     {
         origParent = transform.parent;
-		transform.parent = transform.parent.parent;
+		transform.SetParent(transform.parent.parent);
 		GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
 }

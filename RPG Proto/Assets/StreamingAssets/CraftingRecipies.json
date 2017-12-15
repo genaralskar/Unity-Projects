@@ -1,0 +1,10 @@
+[
+    {
+        "title" : "Stone Sword",
+        "item1" : "wood",
+        "item2" : "stone",
+        "item1amount" : 2,
+        "item2amount" : 1,
+        "slug" : "r_stone_sword"
+    }
+]

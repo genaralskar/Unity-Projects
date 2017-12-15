@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CameraRotate : MonoBehaviour {
 
+
+	public Transform rotateAround;
+	public float trackSpeed;
 	public Vector3 rotation;
 	public float rotateSpeed;
 
@@ -13,7 +16,10 @@ public class CameraRotate : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
+		transform.position = Vector3.Lerp(transform.position, rotateAround.position, trackSpeed);
+	//	transform.position = rotateAround.position;
+
 		if(Input.GetAxis("Horizontal") != 0)
 		{
 			rotation.y -= Input.GetAxis("Horizontal") * rotateSpeed * Time.deltaTime;
