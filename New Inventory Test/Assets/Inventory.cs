@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Inventory : MonoBehaviour {
 
 	public Item[] inventory;
+	public UnityAction InventoryUpdate;
 
 
-	void Start()
+	void Awake()
 	{
 		for(int i = 0; i < inventory.Length; i++)
 		{
@@ -28,6 +30,7 @@ public class Inventory : MonoBehaviour {
 				if(item.stackable)
 				{
 					item.amount += _amount;
+					InventoryUpdate();
 					return;
 				}
 			}
@@ -42,6 +45,7 @@ public class Inventory : MonoBehaviour {
 				{
 					inventory[i].amount = _amount;
 				}
+				InventoryUpdate();
 				return;
 			}
 		}
