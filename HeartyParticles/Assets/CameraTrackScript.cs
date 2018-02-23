@@ -46,7 +46,7 @@ public class CameraTrackScript : MonoBehaviour {
 			tempRot.y -= rotationAmount * Time.deltaTime;
 		}
 
-		print(tempRot);
+//		print(tempRot);
 
 		transform.rotation = Quaternion.Euler(tempRot);
 		light.transform.rotation = Quaternion.Euler(tempRot) * lightRotOffset;
