@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Inventory))]
 public class KeepManager : MonoBehaviour {
 
-	public Item[] inventory;
+	public Inventory inventory;
 
 	//queue might work better than a list here
 	public List<GameObject> workers;
@@ -16,6 +17,7 @@ public class KeepManager : MonoBehaviour {
 
 	void Start()
 	{
+		inventory = GetComponent<Inventory>();
 		CheckForOpenBuildings();
 		StartCoroutine(WorkerCheck());
 	}
@@ -34,7 +36,7 @@ public class KeepManager : MonoBehaviour {
 				if(!tempManage.hasWorker && !openBuildings.Contains(tempManage))
 				{
 					openBuildings.Add(tempManage);
-					print("Added " + tempManage + " to openBuildings");
+				//	print("Added " + tempManage + " to openBuildings");
 				}
 			}
 		}
@@ -49,7 +51,7 @@ public class KeepManager : MonoBehaviour {
 			{
 				SendWorker(openBuildings[0]);
 			}
-			print("building check");
+		//	print("building check");
 			yield return new WaitForSeconds(1);
 		}
 	}
@@ -80,5 +82,13 @@ public class KeepManager : MonoBehaviour {
 	}
 
 	//manage inventory
+	public void AddItem(Item _item, int _amount)
+	{
+		inventory.AddItem(_item, _amount);
+	}
 
+	void LoseItem(Item _item, int _amount)
+	{
+
+	}
 }

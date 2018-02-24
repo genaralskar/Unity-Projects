@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7b6036f0ca64c4b916e3c42999c002, type: 3}
+  m_Name: Fast Hut
+  m_EditorClassIdentifier: 
+  name: fastHut
+  workers:
+  - {fileID: 1130265512651346, guid: ad4285392732fdf459519999695d63c8, type: 2}

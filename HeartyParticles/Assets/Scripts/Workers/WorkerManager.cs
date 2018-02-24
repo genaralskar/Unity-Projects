@@ -20,8 +20,10 @@ public class WorkerManager : MonoBehaviour {
 	void Start()
 	{
 		inventory = new Item[worker.inventorySize];
+	//	print(inventory.Length + " inventory length");
 		agent = GetComponent<NavMeshAgent>();
-		print(agent);
+		agent.speed = worker.speed;
+	//	print(agent);
 		FindKeep();
 	}
 
@@ -30,22 +32,22 @@ public class WorkerManager : MonoBehaviour {
 		GameObject tempKeep = GameObject.FindGameObjectWithTag("Keep");
 		home = tempKeep.GetComponent<KeepManager>().entrance;
 		SendHome();
-		print("find keep");
+	//	print("find keep");
 	}
 	
 	public void SetDestination()
 	{
-		print(destination);
-		print(agent);
+	//	print(destination);
+	//	print(agent);
 		agent.SetDestination(destination.position);
-		print("destination set");
+	//	print("destination set");
 	}
 
 	public void SendHome()
 	{
 		destination = home;
 		SetDestination();
-		print("go home!");
+	//	print("go home!");
 	}
 
 	public void AddItem(Item _item)
@@ -56,7 +58,7 @@ public class WorkerManager : MonoBehaviour {
 			if(item == null)
 			{
 				inventory[i] = _item;
-				print("Item " +_item + " added");
+			//	print("Item " +_item + " added");
 				return;
 			}
 			i++;

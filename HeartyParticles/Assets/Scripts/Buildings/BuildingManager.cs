@@ -29,10 +29,10 @@ public class BuildingManager : MonoBehaviour {
 	//start working
 	IEnumerator Work()
 	{
-		print("Process started");
-		yield return new WaitForSeconds(buildingType.creationTime);
+	//	print("Process started");
+		yield return new WaitForSeconds(buildingType.productionTime);
 		SendWorker();
-		print("Process finished");
+	//	print("Process finished");
 	}
 
 	//send worker with appropriate item(s)
@@ -41,11 +41,15 @@ public class BuildingManager : MonoBehaviour {
 		worker.gameObject.SetActive(true);
 
 		//add items to the worker
-		int i = 0;
-		foreach(Item item in buildingType.itemsToCreate)
+		// int i = 0;
+		// foreach(Item item in buildingType.itemsToCreate)
+		// {
+		// 	worker.AddItem(buildingType.itemsToCreate[i]);
+		// 	i++;
+		// }
+		foreach(Item item in worker.inventory)
 		{
-			worker.AddItem(buildingType.itemsToCreate[i]);
-			i++;
+			worker.AddItem(buildingType.itemsToCreate[0]);
 		}
 		
 		worker.SendHome();

@@ -8,11 +8,11 @@ public class BuildingEntranceManager : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		print("enterd");
+	//	print("enterd");
 		WorkerManager temp = other.GetComponent<WorkerManager>();
 		if(temp.destination == transform)
 		{
-			print("start work");
+		//	print("start work");
 			building.StartWork(temp);
 			
 		}

@@ -7,6 +7,9 @@ public class Housing : ScriptableObject {
 
 	public new string name;
 
+	public Item[] itemsNeeded;
+	public int[] numberOfItemsNeeded;
+
 	public GameObject[] workers;
 
 }

@@ -9,4 +9,8 @@ public class Worker : ScriptableObject {
 
 	public int inventorySize;
 
+	public float speed;
+
+	public float efficiency;
+
 }

@@ -12,7 +12,8 @@ public class HousingManager : MonoBehaviour {
 	{
 		foreach(GameObject obj in house.workers)
 		{
-			GameObject tempWorker = Instantiate(obj, exit.position, Quaternion.identity);
+			Instantiate(obj, exit.position, Quaternion.identity);
+		//	GameObject tempWorker = Instantiate(obj, exit.position, Quaternion.identity);
 		//	tempWorker.GetComponent<WorkerManager>().FindKeep();
 
 		}

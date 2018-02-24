@@ -8,8 +8,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 545fc8eeff87486459a38778ae89ef98, type: 3}
-  m_Name: Basic Worker
+  m_Script: {fileID: 11500000, guid: 681d9bd130f28764aa2d9e12cfdda3cd, type: 3}
+  m_Name: Stone
   m_EditorClassIdentifier: 
-  name: basicWorker
-  inventorySize: 10
+  name: stone
+  art: {fileID: 0}
+  value: 0
