@@ -1,0 +1,188 @@
+fileFormatVersion: 2
+guid: 530f4dc60fb34744281fa52c92d8dd59
+timeCreated: 1519505034
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: ambientLight1
+    100002: Castle_Wall_UV
+    100004: Castle_Wall_UV1
+    100006: Castle_Wall_UV2
+    100008: Castle_Wall_UV3
+    100010: Corner_Tower_UV
+    100012: Corner_Tower_UV1
+    100014: Corner_Tower_UV2
+    100016: Corner_Tower_UV3
+    100018: Corner_Tower_UV4
+    100020: Corner_Tower_UV5
+    100022: Corner_Tower_UV6
+    100024: Corner_Tower_UV7
+    100026: directionalLight1
+    100028: //RootNode
+    100030: group1
+    100032: Keep_Corner_Tower
+    100034: Keep_Corner_Tower1
+    100036: Keep_Corner_Tower2
+    100038: Keep_Corner_Tower3
+    100040: Keep_UV1
+    100042: Person_Scale
+    100044: Person_Scale1
+    400000: ambientLight1
+    400002: Castle_Wall_UV
+    400004: Castle_Wall_UV1
+    400006: Castle_Wall_UV2
+    400008: Castle_Wall_UV3
+    400010: Corner_Tower_UV
+    400012: Corner_Tower_UV1
+    400014: Corner_Tower_UV2
+    400016: Corner_Tower_UV3
+    400018: Corner_Tower_UV4
+    400020: Corner_Tower_UV5
+    400022: Corner_Tower_UV6
+    400024: Corner_Tower_UV7
+    400026: directionalLight1
+    400028: //RootNode
+    400030: group1
+    400032: Keep_Corner_Tower
+    400034: Keep_Corner_Tower1
+    400036: Keep_Corner_Tower2
+    400038: Keep_Corner_Tower3
+    400040: Keep_UV1
+    400042: Person_Scale
+    400044: Person_Scale1
+    2300000: Castle_Wall_UV
+    2300002: Castle_Wall_UV1
+    2300004: Castle_Wall_UV2
+    2300006: Castle_Wall_UV3
+    2300008: Corner_Tower_UV
+    2300010: Corner_Tower_UV1
+    2300012: Corner_Tower_UV2
+    2300014: Corner_Tower_UV3
+    2300016: Corner_Tower_UV4
+    2300018: Corner_Tower_UV5
+    2300020: Corner_Tower_UV6
+    2300022: Corner_Tower_UV7
+    2300024: Keep_Corner_Tower
+    2300026: Keep_Corner_Tower1
+    2300028: Keep_Corner_Tower2
+    2300030: Keep_Corner_Tower3
+    2300032: Keep_UV1
+    2300034: Person_Scale
+    2300036: Person_Scale1
+    3300000: Castle_Wall_UV
+    3300002: Castle_Wall_UV1
+    3300004: Castle_Wall_UV2
+    3300006: Castle_Wall_UV3
+    3300008: Corner_Tower_UV
+    3300010: Corner_Tower_UV1
+    3300012: Corner_Tower_UV2
+    3300014: Corner_Tower_UV3
+    3300016: Corner_Tower_UV4
+    3300018: Corner_Tower_UV5
+    3300020: Corner_Tower_UV6
+    3300022: Corner_Tower_UV7
+    3300024: Keep_Corner_Tower
+    3300026: Keep_Corner_Tower1
+    3300028: Keep_Corner_Tower2
+    3300030: Keep_Corner_Tower3
+    3300032: Keep_UV1
+    3300034: Person_Scale
+    3300036: Person_Scale1
+    4300000: Person_Scale1
+    4300002: Castle_Wall_UV
+    4300004: Corner_Tower_UV
+    4300006: Keep_Corner_Tower2
+    4300008: Castle_Wall_UV3
+    4300010: Keep_UV1
+    4300012: Corner_Tower_UV4
+    4300014: Corner_Tower_UV1
+    4300016: Keep_Corner_Tower3
+    4300018: Keep_Corner_Tower1
+    4300020: Keep_Corner_Tower
+    4300022: Corner_Tower_UV7
+    4300024: Corner_Tower_UV5
+    4300026: Corner_Tower_UV6
+    4300028: Castle_Wall_UV2
+    4300030: Castle_Wall_UV1
+    4300032: Corner_Tower_UV3
+    4300034: Corner_Tower_UV2
+    4300036: Person_Scale
+    9500000: //RootNode
+    10800000: ambientLight1
+    10800002: directionalLight1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
