@@ -6,6 +6,7 @@ public class HitBoxTest : MonoBehaviour {
 
 	public Transform startPoint;
 	public Transform endPoint;
+	public float speed = 2.5f;
 
 	void Start()
 	{
@@ -17,7 +18,7 @@ public class HitBoxTest : MonoBehaviour {
 		while(true)
 		{
 			transform.position = startPoint.position;
-			yield return new WaitForSeconds(5);
+			yield return new WaitForSeconds(speed);
 			transform.position = endPoint.position;
 			yield return new WaitForFixedUpdate();
 		}
