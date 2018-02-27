@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1433af73a1f6c40848937746f50c2c, type: 3}
+  m_Name: Mine
+  m_EditorClassIdentifier: 
+  name: 
+  itemsNeeded:
+  - {fileID: 11400000, guid: f530d5c4f506a934598b02162bf501a2, type: 2}
+  numberOfItemsNeeed: 0a000000
+  itemsToCreate:
+  - {fileID: 11400000, guid: 1571df1ddb3099d4eba25be015861dcf, type: 2}
+  productionTime: 7
+  inventorySize: 5

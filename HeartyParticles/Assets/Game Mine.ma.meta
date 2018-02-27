@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 74e5842c724f83a4680dd1f6992e7722
 timeCreated: 1519334966
 licenseType: Pro
@@ -33,6 +34,14 @@ ModelImporter:
     4300006: Mine_Entrance1
     4300008: Mine_Entrance2
     9500000: //RootNode
+=======
+guid: 60ebc291bd7282b458ed31c1067844db
+timeCreated: 1519508063
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName: {}
+>>>>>>> master
   materials:
     importMaterials: 1
     materialName: 0
