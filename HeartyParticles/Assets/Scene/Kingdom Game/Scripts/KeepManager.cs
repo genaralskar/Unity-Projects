@@ -7,9 +7,12 @@ public class KeepManager : MonoBehaviour {
 
 	public Inventory inventory;
 
+	public float deportSpeed = .5f;
+
 	//queue might work better than a list here
 	public List<GameObject> workers;
 	public List<BuildingManager> openBuildings;
+
 
 
 	public Transform entrance;
@@ -19,7 +22,8 @@ public class KeepManager : MonoBehaviour {
 	{
 		inventory = GetComponent<Inventory>();
 		CheckForOpenBuildings();
-		StartCoroutine(WorkerCheck());
+		StartCoroutine(EmptyBuildingCheck());
+		StartCoroutine(SendWorkerCheck());
 	}
 
 	//check for open buildings
@@ -42,17 +46,26 @@ public class KeepManager : MonoBehaviour {
 		}
 	}
 
-	IEnumerator WorkerCheck()
+	IEnumerator EmptyBuildingCheck()
 	{
 		while(true)
 		{
 			CheckForOpenBuildings();
+			
+		//	print("building check");
+			yield return new WaitForSeconds(1);
+		}
+	}
+
+	IEnumerator SendWorkerCheck()
+	{
+		while(true)
+		{
 			if(workers.Count > 0 && openBuildings.Count > 0)
 			{
 				SendWorker(openBuildings[0]);
 			}
-		//	print("building check");
-			yield return new WaitForSeconds(1);
+			yield return new WaitForSeconds(deportSpeed);
 		}
 	}
 

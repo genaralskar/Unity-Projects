@@ -55,7 +55,7 @@ public class BuildingBlueprint : MonoBehaviour {
 		colliderCount++;
 		print("colliding");
 	}
-	
+
 	void OnTriggerExit(Collider other)
 	{
 		colliderCount--;
@@ -99,6 +99,7 @@ public class BuildingBlueprint : MonoBehaviour {
 		//subract req items from inventory
 		Instantiate(building, transform.position, transform.rotation);
 		TakeItems();
+		colliderCount = 0;
 		gameObject.SetActive(false);
 	}
 
@@ -181,6 +182,7 @@ public class BuildingBlueprint : MonoBehaviour {
 
 	void ClearBlueprintHandler()
 	{
+		colliderCount = 0;
 		gameObject.SetActive(false);
 	}
 

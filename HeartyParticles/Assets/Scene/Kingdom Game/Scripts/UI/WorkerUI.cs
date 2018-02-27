@@ -10,10 +10,15 @@ public class WorkerUI : MonoBehaviour {
 
 	public Text workerText;
 
-	void Start()
+	void Awake()
 	{
 		workerText = GetComponent<Text>();
 		UpdateWorkers += UpdateWorkersHandler;
+	}
+
+	void Start()
+	{
+		
 	}
 
 	void UpdateWorkersHandler()
