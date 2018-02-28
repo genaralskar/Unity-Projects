@@ -14,9 +14,16 @@ public class BuildingManager : MonoBehaviour {
 
 	public Item[] inventory;
 
+
+	public BuildingSO buildingT;
+
+
+
+
 	// Use this for initialization
 	void Start () {
 		inventory = new Item[buildingType.inventorySize];
+		buildingT.DoWork();
 	}
 	
 	public void StartWork(WorkerManager _worker)

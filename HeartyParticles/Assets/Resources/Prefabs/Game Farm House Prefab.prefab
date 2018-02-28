@@ -4570,6 +4570,7 @@ MonoBehaviour:
   hasWorker: 0
   worker: {fileID: 0}
   inventory: []
+  buildingT: {fileID: 11400000, guid: c0dacf3c99c858e4786cc55232c4edb1, type: 2}
 --- !u!208 &208849306276294402
 NavMeshObstacle:
   m_ObjectHideFlags: 1

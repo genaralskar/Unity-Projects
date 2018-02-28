@@ -8,11 +8,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed68eae4e822b2a42b93d3d9887146cf, type: 3}
-  m_Name: ProdTest
+  m_Script: {fileID: 11500000, guid: bbe76337e9006e0439b075dab209cdb6, type: 3}
+  m_Name: TestFarm
   m_EditorClassIdentifier: 
-  name: 
-  reqItems: []
-  availableActions:
-  - {fileID: 11400000, guid: f3981830347704342953325e4358ef67, type: 2}
-  productionitem: []
+  buildingType: {fileID: 0}
+  name: Farm
+  itemsNeeded: []
+  numberOfItemsNeeed: 

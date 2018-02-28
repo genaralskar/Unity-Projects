@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [System.Serializable]
-public class ActionSO : ScriptableObject {
+public abstract class ActionSO : ScriptableObject {
 
 	public new string name;
+	public string description;
+	public Sprite artwork;
 
-	public UnityAction DoAction;
+	public abstract void DoAction(GameObject _obj);
 
 }
