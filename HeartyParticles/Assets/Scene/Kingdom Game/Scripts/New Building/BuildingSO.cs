@@ -6,8 +6,9 @@ using UnityEngine.Events;
 [CreateAssetMenu]
 public abstract class BuildingSO : ScriptableObject {
 
-	public BuildingSO buildingType;
+//	public BuildingSO buildingType;
 	public new string name;
+	public InventorySlot[] needed;
 	public Item[] itemsNeeded;
 	public int[] numberOfItemsNeeed;
 

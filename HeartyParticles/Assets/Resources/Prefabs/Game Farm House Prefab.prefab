@@ -734,6 +734,7 @@ GameObject:
   - component: {fileID: 114316970685228328}
   - component: {fileID: 65826406744884764}
   - component: {fileID: 95323402953703054}
+  - component: {fileID: 114224615639138710}
   m_Layer: 11
   m_Name: Game Farm House Prefab
   m_TagString: Building
@@ -5231,6 +5232,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   building: {fileID: 114375899300770626}
+--- !u!114 &114224615639138710
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1626494526160900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e839e4c12473014b9b3d3faccc0f61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 0}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114375899300770626}
+        m_MethodName: printTest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114316970685228328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5242,7 +5271,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1d3ff66596666e459e524e43be31b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
+  actions:
+  - {fileID: 11400000, guid: f3981830347704342953325e4358ef67, type: 2}
+  - {fileID: 0}
 --- !u!114 &114375899300770626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5260,6 +5291,8 @@ MonoBehaviour:
   hasWorker: 0
   worker: {fileID: 0}
   inventory: []
+  anims: {fileID: 0}
+  Event: {fileID: 0}
   buildingT: {fileID: 11400000, guid: c0dacf3c99c858e4786cc55232c4edb1, type: 2}
 --- !u!208 &208849306276294402
 NavMeshObstacle:

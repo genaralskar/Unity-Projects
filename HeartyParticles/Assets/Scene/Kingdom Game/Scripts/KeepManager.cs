@@ -81,7 +81,8 @@ public class KeepManager : MonoBehaviour {
 			newWorkManager.destination = _destination.entrance;
 			newWorkManager.SetDestination();
 			newWorkManager.home = entrance;
-			_destination.hasWorker = true;
+	//		_destination.hasWorker = true;
+			_destination.HasWorker();
 			openBuildings.RemoveAt(0);
 			workers.RemoveAt(0);
 			WorkerCounter.SubtractInactiveWorker();
