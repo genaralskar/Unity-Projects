@@ -11,6 +11,7 @@ public class BuildingInteract : MonoBehaviour {
 		foreach(ActionSO act in actions)
 		{
 			//instantiate a panel, with appropriate image
+			print("Spawn panel" + act);
 		}
 	}
 

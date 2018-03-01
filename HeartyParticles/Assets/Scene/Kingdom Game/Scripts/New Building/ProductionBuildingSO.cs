@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [CreateAssetMenu]
 public class ProductionBuildingSO : BuildingSO {
@@ -14,8 +15,9 @@ public class ProductionBuildingSO : BuildingSO {
 		Debug.Log("assigned");
 	}
 
-	override public void DoWork()
+	override public void DoWork(UnityAction _animAction)
 	{
+		_animAction();
 		Debug.Log("Working!");
 	}
 

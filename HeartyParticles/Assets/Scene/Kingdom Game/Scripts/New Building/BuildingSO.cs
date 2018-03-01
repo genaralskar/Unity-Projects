@@ -11,6 +11,7 @@ public abstract class BuildingSO : ScriptableObject {
 	public Item[] itemsNeeded;
 	public int[] numberOfItemsNeeed;
 
-	public abstract void DoWork();
+	public abstract void DoWork(UnityAction _animAction);
+//	public abstract void DoWork();
 
 }

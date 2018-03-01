@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BuildingManager : MonoBehaviour {
 
@@ -14,8 +15,10 @@ public class BuildingManager : MonoBehaviour {
 
 	public Item[] inventory;
 
+	//=============================================\\
 
 	public BuildingSO buildingT;
+	public UnityAction startAnimAction;
 
 
 
@@ -23,14 +26,20 @@ public class BuildingManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		inventory = new Item[buildingType.inventorySize];
-		buildingT.DoWork();
+		startAnimAction += printTest;
 	}
 	
 	public void StartWork(WorkerManager _worker)
 	{
 		worker = _worker;
 		_worker.gameObject.SetActive(false);
+		buildingT.DoWork(startAnimAction);
 		StartCoroutine(Work());
+	}
+
+	void printTest()
+	{
+		print("Work started for " + gameObject);
 	}
 
 	//start working
@@ -63,4 +72,20 @@ public class BuildingManager : MonoBehaviour {
 		worker = null;
 		hasWorker = false;
 	}
+
+	void Move()
+	{
+
+	}
+
+	void Destroy()
+	{
+
+	}
+
+	void Upgrade()
+	{
+
+	}
+
 }

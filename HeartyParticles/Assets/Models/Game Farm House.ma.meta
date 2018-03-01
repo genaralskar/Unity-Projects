@@ -71,6 +71,16 @@ ModelImporter:
     100126: Stone_Corner_UV8
     100128: Stone_Corner_UV9
     100130: Stone_Corners
+    100132: Wheat
+    100134: Wheat10
+    100136: Wheat11
+    100138: Wheat12
+    100140: Wheat13
+    100142: Wheat14
+    100144: Wheat15
+    100146: Wheat16
+    100148: Wheat17
+    100150: Wheat9
     400000: Dirt_Mound
     400002: Dirt_Mound1
     400004: Dirt_Mound2
@@ -137,6 +147,16 @@ ModelImporter:
     400126: Stone_Corner_UV8
     400128: Stone_Corner_UV9
     400130: Stone_Corners
+    400132: Wheat
+    400134: Wheat10
+    400136: Wheat11
+    400138: Wheat12
+    400140: Wheat13
+    400142: Wheat14
+    400144: Wheat15
+    400146: Wheat16
+    400148: Wheat17
+    400150: Wheat9
     2300000: Dirt_Mound
     2300002: Dirt_Mound1
     2300004: Dirt_Mound2
@@ -198,6 +218,15 @@ ModelImporter:
     2300116: Stone_Corner_UV7
     2300118: Stone_Corner_UV8
     2300120: Stone_Corner_UV9
+    2300122: Wheat10
+    2300124: Wheat11
+    2300126: Wheat12
+    2300128: Wheat13
+    2300130: Wheat14
+    2300132: Wheat15
+    2300134: Wheat16
+    2300136: Wheat17
+    2300138: Wheat9
     3300000: Dirt_Mound
     3300002: Dirt_Mound1
     3300004: Dirt_Mound2
@@ -259,6 +288,15 @@ ModelImporter:
     3300116: Stone_Corner_UV7
     3300118: Stone_Corner_UV8
     3300120: Stone_Corner_UV9
+    3300122: Wheat10
+    3300124: Wheat11
+    3300126: Wheat12
+    3300128: Wheat13
+    3300130: Wheat14
+    3300132: Wheat15
+    3300134: Wheat16
+    3300136: Wheat17
+    3300138: Wheat9
     4300000: Person_Scale
     4300002: Dirt_Mound
     4300004: Dirt_Mound1
@@ -320,6 +358,17 @@ ModelImporter:
     4300116: Roof_Crossbar3
     4300118: Roof_Post_Front_Small2
     4300120: Roof_Post_Back_Small2
+    4300122: Wheat9
+    4300124: Wheat10
+    4300126: Wheat11
+    4300128: Wheat12
+    4300130: Wheat13
+    4300132: Wheat14
+    4300134: Wheat15
+    4300136: Wheat16
+    4300138: Wheat17
+    7400000: Wheat Production
+    7400002: Farm Idle
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -327,7 +376,7 @@ ModelImporter:
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
-    bakeSimulation: 0
+    bakeSimulation: 1
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
@@ -344,7 +393,63 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Wheat Production
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 113
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Farm Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

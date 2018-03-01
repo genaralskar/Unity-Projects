@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class BuildingManager2 : MonoBehaviour {
 
-	public List<Building2> building;
+	void Move()
+	{
+
+	}
+
+	void Destroy()
+	{
+
+	}
+
+	void Upgrade()
+	{
+		
+	}
 
 }
