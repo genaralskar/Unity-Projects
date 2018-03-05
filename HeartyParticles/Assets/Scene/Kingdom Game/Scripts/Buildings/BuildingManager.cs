@@ -28,17 +28,18 @@ public class BuildingManager : MonoBehaviour {
 	void Awake()
 	{
 		Event = ScriptableObject.CreateInstance(typeof(GameEvent)) as GameEvent;
-		GetComponent<GameEventListener>().Event = Event;
+	//	GetComponent<GameEventListener>().Event = Event;
 		GetComponent<GameEventListener>().enabled = true;
+		anims = GetComponent<Animator>();
+	//	anims.GetBehaviour<OnAnimExit>().Event = Event;
 	}
 	
 	// Use this for initialization
 	void Start () {
 		inventory = new Item[buildingType.inventorySize];
 		startAnimAction += printTest;
-		anims = GetComponent<Animator>();
-		anims.GetBehaviour<OnAnimExit>().Event = Event;
-		print(Event);
+		
+	//	print(Event);
 	}
 
 	public void HasWorker()
@@ -51,7 +52,7 @@ public class BuildingManager : MonoBehaviour {
 	{
 		worker = _worker;
 		_worker.gameObject.SetActive(false);
-		buildingT.DoWork(startAnimAction);
+	//	buildingT.DoWork(startAnimAction);
 		anims.SetTrigger("Work");
 		StartCoroutine(Work());
 	}
@@ -90,6 +91,7 @@ public class BuildingManager : MonoBehaviour {
 		worker.SendHome();
 		worker = null;
 		hasWorker = false;
+		anims.SetBool("HasWorker", false);
 	}
 
 	void Move()

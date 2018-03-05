@@ -9,6 +9,8 @@ public class Inventory : MonoBehaviour {
 
 	public List<int> itemsAmounts; //amounts of certain items
 
+	public List<InventorySlot> inv;
+
 	public UnityAction UpdateInventory;
 	
 	void Awake()
@@ -39,6 +41,15 @@ public class Inventory : MonoBehaviour {
 			}
 		}
 		itemsAmounts[i] += _amount;
+
+		for(int j = 0; j < inv.Count; j++)
+		{
+			if(inv[j].item == _item)
+			{
+				inv[j].amount += _amount;
+			}
+		}
+
 		
 		if(UpdateInventory != null)
 		{

@@ -1,0 +1,162 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: FarmMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Entire_thing
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm/Dirt_Mound
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm/Dirt_Mound1
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm/Dirt_Mound2
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm/Dirt_Mound3
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm/Dirt_Mound4
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm/Dirt_Mound5
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm/Dirt_Mound6
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm/Dirt_Mound7
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm/Dirt_Mound8
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm/Fence_Post
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm/Fence_Post1
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm/Fence_Post2
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm/Fence_Post3
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm/Fence_Post4
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm/Fence_Post7
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm/Fence_Post8
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Farm_House 1
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Roof
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Roof_Crossbar
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Roof_Crossbar1
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Roof_Crossbar2
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Roof_Crossbar3
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Roof_Post_Back_Small
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Roof_Post_Back_Small1
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Roof_Post_Back_Small2
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Roof_Post_Front_Small
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Roof_Post_Front_Small1
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Roof_Post_Front_Small2
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Roof_Post_Top
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Roof_Support_Pillar
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV1
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV2
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV3
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV4
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV5
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV6
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV7
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV8
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV9
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV10
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV11
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV12
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV13
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV14
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV15
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV16
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV17
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV18
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV19
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV20
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV21
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV22
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV23
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV24
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV25
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV26
+    m_Weight: 0
+  - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV27
+    m_Weight: 0
+  - m_Path: Person_Scale
+    m_Weight: 0
+  - m_Path: Wheat
+    m_Weight: 0
+  - m_Path: Wheat/Wheat9
+    m_Weight: 0
+  - m_Path: Wheat/Wheat10
+    m_Weight: 0
+  - m_Path: Wheat/Wheat11
+    m_Weight: 0
+  - m_Path: Wheat/Wheat12
+    m_Weight: 0
+  - m_Path: Wheat/Wheat13
+    m_Weight: 0
+  - m_Path: Wheat/Wheat14
+    m_Weight: 0
+  - m_Path: Wheat/Wheat15
+    m_Weight: 0
+  - m_Path: Wheat/Wheat16
+    m_Weight: 0
+  - m_Path: Wheat/Wheat17
+    m_Weight: 0
+  - m_Path: Worker_Flag
+    m_Weight: 1
+  - m_Path: Worker_Flag_Pole
+    m_Weight: 0

@@ -6,7 +6,7 @@ using RoboRyanTron.Unite2017.Events;
 
 public class OnAnimExit : StateMachineBehaviour {
 
-	public UnityAction StateExit;
+	public string ID;
 	public GameEvent Event;
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state

@@ -81,6 +81,8 @@ ModelImporter:
     100146: Wheat16
     100148: Wheat17
     100150: Wheat9
+    100152: Worker_Flag
+    100154: Worker_Flag_Pole
     400000: Dirt_Mound
     400002: Dirt_Mound1
     400004: Dirt_Mound2
@@ -157,6 +159,8 @@ ModelImporter:
     400146: Wheat16
     400148: Wheat17
     400150: Wheat9
+    400152: Worker_Flag
+    400154: Worker_Flag_Pole
     2300000: Dirt_Mound
     2300002: Dirt_Mound1
     2300004: Dirt_Mound2
@@ -227,6 +231,8 @@ ModelImporter:
     2300134: Wheat16
     2300136: Wheat17
     2300138: Wheat9
+    2300140: Worker_Flag
+    2300142: Worker_Flag_Pole
     3300000: Dirt_Mound
     3300002: Dirt_Mound1
     3300004: Dirt_Mound2
@@ -297,6 +303,8 @@ ModelImporter:
     3300134: Wheat16
     3300136: Wheat17
     3300138: Wheat9
+    3300140: Worker_Flag
+    3300142: Worker_Flag_Pole
     4300000: Person_Scale
     4300002: Dirt_Mound
     4300004: Dirt_Mound1
@@ -367,8 +375,12 @@ ModelImporter:
     4300134: Wheat15
     4300136: Wheat16
     4300138: Wheat17
+    4300140: Worker_Flag
+    4300142: Worker_Flag_Pole
     7400000: Wheat Production
     7400002: Farm Idle
+    7400004: Flag Up
+    7400006: Flag Down
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -450,6 +462,62 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Flag Up
+      takeName: Take 001
+      firstFrame: 114
+      lastFrame: 115
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Flag Down
+      takeName: Take 001
+      firstFrame: 116
+      lastFrame: 117
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []
