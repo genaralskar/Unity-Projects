@@ -44,6 +44,13 @@ public class WorkerManager : MonoBehaviour {
 	//	print("destination set");
 	}
 
+	[ContextMenu ("Fix Destination")]
+	public void FixDestination()
+	{
+		agent.SetDestination(transform.position);
+		agent.SetDestination(destination.position);
+	}
+
 	public void SendHome()
 	{
 		destination = home;

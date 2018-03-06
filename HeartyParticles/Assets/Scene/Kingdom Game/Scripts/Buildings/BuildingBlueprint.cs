@@ -100,7 +100,7 @@ public class BuildingBlueprint : MonoBehaviour {
 		Instantiate(building, transform.position, transform.rotation);
 		TakeItems();
 		colliderCount = 0;
-		gameObject.SetActive(false);
+	//	gameObject.SetActive(false);
 	}
 
 	//for each req item, search through inventory to see if the item is in the inventory
