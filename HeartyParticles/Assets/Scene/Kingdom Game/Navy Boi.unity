@@ -2088,17 +2088,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114316970685228328, guid: 12d0aab85ed499a42aa63f5d8881bc43,
         type: 2}
-      propertyPath: buildingPanel
-      value: 
-      objectReference: {fileID: 114700118395137750, guid: ad23a748b2fe48c4b999481b0858ba11,
-        type: 2}
-    - target: {fileID: 114316970685228328, guid: 12d0aab85ed499a42aa63f5d8881bc43,
-        type: 2}
       propertyPath: interactUI
       value: 
       objectReference: {fileID: 438182274}
-    m_RemovedComponents:
-    - {fileID: 114170185787347236, guid: 12d0aab85ed499a42aa63f5d8881bc43, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12d0aab85ed499a42aa63f5d8881bc43, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &837639311 stripped
