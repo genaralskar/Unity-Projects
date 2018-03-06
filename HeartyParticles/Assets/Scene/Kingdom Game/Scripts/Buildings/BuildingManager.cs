@@ -27,9 +27,9 @@ public class BuildingManager : MonoBehaviour {
 
 	void Awake()
 	{
-		Event = ScriptableObject.CreateInstance(typeof(GameEvent)) as GameEvent;
+	//	Event = ScriptableObject.CreateInstance(typeof(GameEvent)) as GameEvent;
 	//	GetComponent<GameEventListener>().Event = Event;
-		GetComponent<GameEventListener>().enabled = true;
+	//	GetComponent<GameEventListener>().enabled = true;
 		anims = GetComponent<Animator>();
 	//	anims.GetBehaviour<OnAnimExit>().Event = Event;
 	}
@@ -54,7 +54,7 @@ public class BuildingManager : MonoBehaviour {
 		_worker.gameObject.SetActive(false);
 	//	buildingT.DoWork(startAnimAction);
 		anims.SetTrigger("Work");
-		StartCoroutine(Work());
+	//	StartCoroutine(Work());
 	}
 
 	public void printTest()
@@ -72,7 +72,7 @@ public class BuildingManager : MonoBehaviour {
 	}
 
 	//send worker with appropriate item(s)
-	void SendWorker()
+	public void SendWorker()
 	{
 		worker.gameObject.SetActive(true);
 
@@ -94,8 +94,9 @@ public class BuildingManager : MonoBehaviour {
 		anims.SetBool("HasWorker", false);
 	}
 
-	void Move()
+	public void Move()
 	{
+		print("Gotta move that gear up!");
 		//store position/rotation data
 		//delete? this gameobject
 		//go to the blueprint thing
