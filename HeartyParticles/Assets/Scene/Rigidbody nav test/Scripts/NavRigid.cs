@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(Rigidbody), typeof(NavMeshAgent))]
+[RequireComponent(typeof(Rigidbody), typeof(NavMeshAgent), typeof(LastFrameVelocity))]
 public class NavRigid : MonoBehaviour {
 
 	Rigidbody rb;
@@ -25,7 +25,7 @@ public class NavRigid : MonoBehaviour {
 	void Start()
 	{
 
-		print(Vector3.Dot(new Vector3(12, 15, 15), new Vector3(12, 15, -15)));
+	//	print(Vector3.Dot(new Vector3(12, 15, 15), new Vector3(12, 15, -15)));
 
 		rb = GetComponent<Rigidbody>();
 		agent = GetComponent<NavMeshAgent>();
@@ -43,8 +43,8 @@ public class NavRigid : MonoBehaviour {
 		rb.isKinematic = false;
 	//	rb.AddForce(_force);
 		rb.velocity += _force / pushbackMod;
-		print(_force);
-		print("Pushed! " + rb.velocity);
+	//	print(_force);
+	//	print("Pushed! " + rb.velocity);
 		isGrounded = false;
 		StopAllCoroutines();
 		StartCoroutine(CheckGrounding());
@@ -53,7 +53,7 @@ public class NavRigid : MonoBehaviour {
 	void OnCollisionEnter(Collision other)	//when something bumps into this object
 	{
 	//	print(other.relativeVelocity);
-		NavRigid collNR = other.gameObject.GetComponent<NavRigid>();
+		LastFrameVelocity collNR = other.gameObject.GetComponent<LastFrameVelocity>();
 		if(collNR != null && rb.isKinematic == true) //if this rigidbody is kinimatic/has the agent enabled
 		{
 			//if relative magnitude is big enough
@@ -81,13 +81,13 @@ public class NavRigid : MonoBehaviour {
 		Rigidbody collRB = other.rigidbody;
 		if(collRB != null && rb.isKinematic == true)
 		{
-			print("First check done");
+		//	print("First check done");
 
 			float collMag = collRB.velocity.magnitude;
-			print("Relative mag: " + other.relativeVelocity.magnitude);
-			print(gameObject + " This mag: " + rb.velocity.magnitude);
-			print(other.gameObject +  "Collider mag: " + collMag);
-			print(other.gameObject + " Collider velocity: "+ collRB.velocity);
+		//	print("Relative mag: " + other.relativeVelocity.magnitude);
+		//	print(gameObject + " This mag: " + rb.velocity.magnitude);
+		//	print(other.gameObject +  "Collider mag: " + collMag);
+		//	print(other.gameObject + " Collider velocity: "+ collRB.velocity);
 
 			
 			// if(Vector3.Dot(rb.velocity, collRB.velocity) < 0 && collMag > rb.velocity.magnitude + pushMag)
@@ -99,10 +99,10 @@ public class NavRigid : MonoBehaviour {
 
 			if(other.relativeVelocity.magnitude > pushMag && collMag > rb.velocity.magnitude)
 			{
-				print("Pushing!");
-				print(other.gameObject + " Collider velocity: "+ collRB.velocity);
+			//	print("Pushing!");
+			//	print(other.gameObject + " Collider velocity: "+ collRB.velocity);
 				Push(collRB.velocity);
-				print(gameObject + " This velocity: "+ rb.velocity);
+			//	print(gameObject + " This velocity: "+ rb.velocity);
 			//	rb.velocity = collRB.velocity;
 			}
 
@@ -149,7 +149,7 @@ public class NavRigid : MonoBehaviour {
 			}
 		//	print("checking if grounded");
 		}
-		print("Slide check done!");
+	//	print("Slide check done!");
 		rb.isKinematic = true;
 		agent.enabled = true;
 		agent.SetDestination(destination.position);
