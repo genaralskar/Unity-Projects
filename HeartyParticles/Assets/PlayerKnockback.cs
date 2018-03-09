@@ -23,6 +23,7 @@ public class PlayerKnockback : MonoBehaviour {
 	public void Push(Vector3 _force)
 	{
 		print("knocking back player");
+		rb.velocity = _force;
 		anims.SetTrigger("Knockback");
 	//	rb.AddForce(_force);
 	//	rb.velocity += _force / pushbackMod; //send this to the animator......

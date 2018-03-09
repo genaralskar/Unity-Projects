@@ -86,6 +86,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0695ada4996f58a499078531d9cece8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114138227784073936
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5865cab0a23c0754fb5b7e0a6473f6a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallMultiplier: 20
+  fallStartThreshold: 5
 --- !u!114 &114184860810074920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb4943bd032e444408db813bd560b226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setTo: 0
+  setTo: 1
 --- !u!114 &114310200231368988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,7 +197,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67bcccac7a2603c4ea3d8df7b1c160fe, type: 3}
   m_Name: 
@@ -212,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41878f5f54b2c5408dbde29e7580f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setTo: 1
+  setTo: 0
 --- !u!114 &114681618320490822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -252,7 +265,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67bcccac7a2603c4ea3d8df7b1c160fe, type: 3}
   m_Name: 
@@ -299,7 +312,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 137e6c1e4f6e99f499f8dad6db80590a, type: 3}
   m_Name: 
@@ -518,6 +531,7 @@ AnimatorState:
   - {fileID: 114562615823319478}
   - {fileID: 114681618320490822}
   - {fileID: 114086970193350280}
+  - {fileID: 114138227784073936}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

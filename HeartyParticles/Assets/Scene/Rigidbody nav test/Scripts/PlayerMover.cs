@@ -12,6 +12,9 @@ public class PlayerMover : MonoBehaviour {
 
 	public float slopeAngle = 45;
 	public float moveSpeed = 10;
+	public float accelRate = 2;
+	public float decelRate = 1;
+	public float slideFactor = 1;
 	public Vector3 moveVector;
 	public Vector3 moveAdditional;
 
@@ -31,7 +34,7 @@ public class PlayerMover : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		rbVelocity = rb.velocity;
 		Inputs();
 	//	print(cc.isGrounded);
@@ -61,16 +64,42 @@ public class PlayerMover : MonoBehaviour {
 		// 		transform.position = new Vector3(transform.position.x, hit.point.y + cc.height/2, transform.position.z);
 		// 	}
 		// }
-		cc.Move(moveVector + moveAdditional * Time.deltaTime);
+		RBGroundMove();
+	//	cc.Move(moveVector + moveAdditional * Time.deltaTime);
 		ccVelocity = cc.velocity;
 	//	print(cc.isGrounded);
 	//	rb.velocity = cc.velocity;
 	}
 
-	public void RBMove()
+	public void RBGroundMove()
 	{
-		rb.AddForce(moveVector * 100);
-		print("adding force");
+
+		if(rb.velocity.magnitude < moveSpeed * Mathf.Sqrt(2))
+		rb.velocity = moveVector;
+
+		// if(rb.velocity.magnitude < moveSpeed)
+		// {
+		// 	rb.AddForce(moveVector * accelRate); //100 is accel rate
+		// //	print("Moving");
+		// }
+		// else
+		// {
+			
+		// }
+	}
+
+	void Decel()
+	{
+		rb.velocity /= decelRate;
+	//	Vector3 decelVelocity = new Vector3(tempX, rb.velocity.y, tempZ);
+	//	print("Decel : " + decelVelocity);
+		print ("Decel");
+	}
+
+	public void RBMove() //air movement
+	{
+		rb.AddForce(moveVector * .9f);
+	//	print("adding force");
 	}
 
 	public bool RBGrounded()
@@ -99,13 +128,20 @@ public class PlayerMover : MonoBehaviour {
 	//	moveVector.z = transform.forward.z * Input.GetAxis("Vertical");
 
 		moveVector = (transform.right * anims.GetFloat("MoveX") + transform.forward * anims.GetFloat("MoveZ")) * moveSpeed;
-		moveVector.y = -.1f;
+
+		if(moveVector == Vector3.zero && rb.velocity != Vector3.zero && anims.GetBool("RBGrounded"))
+		{
+			Decel();
+		}
+
+	//	moveVector.y = -.1f;
 	//	moveVector = new Vector3(anims.GetFloat("MoveX"), 0, anims.GetFloat("MoveZ")) * moveSpeed;
-		//========================mouse stuff===============================\\
+
+
+		//========================   mouse stuff   ===============================\\
 		mouseRotX += Input.GetAxis("Mouse X") * sensitivity; //rotation left and right
 		mouseRotY += Input.GetAxis("Mouse Y") * sensitivity; //rotation up and down
 		mouseRotY = Mathf.Clamp(mouseRotY, -90, 90);
-
 		transform.rotation = Quaternion.Euler(0, mouseRotX, 0); //left and right, use Y axis
 		characterCam.transform.localRotation = Quaternion.Euler(-mouseRotY, 0, 0); //up and down, use X axis
 		
