@@ -5,11 +5,17 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class LastFrameVelocity : MonoBehaviour {
 
+	Rigidbody rb;
 	public Vector3 lfVelocity;
+
+	void Start()
+	{
+		rb = GetComponent<Rigidbody>();
+	}
 
 	void FixedUpdate()
 	{
-		lfVelocity = GetComponent<Rigidbody>().velocity;
+		lfVelocity = rb.velocity;
 	}
 
 }
