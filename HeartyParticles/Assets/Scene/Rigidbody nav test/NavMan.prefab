@@ -22,10 +22,12 @@ GameObject:
   - component: {fileID: 33735268160840602}
   - component: {fileID: 136826474042693110}
   - component: {fileID: 23230699085091822}
+  - component: {fileID: 114614408214849022}
   - component: {fileID: 114172711478646406}
   - component: {fileID: 114788348658245744}
   - component: {fileID: 54661722471762798}
   - component: {fileID: 195853438716879972}
+  - component: {fileID: 114275510217060560}
   m_Layer: 12
   m_Name: NavMan
   m_TagString: Untagged
@@ -112,14 +114,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
-  slideMag: 0.5
-  pushMag: 0.5
+  slideMag: 5
+  pushMag: 1
   pushbackMod: 1.1
   groundMask:
     serializedVersion: 2
     m_Bits: 1
   isGrounded: 1
   lfVelocity: {x: 0, y: 0, z: 0}
+--- !u!114 &114275510217060560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1590749213754896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92b45884b54a8af46a43151af0e543f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 0}
+--- !u!114 &114614408214849022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1590749213754896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0abe9fda395ee22488c21c41f439a2d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  baseKnockbackFactor: 1
 --- !u!114 &114788348658245744
 MonoBehaviour:
   m_ObjectHideFlags: 1
