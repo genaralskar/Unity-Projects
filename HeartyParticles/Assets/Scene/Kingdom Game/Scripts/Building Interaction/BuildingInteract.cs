@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class BuildingInteract : MonoBehaviour {
 
@@ -11,12 +12,19 @@ public class BuildingInteract : MonoBehaviour {
 
 	void OnMouseDown()
 	{
-		foreach(ActionSO act in actions)
+
+		if(!EventSystem.current.IsPointerOverGameObject())
 		{
-			//instantiate a panel, with appropriate image
-			interactUI.SpawnPanels(actions, buildingPanel);
-			print("Spawn panel" + act);
+			interactUI.SpawnPanels(actions, gameObject);
+			print("Spawn panel: " + actions);
 		}
+		// foreach(ActionSO act in actions)
+		// {
+		// 	//instantiate a panel, with appropriate image
+		// //	interactUI.SpawnPanels(actions, buildingPanel);
+			
+		// 	print("Spawn panel: " + act);
+		// }
 	}
 
 	void SpawnPanel(ActionSO _action)

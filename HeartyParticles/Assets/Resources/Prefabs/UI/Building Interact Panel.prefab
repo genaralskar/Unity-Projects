@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222486970072054804}
   - component: {fileID: 114700118395137750}
   - component: {fileID: 114879172631689858}
-  - component: {fileID: 114201597415161576}
+  - component: {fileID: 114768274182935750}
   m_Layer: 5
   m_Name: Building Interact Panel
   m_TagString: Untagged
@@ -30,17 +30,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114201597415161576
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1445390737759030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aa86f177d760844cbdd1d9f7c3184dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114700118395137750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,7 +42,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -68,6 +57,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114768274182935750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1445390737759030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3666fd6de3e97b42ba261b6699d25c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions: []
 --- !u!114 &114879172631689858
 MonoBehaviour:
   m_ObjectHideFlags: 1

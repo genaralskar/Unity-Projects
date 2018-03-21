@@ -4,31 +4,30 @@ using UnityEngine;
 
 public class CameraTrackScript : MonoBehaviour {
 
-	public Transform trackPoint;
+	
 
-	[Range(0,1)]
-	public float trackSpeed = 0.5f;
 	public float rotationAmount = 10;
 
-	Quaternion lightRotOffset;
+	public float lightRotOffset = -10;
 
 	Vector3 tempRot;
-	
-	public Vector3 offset;
 
 	public new GameObject light;
 
+	public float moveSpeed;
+	[Range(0, 1)]
+	public float lerpAmount;
+
+	public CamZoom camZoom;
+
 	// Use this for initialization
 	void Start () {
-		offset = transform.position - trackPoint.position;
-		lightRotOffset = light.transform.rotation;
+		tempRot = transform.rotation.eulerAngles;
 	}
 	
 	// Update is called once per frame
 	void LateUpdate () {
-		Vector3 tempPos = trackPoint.position + offset;
-
-		transform.position = Vector3.Lerp(transform.position, tempPos, trackSpeed);
+		Move();
 
 		Rotate();
 	}
@@ -49,6 +48,21 @@ public class CameraTrackScript : MonoBehaviour {
 //		print(tempRot);
 
 		transform.rotation = Quaternion.Euler(tempRot);
-		light.transform.rotation = Quaternion.Euler(tempRot) * lightRotOffset;
+		
+		light.transform.rotation = Quaternion.Euler(new Vector3(50, lightRotOffset + tempRot.y, 0));
+	}
+
+	void Move()
+	{
+		float horiz = Input.GetAxis("Horizontal");
+		float vert = Input.GetAxis("Vertical");
+		Vector3 moveVector = new Vector3(horiz, 0, vert);
+	//	print(moveVector);
+	//	Vector3 lerpMove = Vector3.Lerp(Vector3.zero, moveVector, lerpAmount);
+	//	print(lerpMove);
+	//	transform.Translate(lerpMove * moveSpeed * Time.deltaTime, Space.World);
+
+	//	transform.position = Vector3.Lerp(transform.position, transform.InverseTransformPoint(moveVector + transform.position), lerpAmount);
+		transform.Translate(moveVector * Time.deltaTime * camZoom.zoomDistance, Space.Self);
 	}
 }

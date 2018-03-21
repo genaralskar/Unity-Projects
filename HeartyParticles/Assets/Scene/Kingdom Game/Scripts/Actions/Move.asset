@@ -8,9 +8,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f16d6d9989b57a344a27a05f94afb303, type: 3}
-  m_Name: Destroy
+  m_Script: {fileID: 11500000, guid: f4c652b0e2064ff4da9c983ebc212df5, type: 3}
+  m_Name: Move
   m_EditorClassIdentifier: 
-  name: Destroy
-  description: Destroy the current building
-  artwork: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  name: Move
+  description: Move the current building
+  artwork: {fileID: 0}

@@ -72,6 +72,10 @@ public class BuildingBlueprint : MonoBehaviour {
 			transform.position = hit.point;
 		//	print(hit.point);
 		}
+		else
+		{
+			transform.position = Vector3.down * 100;
+		}
 	//	print("move object");
 	}
 

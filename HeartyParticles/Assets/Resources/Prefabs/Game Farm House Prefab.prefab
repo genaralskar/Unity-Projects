@@ -5231,8 +5231,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 16.13, y: 5.8, z: 23.62}
-  m_Center: {x: 0, y: 0, z: -0.1}
+  m_Size: {x: 16.05, y: 5.8, z: 20.1}
+  m_Center: {x: 0, y: 0, z: -1.79}
 --- !u!95 &95323402953703054
 Animator:
   serializedVersion: 3
@@ -5268,7 +5268,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1626494526160900}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e839e4c12473014b9b3d3faccc0f61d, type: 3}
   m_Name: 
@@ -5303,6 +5303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actions:
   - {fileID: 11400000, guid: f3981830347704342953325e4358ef67, type: 2}
+  - {fileID: 11400000, guid: 8513f51061ad49d42b14710f0d70dae7, type: 2}
   buildingPanel: {fileID: 114700118395137750, guid: ad23a748b2fe48c4b999481b0858ba11,
     type: 2}
   interactUI: {fileID: 0}
