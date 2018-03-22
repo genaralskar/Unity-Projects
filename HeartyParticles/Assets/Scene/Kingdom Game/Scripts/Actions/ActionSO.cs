@@ -10,6 +10,6 @@ public abstract class ActionSO : ScriptableObject {
 	public string description;
 	public Sprite artwork;
 
-	public abstract void DoAction(GameObject _obj);
+	public abstract void DoAction(BuildingManager _obj);
 
 }

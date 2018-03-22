@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class MoveSO : ActionSO {
 
-	public override void DoAction(GameObject _obj)
+	public override void DoAction(BuildingManager _obj)
 	{
 		//do move stuff
 		Debug.Log("Do move stuff!");

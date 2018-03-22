@@ -11,7 +11,7 @@ public class BuildingInteractUI : MonoBehaviour {
 	public GameObject canvas;
 
 
-	public void SpawnPanels(List<ActionSO> _actions, GameObject _gameObj)
+	public void SpawnPanels(List<ActionSO> _actions, BuildingManager _buildManage)
 	{
 		Image _container = Instantiate(actionContainerPanel);
 		_container.transform.SetParent(canvas.transform);
@@ -23,7 +23,7 @@ public class BuildingInteractUI : MonoBehaviour {
 			Image _actionButton = Instantiate(actionButton);
 			_actionButton.transform.SetParent(_container.transform);
 			ActionButton _aB = _actionButton.gameObject.GetComponent<ActionButton>();
-			_aB.PopulatePanel(a, _gameObj);
+			_aB.PopulatePanel(a, _buildManage);
 		}
 	}
 }

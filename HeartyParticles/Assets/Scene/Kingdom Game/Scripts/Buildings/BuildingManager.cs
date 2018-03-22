@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using RoboRyanTron.Unite2017.Events;
 
-[RequireComponent(typeof(GameEventListener), typeof(Animator), typeof(GameEvent))]
+[RequireComponent(typeof(Animator), typeof(GameEvent))]
 public class BuildingManager : MonoBehaviour {
 
 	public Building buildingType;

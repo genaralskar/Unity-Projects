@@ -59,11 +59,20 @@ public class KeepManager : MonoBehaviour {
 
 	IEnumerator SendWorkerCheck()
 	{
+		//add a check if building is not destroyed<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 		while(true)
 		{
 			if(workers.Count > 0 && openBuildings.Count > 0)
 			{
-				SendWorker(openBuildings[0]);
+				if(openBuildings[0] == null) //put this in a loop <<<<<<<<<<<<<<<<<<<<<<
+				{
+					openBuildings.RemoveAt(0);
+				}
+				else
+				{
+					SendWorker(openBuildings[0]);
+				}
+				
 			}
 			yield return new WaitForSeconds(deportSpeed);
 		}

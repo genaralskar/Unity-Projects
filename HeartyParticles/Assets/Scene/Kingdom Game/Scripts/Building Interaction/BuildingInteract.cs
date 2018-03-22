@@ -15,7 +15,7 @@ public class BuildingInteract : MonoBehaviour {
 
 		if(!EventSystem.current.IsPointerOverGameObject())
 		{
-			interactUI.SpawnPanels(actions, gameObject);
+			interactUI.SpawnPanels(actions, GetComponent<BuildingManager>());
 			print("Spawn panel: " + actions);
 		}
 		// foreach(ActionSO act in actions)
