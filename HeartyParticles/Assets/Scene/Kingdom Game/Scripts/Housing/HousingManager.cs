@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HousingManager : MonoBehaviour {
+public class HousingManager : BuildingManager {
 
 	public Housing house;
 	
@@ -31,5 +31,10 @@ public class HousingManager : MonoBehaviour {
 			worker.GetComponent<WorkerManager>().worker = _workType;
 			worker.GetComponent<WorkerManager>().UpdateWorker();
 		}
+	}
+
+	public override void WorkerStuff(WorkerManager _worker)
+	{
+		
 	}
 }

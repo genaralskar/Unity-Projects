@@ -24,10 +24,11 @@ public class WorkerManager : MonoBehaviour {
 	void Start()
 	{
 		inventory = new Item[worker.inventorySize];
-		inventorySize = worker.inventorySize;
+	//	inventorySize = worker.inventorySize;
 	//	print(inventory.Length + " inventory length");
 		agent = GetComponent<NavMeshAgent>();
-		agent.speed = worker.speed;
+	//	agent.speed = worker.speed;
+		UpdateWorker();
 	//	print(agent);
 		FindKeep();
 	}
@@ -82,8 +83,10 @@ public class WorkerManager : MonoBehaviour {
 		hasItem = _hasItem;
 	}
 
-	public void UpdateWorker()
+	public void UpdateWorker() //set all values for worker here
 	{
 		agent.speed = worker.speed;
+		inventorySize = worker.inventorySize;
+		print("updated worker to " + worker);
 	}
 }

@@ -11,7 +11,12 @@ public class UpgradeHousing : ActionSO {
 	{
 		HousingManager _houseManage = _buildingManage.GetManager<HousingManager>();
 		_houseManage = _buildingManage.GetComponent<HousingManager>();
-		Debug.Log("got type of " + _houseManage);
+		if(_houseManage)
+		{
+			_houseManage.UpgradeWorker(workerType);
+			Debug.Log("Upgraded worker to: " + workerType);
+		}
+	//	Debug.Log("got type of " + _houseManage);
 		//do stuf to housing manager suuucka!!!
 	}
 }

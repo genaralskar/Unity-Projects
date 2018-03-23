@@ -14,4 +14,4 @@ MonoBehaviour:
   name: 
   description: 
   artwork: {fileID: 0}
-  workerType: {fileID: 0}
+  workerType: {fileID: 11400000, guid: 1cbbffd56195e0241a4517dcd3233af9, type: 2}

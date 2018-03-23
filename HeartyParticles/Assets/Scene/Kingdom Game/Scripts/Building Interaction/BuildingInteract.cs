@@ -7,8 +7,12 @@ using UnityEngine.EventSystems;
 public class BuildingInteract : MonoBehaviour {
 
 	public List<ActionSO> actions;
-	public Image buildingPanel;
 	public BuildingInteractUI interactUI;
+
+	void Start()
+	{
+		interactUI = FindObjectOfType<BuildingInteractUI>();
+	}
 
 	void OnMouseDown()
 	{

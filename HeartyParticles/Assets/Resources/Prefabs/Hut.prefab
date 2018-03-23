@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23266536102681134}
   - component: {fileID: 114515146205980612}
   - component: {fileID: 208753582729480420}
+  - component: {fileID: 114038156620642462}
   m_Layer: 11
   m_Name: Hut
   m_TagString: Untagged
@@ -55,8 +56,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1227223659262750}
-  m_LocalRotation: {x: -0, y: 0.9525611, z: -0, w: 0.30434763}
-  m_LocalPosition: {x: 40.575924, y: 0.4999999, z: -60.566048}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 40.76, y: 1.2104874, z: -42.01}
   m_LocalScale: {x: 7.37662, y: 7.376618, z: 7.376618}
   m_Children:
   - {fileID: 4903451549419240}
@@ -178,6 +179,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114038156620642462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1227223659262750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d3ff66596666e459e524e43be31b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions:
+  - {fileID: 11400000, guid: fd7bf8f2e7f5ad34d8b4ed4a10311e2a, type: 2}
+  - {fileID: 11400000, guid: 8513f51061ad49d42b14710f0d70dae7, type: 2}
+  - {fileID: 11400000, guid: f3981830347704342953325e4358ef67, type: 2}
+  interactUI: {fileID: 0}
 --- !u!114 &114515146205980612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -189,8 +206,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a9e67af92ec5f4882c50bd4eeb243b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildingType: {fileID: 0}
+  entrance: {fileID: 0}
+  inventory: []
+  anims: {fileID: 0}
+  build: {fileID: 0}
   house: {fileID: 11400000, guid: 7021705cb73862a4395d7ec8ec25fd17, type: 2}
   exit: {fileID: 4903451549419240}
+  workers: []
 --- !u!208 &208753582729480420
 NavMeshObstacle:
   m_ObjectHideFlags: 1
