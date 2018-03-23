@@ -34,7 +34,7 @@ public class KeepManager : MonoBehaviour {
 
 		foreach(GameObject obj in tempGO)
 		{
-			BuildingManager tempManage = obj.GetComponent<BuildingManager>();
+			ProductionManager tempManage = obj.GetComponent<ProductionManager>();
 			if(tempManage)
 			{
 				if(!tempManage.hasWorker && !openBuildings.Contains(tempManage))
@@ -87,11 +87,11 @@ public class KeepManager : MonoBehaviour {
 			GameObject newWorker = workers[0];
 			newWorker.SetActive(true);
 			WorkerManager newWorkManager = newWorker.GetComponent<WorkerManager>();
-			newWorkManager.destination = _destination.entrance;
+			newWorkManager.destination = _destination.GetComponent<ProductionManager>().entrance;
 			newWorkManager.SetDestination();
 			newWorkManager.home = entrance;
 	//		_destination.hasWorker = true;
-			_destination.HasWorker();
+			_destination.GetComponent<ProductionManager>().SetWorker(true);
 			openBuildings.RemoveAt(0);
 			workers.RemoveAt(0);
 			WorkerCounter.SubtractInactiveWorker();
@@ -108,6 +108,7 @@ public class KeepManager : MonoBehaviour {
 	//manage inventory
 	public void AddItem(Item _item, int _amount)
 	{
+		print("sending add item through to inventory");
 		inventory.AddItem(_item, _amount);
 	}
 

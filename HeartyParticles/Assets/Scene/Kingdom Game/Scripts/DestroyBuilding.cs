@@ -13,14 +13,15 @@ public class DestroyBuilding : MonoBehaviour {
 	
 	void Destroy(GameObject _gameObj)
 	{
+		ProductionManager _manager = buildingManager.GetComponent<ProductionManager>();
 		//check if a worker is in building/is coming to the building
-		if(buildingManager.worker != null)
+		if(_manager.worker != null)
 		{
-			if(buildingManager.worker.gameObject.activeInHierarchy == false)
+			if(_manager.worker.gameObject.activeInHierarchy == false)
 			{
-				buildingManager.worker.gameObject.SetActive(true);
+				_manager.worker.gameObject.SetActive(true);
 			}
-			buildingManager.worker.SendHome();
+			_manager.worker.SendHome();
 		}
 		
 		Destroy(_gameObj);

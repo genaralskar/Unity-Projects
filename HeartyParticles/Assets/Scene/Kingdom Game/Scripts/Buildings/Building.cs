@@ -10,7 +10,7 @@ public class Building : ScriptableObject {
 	public Item[] itemsNeeded;
 	public int[] numberOfItemsNeeed;
 
-	public Item[] itemsToCreate;
+	public Item itemToCreate;
 	public float productionTime;
 	
 

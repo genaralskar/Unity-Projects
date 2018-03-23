@@ -14,15 +14,15 @@ public class DestroySO : ActionSO {
 
 	void Destroy(BuildingManager buildingManager)
 	{
-		
+		WorkerManager _worker = buildingManager.GetComponent<ProductionManager>().worker;
 
-		if(buildingManager.worker != null)
+		if(_worker != null)
 		{
-			if(buildingManager.worker.gameObject.activeInHierarchy == false)
+			if(_worker.gameObject.activeInHierarchy == false)
 			{
-				buildingManager.worker.gameObject.SetActive(true);
+				_worker.gameObject.SetActive(true);
 			}
-			buildingManager.worker.SendHome();
+			_worker.SendHome();
 		}
 		
 		Destroy(buildingManager.gameObject);

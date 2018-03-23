@@ -12,23 +12,32 @@ public class KeepEntranceManager : MonoBehaviour {
 		WorkerManager temp = other.GetComponent<WorkerManager>();
 		if(temp.destination == transform)
 		{
-
-			if(temp.inventory != null)
+			if(temp.hasItem)
 			{
-			//	print("non null inventory");
-				int i = 0;
-				foreach(Item item in temp.inventory)
-				{
-					if(item != null)
-					{
-					//	print("in the foreach loop");
-						building.AddItem(item, 1);
-						temp.inventory[i] = null;
-					//	print("added item");
-					}
-					i++;
-				}
+				print("Adding items to inventory");
+				building.AddItem(temp.inventoryItem, temp.inventorySize);
+				temp.inventoryItem = null;
+				temp.SetHasItem(false);
+				print("Added items!");
 			}
+
+
+			// if(temp.inventory != null)
+			// {
+			// //	print("non null inventory");
+			// 	int i = 0;
+			// 	foreach(Item item in temp.inventory)
+			// 	{
+			// 		if(item != null)
+			// 		{
+			// 		//	print("in the foreach loop");
+			// 			building.AddItem(item, 1);
+			// 			temp.inventory[i] = null;
+			// 		//	print("added item");
+			// 		}
+			// 		i++;
+			// 	}
+			// }
 
 			building.AddWorker(temp);
 			WorkerCounter.AddInactiveWorker();

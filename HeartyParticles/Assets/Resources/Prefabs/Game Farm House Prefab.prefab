@@ -732,10 +732,9 @@ GameObject:
   - component: {fileID: 4533077854309340}
   - component: {fileID: 65826406744884764}
   - component: {fileID: 208849306276294402}
-  - component: {fileID: 114375899300770626}
+  - component: {fileID: 114418923551008018}
   - component: {fileID: 114316970685228328}
   - component: {fileID: 95323402953703054}
-  - component: {fileID: 114224615639138710}
   m_Layer: 11
   m_Name: Game Farm House Prefab
   m_TagString: Building
@@ -5261,35 +5260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06330424aedde8041b81af9be2973893, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  building: {fileID: 114375899300770626}
---- !u!114 &114224615639138710
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1626494526160900}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e839e4c12473014b9b3d3faccc0f61d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 0}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114375899300770626}
-        m_MethodName: SendWorker
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
+  building: {fileID: 114418923551008018}
 --- !u!114 &114316970685228328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5307,7 +5278,7 @@ MonoBehaviour:
   buildingPanel: {fileID: 114700118395137750, guid: ad23a748b2fe48c4b999481b0858ba11,
     type: 2}
   interactUI: {fileID: 0}
---- !u!114 &114375899300770626
+--- !u!114 &114418923551008018
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -5315,18 +5286,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1626494526160900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee88ae033d133a645af932483fba2a5a, type: 3}
+  m_Script: {fileID: 11500000, guid: 574d78feb10a0314fbf3f59d5ebd2ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buildingType: {fileID: 11400000, guid: 224e51be14118054ca7c76bdd08aeaf5, type: 2}
   entrance: {fileID: 4772785359079984}
-  exit: {fileID: 0}
+  inventory: []
+  anims: {fileID: 95323402953703054}
+  build: {fileID: 0}
   hasWorker: 0
   worker: {fileID: 0}
-  inventory: []
-  anims: {fileID: 0}
-  Event: {fileID: 0}
-  buildingT: {fileID: 11400000, guid: c0dacf3c99c858e4786cc55232c4edb1, type: 2}
+  buildSpeed: 1
 --- !u!208 &208083889615307094
 NavMeshObstacle:
   m_ObjectHideFlags: 1

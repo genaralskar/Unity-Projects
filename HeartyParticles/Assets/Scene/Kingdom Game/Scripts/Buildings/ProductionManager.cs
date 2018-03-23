@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class ProductionManager : BuildingManager {
 
-	public new Building buildingType;
-	public new bool hasWorker = false;
-	public new WorkerManager worker;
+	public bool hasWorker = false;
+	public WorkerManager worker;
 	public float buildSpeed = 1;
 
 	//get animator from scriptable object
@@ -22,7 +21,7 @@ public class ProductionManager : BuildingManager {
 		anims.SetBool("HasWorker", _setTo);
 	}
 
-	public new void StartWork(WorkerManager _worker) //gets called when worker arrives at building
+	public void StartWork(WorkerManager _worker) //gets called when worker arrives at building
 	{
 		worker = _worker;
 		_worker.gameObject.SetActive(false);
@@ -33,6 +32,8 @@ public class ProductionManager : BuildingManager {
 	{
 		worker.gameObject.SetActive(true);
 		//worker inventory stuff
+		worker.inventoryItem = buildingType.itemToCreate;
+		worker.SetHasItem(true);
 		worker.SendHome();
 		worker = null;
 		SetWorker(false);

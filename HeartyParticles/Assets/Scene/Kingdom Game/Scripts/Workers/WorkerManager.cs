@@ -14,12 +14,17 @@ public class WorkerManager : MonoBehaviour {
 
 	public Item[] inventory;
 
+	public Item inventoryItem;
+	public bool hasItem;
+	public int inventorySize;
+
 
 	NavMeshAgent agent;
 
 	void Start()
 	{
 		inventory = new Item[worker.inventorySize];
+		inventorySize = worker.inventorySize;
 	//	print(inventory.Length + " inventory length");
 		agent = GetComponent<NavMeshAgent>();
 		agent.speed = worker.speed;
@@ -35,7 +40,6 @@ public class WorkerManager : MonoBehaviour {
 	//	print("find keep");
 	}
 	
-	[ContextMenu ("Set Destination")]
 	public void SetDestination()
 	{
 	//	print(destination);
@@ -71,6 +75,11 @@ public class WorkerManager : MonoBehaviour {
 			}
 			i++;
 		}
+	}
+
+	public void SetHasItem(bool _hasItem)
+	{
+		hasItem = _hasItem;
 	}
 
 	public void UpdateWorker()

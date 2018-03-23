@@ -15,8 +15,6 @@ MonoBehaviour:
   itemsNeeded:
   - {fileID: 11400000, guid: f530d5c4f506a934598b02162bf501a2, type: 2}
   numberOfItemsNeeed: 05000000
-  itemsToCreate:
-  - {fileID: 11400000, guid: f530d5c4f506a934598b02162bf501a2, type: 2}
-  - {fileID: 11400000, guid: f530d5c4f506a934598b02162bf501a2, type: 2}
+  itemToCreate: {fileID: 11400000, guid: f530d5c4f506a934598b02162bf501a2, type: 2}
   productionTime: 5
   inventorySize: 10
