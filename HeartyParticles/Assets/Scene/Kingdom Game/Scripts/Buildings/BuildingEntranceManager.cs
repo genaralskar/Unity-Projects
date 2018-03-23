@@ -13,7 +13,7 @@ public class BuildingEntranceManager : MonoBehaviour {
 		if(temp.destination == transform)
 		{
 		//	print("start work");
-			building.StartWork(temp);
+			building.WorkStuff(temp);
 			
 		}
 	}

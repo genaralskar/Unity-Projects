@@ -5,12 +5,11 @@ using UnityEngine.Events;
 using RoboRyanTron.Unite2017.Events;
 
 [RequireComponent(typeof(Animator), typeof(GameEvent))]
-public class BuildingManager : MonoBehaviour {
+public abstract class BuildingManager : MonoBehaviour {
 
 	public Building buildingType;
 
 	public Transform entrance;
-	public Transform exit;
 
 	public bool hasWorker = false;
 	public WorkerManager worker;
@@ -18,28 +17,28 @@ public class BuildingManager : MonoBehaviour {
 	public Item[] inventory;
 
 	public Animator anims;
-	public GameEvent Event;
+
+	public BuildingManager build;
 
 	//=============================================\\
 
-	public BuildingSO buildingT;
 	public UnityAction startAnimAction;
 
 	void Awake()
 	{
-	//	Event = ScriptableObject.CreateInstance(typeof(GameEvent)) as GameEvent;
-	//	GetComponent<GameEventListener>().Event = Event;
-	//	GetComponent<GameEventListener>().enabled = true;
-		anims = GetComponent<Animator>();
-	//	anims.GetBehaviour<OnAnimExit>().Event = Event;
+		anims = GetComponent<Animator>(); //art will be a prefab, instantiated
 	}
-	
-	// Use this for initialization
+
 	void Start () {
-		inventory = new Item[buildingType.inventorySize];
+		inventory = new Item[buildingType.inventorySize]; //probs don't need
 		startAnimAction += printTest;
 		
 	//	print(Event);
+	}
+
+	public void WorkStuff(WorkerManager _worker)
+	{
+		build.WorkerStuff(_worker);
 	}
 
 	public void HasWorker()
@@ -94,23 +93,11 @@ public class BuildingManager : MonoBehaviour {
 		anims.SetBool("HasWorker", false);
 	}
 
-	public void Move()
+	public T GetManager<T>() //where T : BuildingManager //returns the secondary building manager, like the production manager or housing manager
 	{
-		print("Gotta move that gear up!");
-		//store position/rotation data
-		//delete? this gameobject
-		//go to the blueprint thing
-		//if rightclick, send it back to original pos
+		return GetComponent<T>();
 	}
 
-	void Destroy()
-	{
-
-	}
-
-	void Upgrade()
-	{
-		//set things to be upgraded
-	}
+	public abstract void WorkerStuff(WorkerManager _worker);
 
 }

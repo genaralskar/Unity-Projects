@@ -72,4 +72,9 @@ public class WorkerManager : MonoBehaviour {
 			i++;
 		}
 	}
+
+	public void UpdateWorker()
+	{
+		agent.speed = worker.speed;
+	}
 }
