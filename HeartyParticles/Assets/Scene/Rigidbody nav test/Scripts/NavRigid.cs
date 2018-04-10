@@ -53,6 +53,7 @@ public class NavRigid : MonoBehaviour {
 	void OnCollisionEnter(Collision other)	//when something bumps into this object
 	{
 	//	print(other.relativeVelocity);
+		print("collided");
 		LastFrameVelocity collNR = other.gameObject.GetComponent<LastFrameVelocity>();
 		if(collNR != null && rb.isKinematic == true) //if this rigidbody is kinimatic/has the agent enabled
 		{
