@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 530f4dc60fb34744281fa52c92d8dd59
-timeCreated: 1519505034
-licenseType: Free
+guid: d97cf6fc069eb534aa649f4ddf877e17
 ModelImporter:
-  serializedVersion: 21
+  serializedVersion: 22
   fileIDToRecycleName:
-    100000: ambientLight1
+    100000: //RootNode
     100002: Castle_Wall_UV
     100004: Castle_Wall_UV1
     100006: Castle_Wall_UV2
@@ -18,17 +16,12 @@ ModelImporter:
     100020: Corner_Tower_UV5
     100022: Corner_Tower_UV6
     100024: Corner_Tower_UV7
-    100026: directionalLight1
-    100028: //RootNode
-    100030: group1
-    100032: Keep_Corner_Tower
-    100034: Keep_Corner_Tower1
-    100036: Keep_Corner_Tower2
-    100038: Keep_Corner_Tower3
-    100040: Keep_UV1
-    100042: Person_Scale
-    100044: Person_Scale1
-    400000: ambientLight1
+    100026: Keep_Corner_Tower
+    100028: Keep_Corner_Tower1
+    100030: Keep_Corner_Tower2
+    100032: Keep_Corner_Tower3
+    100034: Keep_UV1
+    400000: //RootNode
     400002: Castle_Wall_UV
     400004: Castle_Wall_UV1
     400006: Castle_Wall_UV2
@@ -41,16 +34,14 @@ ModelImporter:
     400020: Corner_Tower_UV5
     400022: Corner_Tower_UV6
     400024: Corner_Tower_UV7
-    400026: directionalLight1
-    400028: //RootNode
-    400030: group1
-    400032: Keep_Corner_Tower
-    400034: Keep_Corner_Tower1
-    400036: Keep_Corner_Tower2
-    400038: Keep_Corner_Tower3
-    400040: Keep_UV1
-    400042: Person_Scale
-    400044: Person_Scale1
+    400026: Keep_Corner_Tower
+    400028: Keep_Corner_Tower1
+    400030: Keep_Corner_Tower2
+    400032: Keep_Corner_Tower3
+    400034: Keep_UV1
+    2100000: Castle_Wall
+    2100002: Castle_Tower
+    2100004: Keep
     2300000: Castle_Wall_UV
     2300002: Castle_Wall_UV1
     2300004: Castle_Wall_UV2
@@ -68,8 +59,6 @@ ModelImporter:
     2300028: Keep_Corner_Tower2
     2300030: Keep_Corner_Tower3
     2300032: Keep_UV1
-    2300034: Person_Scale
-    2300036: Person_Scale1
     3300000: Castle_Wall_UV
     3300002: Castle_Wall_UV1
     3300004: Castle_Wall_UV2
@@ -87,34 +76,29 @@ ModelImporter:
     3300028: Keep_Corner_Tower2
     3300030: Keep_Corner_Tower3
     3300032: Keep_UV1
-    3300034: Person_Scale
-    3300036: Person_Scale1
-    4300000: Person_Scale1
-    4300002: Castle_Wall_UV
-    4300004: Corner_Tower_UV
-    4300006: Keep_Corner_Tower2
-    4300008: Castle_Wall_UV3
-    4300010: Keep_UV1
-    4300012: Corner_Tower_UV4
-    4300014: Corner_Tower_UV1
-    4300016: Keep_Corner_Tower3
-    4300018: Keep_Corner_Tower1
-    4300020: Keep_Corner_Tower
-    4300022: Corner_Tower_UV7
-    4300024: Corner_Tower_UV5
-    4300026: Corner_Tower_UV6
-    4300028: Castle_Wall_UV2
-    4300030: Castle_Wall_UV1
-    4300032: Corner_Tower_UV3
-    4300034: Corner_Tower_UV2
-    4300036: Person_Scale
-    9500000: //RootNode
-    10800000: ambientLight1
-    10800002: directionalLight1
+    4300000: Castle_Wall_UV
+    4300002: Corner_Tower_UV
+    4300004: Keep_Corner_Tower2
+    4300006: Castle_Wall_UV3
+    4300008: Keep_UV1
+    4300010: Corner_Tower_UV4
+    4300012: Corner_Tower_UV1
+    4300014: Keep_Corner_Tower3
+    4300016: Keep_Corner_Tower1
+    4300018: Keep_Corner_Tower
+    4300020: Corner_Tower_UV7
+    4300022: Corner_Tower_UV5
+    4300024: Corner_Tower_UV6
+    4300026: Castle_Wall_UV2
+    4300028: Castle_Wall_UV1
+    4300030: Corner_Tower_UV3
+    4300032: Corner_Tower_UV2
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -127,6 +111,8 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -151,6 +137,8 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -180,7 +168,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

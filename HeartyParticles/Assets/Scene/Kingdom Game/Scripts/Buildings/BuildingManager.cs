@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using RoboRyanTron.Unite2017.Events;
 
-[RequireComponent(typeof(Animator), typeof(GameEvent))]
+[RequireComponent(typeof(Animator))]
 public abstract class BuildingManager : MonoBehaviour {
 
 	public Building buildingType;
@@ -22,7 +22,11 @@ public abstract class BuildingManager : MonoBehaviour {
 
 	void Awake()
 	{
-		anims = GetComponent<Animator>(); //art will be a prefab, instantiated
+		if (anims == null)
+		{
+			anims = GetComponent<Animator>(); //art will be a prefab, instantiated
+		}
+		
 	}
 
 	void Start () {

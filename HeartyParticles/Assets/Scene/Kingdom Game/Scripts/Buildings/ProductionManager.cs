@@ -23,6 +23,7 @@ public class ProductionManager : BuildingManager {
 
 	public void StartWork(WorkerManager _worker) //gets called when worker arrives at building
 	{
+		print("doing worker stuff");
 		worker = _worker;
 		_worker.gameObject.SetActive(false);
 		anims.SetTrigger("Work");

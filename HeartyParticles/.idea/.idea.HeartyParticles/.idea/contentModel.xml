@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\genar\.Rider2018.1\system\resharper-host\Local\Transient\ReSharperHost\v12\SolutionCaches\_HeartyParticles.134841459.00" t="ExcludeRecursive" />
+    <e p="E:\GIT\Unity-Projects\HeartyParticles" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="AnimationEvent.cs" t="Include" />
+        <e p="CCGroundedCheck.cs" t="Include" />
+        <e p="CCMove.cs" t="Include" />
+        <e p="ClickMove.cs" t="Include" />
+        <e p="ConstantRotate.cs" t="Include" />
+        <e p="DestroyAfterTime.cs" t="Include" />
+        <e p="Events" t="Include">
+          <e p="Editor" t="Include">
+            <e p="EventEditor.cs" t="Include" />
+          </e>
+          <e p="GameEvent.cs" t="Include" />
+          <e p="GameEventListener.cs" t="Include" />
+        </e>
+        <e p="Jump.cs" t="Include" />
+        <e p="MeteorController.cs" t="Include" />
+        <e p="MortarScript.cs" t="Include" />
+        <e p="Move.cs" t="Include" />
+        <e p="NavAgentBehavoir.cs" t="Include" />
+        <e p="OnAnimExit.cs" t="Include" />
+        <e p="PlayerAttack.cs" t="Include" />
+        <e p="PlayerAttackHitbox.cs" t="Include" />
+        <e p="PlayerFallSpeed.cs" t="Include" />
+        <e p="PlayerInput.cs" t="Include" />
+        <e p="PlayerKnockback.cs" t="Include" />
+        <e p="PlayerKnockbackHitbox.cs" t="Include" />
+        <e p="RBGroundedCheck.cs" t="Include" />
+        <e p="RBMove.cs" t="Include" />
+        <e p="Scene" t="Include">
+          <e p="Kingdom Game" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="Actions" t="Include">
+                <e p="ActionSO.cs" t="Include" />
+                <e p="DestroySO.cs" t="Include" />
+                <e p="MoveSO.cs" t="Include" />
+                <e p="UpgradeHousing.cs" t="Include" />
+                <e p="UpgradeProductionSO.cs" t="Include" />
+              </e>
+              <e p="Building Interaction" t="Include">
+                <e p="ActionButton.cs" t="Include" />
+                <e p="BuildingInteract.cs" t="Include" />
+              </e>
+              <e p="Buildings" t="Include">
+                <e p="ActivateBlueprint.cs" t="Include" />
+                <e p="Building.cs" t="Include" />
+                <e p="Building2.cs" t="Include" />
+                <e p="BuildingBlueprint.cs" t="Include" />
+                <e p="BuildingEntranceManager.cs" t="Include" />
+                <e p="BuildingManager.cs" t="Include" />
+                <e p="ProductionBuilding.cs" t="Include" />
+                <e p="ProductionManager.cs" t="Include" />
+              </e>
+              <e p="CameraControl.cs" t="Include" />
+              <e p="CameraTrackScript.cs" t="Include" />
+              <e p="CamZoom.cs" t="Include" />
+              <e p="DestroyBuilding.cs" t="Include" />
+              <e p="EventManager.cs" t="Include" />
+              <e p="Housing" t="Include">
+                <e p="Housing.cs" t="Include" />
+                <e p="HousingManager.cs" t="Include" />
+              </e>
+              <e p="Inventory" t="Include">
+                <e p="Inventory.cs" t="Include" />
+                <e p="InventorySlot.cs" t="Include" />
+                <e p="TestInventory.cs" t="Include" />
+              </e>
+              <e p="ItemDatabase.cs" t="Include" />
+              <e p="ItemInventory.cs" t="Include" />
+              <e p="Items" t="Include">
+                <e p="Item.cs" t="Include" />
+              </e>
+              <e p="KeepEntranceManager.cs" t="Include" />
+              <e p="KeepManager.cs" t="Include" />
+              <e p="New Building" t="Include">
+                <e p="BuildingSO.cs" t="Include" />
+                <e p="HousingSO.cs" t="Include" />
+                <e p="ProductionBuildingSO.cs" t="Include" />
+                <e p="StorageSO.cs" t="Include" />
+              </e>
+              <e p="New Neo Buildings" t="Include">
+                <e p="HousingBuildingManager.cs" t="Include" />
+                <e p="StorageBuildingManager.cs" t="Include" />
+              </e>
+              <e p="UI" t="Include">
+                <e p="BuildingActionPanelController.cs" t="Include" />
+                <e p="BuildingInteractUI.cs" t="Include" />
+                <e p="DisplayItemAmount.cs" t="Include" />
+                <e p="WorkerUI.cs" t="Include" />
+              </e>
+              <e p="WorkerCounter.cs" t="Include" />
+              <e p="Workers" t="Include">
+                <e p="Worker.cs" t="Include" />
+                <e p="WorkerManager.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Rigidbody nav test" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="CollisionTest.cs" t="Include" />
+              <e p="Damager.cs" t="Include" />
+              <e p="Forcewall.cs" t="Include" />
+              <e p="Health.cs" t="Include" />
+              <e p="HitBoxTest.cs" t="Include" />
+              <e p="LastFrameVelocity.cs" t="Include" />
+              <e p="MetorSpawner.cs" t="Include" />
+              <e p="NavRigid.cs" t="Include" />
+              <e p="NavRigidBehavior.cs" t="Include" />
+              <e p="PlayerMover.cs" t="Include" />
+              <e p="SetVelocity.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="SetCCOnEnter.cs" t="Include" />
+        <e p="SetCCOnExit.cs" t="Include" />
+        <e p="SetMoveValues.cs" t="Include" />
+        <e p="SetRBOnEnter.cs" t="Include" />
+        <e p="SetRBOnExit.cs" t="Include" />
+        <e p="SetRBVelOnExit.cs" t="Include" />
+        <e p="Spin.cs" t="Include" />
+        <e p="StateEnterEvent.cs" t="Include" />
+        <e p="StateExitEvent.cs" t="Include" />
+      </e>
+      <e p="HeartyParticles.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>

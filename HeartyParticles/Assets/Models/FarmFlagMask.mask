@@ -5,7 +5,7 @@ AvatarMask:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: FarmMask
+  m_Name: FarmFlagMask
   m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
   m_Elements:
   - m_Path: 
@@ -134,8 +134,12 @@ AvatarMask:
     m_Weight: 0
   - m_Path: Entire_thing/Farm_House/Stone_Corners/Stone_Corner_UV27
     m_Weight: 0
-  - m_Path: Person_Scale
-    m_Weight: 0
+  - m_Path: Flag
+    m_Weight: 1
+  - m_Path: Flag/Worker_Flag
+    m_Weight: 1
+  - m_Path: Flag/Worker_Flag_Pole
+    m_Weight: 1
   - m_Path: Wheat
     m_Weight: 0
   - m_Path: Wheat/Wheat9
@@ -155,8 +159,4 @@ AvatarMask:
   - m_Path: Wheat/Wheat16
     m_Weight: 0
   - m_Path: Wheat/Wheat17
-    m_Weight: 0
-  - m_Path: Worker_Flag
-    m_Weight: 1
-  - m_Path: Worker_Flag_Pole
     m_Weight: 0

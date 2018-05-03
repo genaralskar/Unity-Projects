@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="154f08af-0857-4bec-96e8-522a9bfc933f" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="ProductionManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/ProductionManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+              <folding>
+                <marker date="1525322297670" expanded="false" signature="6:78" ph="..." />
+                <marker date="1525322297670" expanded="true" signature="129:948" ph="{...}" />
+                <marker date="1525322297670" expanded="true" signature="321:349" ph="{...}" />
+                <marker date="1525322297670" expanded="true" signature="386:452" ph="{...}" />
+                <marker date="1525322297670" expanded="true" signature="545:669" ph="{...}" />
+                <marker date="1525322297670" expanded="true" signature="739:946" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BuildingManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/BuildingManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="40" column="35" lean-forward="true" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+              <folding>
+                <marker date="1525321973412" expanded="false" signature="6:141" ph="..." />
+                <marker date="1525321973412" expanded="true" signature="234:1142" ph="{...}" />
+                <marker date="1525321973412" expanded="true" signature="484:596" ph="{...}" />
+                <marker date="1525321973412" expanded="true" signature="508:590" ph="{...}" />
+                <marker date="1525321973412" expanded="true" signature="613:743" ph="{...}" />
+                <marker date="1525321973412" expanded="true" signature="790:826" ph="{...}" />
+                <marker date="1525321973412" expanded="true" signature="852:902" ph="{...}" />
+                <marker date="1525321973412" expanded="true" signature="1046:1080" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BuildingEntranceManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/BuildingEntranceManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <marker date="1525322313921" expanded="false" signature="6:78" ph="..." />
+                <marker date="1525322313921" expanded="true" signature="133:397" ph="{...}" />
+                <marker date="1525322313921" expanded="true" signature="207:395" ph="{...}" />
+                <marker date="1525322313921" expanded="true" signature="325:392" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActivateBlueprint.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/ActivateBlueprint.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1519510687618" expanded="false" signature="6:78" ph="..." />
+                <marker date="1519510687618" expanded="true" signature="127:309" ph="{...}" />
+                <marker date="1519510687618" expanded="true" signature="184:306" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BuildingBlueprint.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/BuildingBlueprint.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="33" column="64" lean-forward="true" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
+              <folding>
+                <marker date="1525323106946" expanded="false" signature="6:104" ph="..." />
+                <marker date="1525323106946" expanded="true" signature="153:4157" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="489:1069" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="701:858" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="884:1023" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="1085:1109" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="1147:1214" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="1251:1321" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="1343:1664" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="1510:1576" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="1583:1635" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="1687:2007" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="1692:1777" ph="/* print(&quot;Mouse over&quot;); ... */" />
+                <marker date="1525323106946" expanded="true" signature="1823:1897" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="1975:2004" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="2030:2209" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="2152:2206" ph="/* colliderCount = 0; ... */" />
+                <marker date="1525323106946" expanded="true" signature="2212:2480" ph="/* for each req item, search through inventory to see if the item is in the inventory ... */" />
+                <marker date="1525323106946" expanded="true" signature="2502:3867" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="2508:2582" ph="/* if(!buildingManager) ... */" />
+                <marker date="1525323106946" expanded="true" signature="2618:2967" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="2664:2933" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="2819:2894" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="2903:2928" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="2941:2963" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="2969:3838" ph="/* int itemCheck = 0; ... */" />
+                <marker date="1525323106946" expanded="true" signature="3886:4062" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="3923:4059" ph="{...}" />
+                <marker date="1525323106946" expanded="true" signature="4093:4151" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/ProductionManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/BuildingBlueprint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/ActivateBlueprint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/BuildingEntranceManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/BuildingManager.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/BuildingManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/ProductionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/BuildingEntranceManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/BuildingBlueprint.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="592" />
+    <option name="width" value="1335" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="UnityExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="UnityExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="HeartyParticles" type="483dac07:UnityExplorerNode$Root" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-hidden-items" value="false" />
+      </pane>
+      <pane id="SolutionExplorer">
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="154f08af-0857-4bec-96e8-522a9bfc933f" name="Default" comment="" />
+      <created>1525321700087</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1525321700087</updated>
+      <workItem from="1525321705382" duration="2527000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2527000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" />
+      <window_info anchor="right" id="Database" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" isUnityUI="false" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/BuildingEntranceManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <marker date="1525322313921" expanded="false" signature="6:78" ph="..." />
+            <marker date="1525322313921" expanded="true" signature="133:397" ph="{...}" />
+            <marker date="1525322313921" expanded="true" signature="207:395" ph="{...}" />
+            <marker date="1525322313921" expanded="true" signature="325:392" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/ActivateBlueprint.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1519510687618" expanded="false" signature="6:78" ph="..." />
+            <marker date="1519510687618" expanded="true" signature="127:309" ph="{...}" />
+            <marker date="1519510687618" expanded="true" signature="184:306" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/BuildingManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="40" column="35" lean-forward="true" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+          <folding>
+            <marker date="1525321973412" expanded="false" signature="6:141" ph="..." />
+            <marker date="1525321973412" expanded="true" signature="234:1142" ph="{...}" />
+            <marker date="1525321973412" expanded="true" signature="484:596" ph="{...}" />
+            <marker date="1525321973412" expanded="true" signature="508:590" ph="{...}" />
+            <marker date="1525321973412" expanded="true" signature="613:743" ph="{...}" />
+            <marker date="1525321973412" expanded="true" signature="790:826" ph="{...}" />
+            <marker date="1525321973412" expanded="true" signature="852:902" ph="{...}" />
+            <marker date="1525321973412" expanded="true" signature="1046:1080" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/ProductionManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+          <folding>
+            <marker date="1525322297670" expanded="false" signature="6:78" ph="..." />
+            <marker date="1525322297670" expanded="true" signature="129:948" ph="{...}" />
+            <marker date="1525322297670" expanded="true" signature="321:349" ph="{...}" />
+            <marker date="1525322297670" expanded="true" signature="386:452" ph="{...}" />
+            <marker date="1525322297670" expanded="true" signature="545:669" ph="{...}" />
+            <marker date="1525322297670" expanded="true" signature="739:946" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/BuildingBlueprint.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="33" column="64" lean-forward="true" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
+          <folding>
+            <marker date="1525323106946" expanded="false" signature="6:104" ph="..." />
+            <marker date="1525323106946" expanded="true" signature="153:4157" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="489:1069" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="701:858" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="884:1023" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="1085:1109" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="1147:1214" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="1251:1321" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="1343:1664" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="1510:1576" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="1583:1635" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="1687:2007" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="1692:1777" ph="/* print(&quot;Mouse over&quot;); ... */" />
+            <marker date="1525323106946" expanded="true" signature="1823:1897" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="1975:2004" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="2030:2209" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="2152:2206" ph="/* colliderCount = 0; ... */" />
+            <marker date="1525323106946" expanded="true" signature="2212:2480" ph="/* for each req item, search through inventory to see if the item is in the inventory ... */" />
+            <marker date="1525323106946" expanded="true" signature="2502:3867" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="2508:2582" ph="/* if(!buildingManager) ... */" />
+            <marker date="1525323106946" expanded="true" signature="2618:2967" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="2664:2933" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="2819:2894" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="2903:2928" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="2941:2963" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="2969:3838" ph="/* int itemCheck = 0; ... */" />
+            <marker date="1525323106946" expanded="true" signature="3886:4062" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="3923:4059" ph="{...}" />
+            <marker date="1525323106946" expanded="true" signature="4093:4151" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

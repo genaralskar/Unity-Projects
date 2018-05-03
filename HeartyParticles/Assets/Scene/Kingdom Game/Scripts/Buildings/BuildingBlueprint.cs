@@ -103,7 +103,7 @@ public class BuildingBlueprint : MonoBehaviour {
 		//subract req items from inventory
 		Instantiate(building, transform.position, transform.rotation);
 		TakeItems();
-		colliderCount = 0;
+	//	colliderCount = 0;
 	//	gameObject.SetActive(false);
 	}
 
