@@ -75,7 +75,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuildingBlueprint.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BuildingBlueprint.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/BuildingBlueprint.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="301">
@@ -115,6 +115,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Building.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/Building.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+              <folding>
+                <marker date="1522131728429" expanded="false" signature="6:78" ph="..." />
+                <marker date="1522131728429" expanded="true" signature="194:376" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -123,6 +136,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/ProductionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/BuildingBlueprint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/Building.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/ActivateBlueprint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/BuildingEntranceManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/BuildingManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -143,7 +157,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds">
     <option name="x" value="592" />
     <option name="width" value="1335" />
     <option name="height" value="1047" />
@@ -204,12 +218,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525321700087</updated>
-      <workItem from="1525321705382" duration="2527000" />
+      <workItem from="1525321705382" duration="3192000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2527000" />
+    <option name="totallyTimeSpent" value="3192000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -221,8 +235,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
-    <editor active="true" />
+    <frame x="592" y="0" width="1335" height="1047" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Errors In Solution" />
@@ -347,6 +360,17 @@
             <marker date="1525323106946" expanded="true" signature="3886:4062" ph="{...}" />
             <marker date="1525323106946" expanded="true" signature="3923:4059" ph="{...}" />
             <marker date="1525323106946" expanded="true" signature="4093:4151" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scene/Kingdom Game/Scripts/Buildings/Building.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding>
+            <marker date="1522131728429" expanded="false" signature="6:78" ph="..." />
+            <marker date="1522131728429" expanded="true" signature="194:376" ph="{...}" />
           </folding>
         </state>
       </provider>
