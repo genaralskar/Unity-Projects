@@ -28,6 +28,9 @@ public class PlayerController : MonoBehaviour
 		
 		Vector3 moveVector = new Vector3(moveX, 0, moveY);
 		//print("moveVector = " + moveVector);
+		
+		if(moveVector.magnitude > 1)
+			moveVector = moveVector.normalized;
 
 		_cc.Move(moveVector * MoveSpeed * Time.deltaTime);
 	}

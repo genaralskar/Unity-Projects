@@ -8,9 +8,29 @@
         <e p="Scripts" t="Include">
           <e p="BulletController.cs" t="Include" />
           <e p="CameraFollow.cs" t="Include" />
+          <e p="Enemies" t="Include">
+            <e p="Enemy Behaviors" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="EnemyBehavior_Chase.cs" t="Include" />
+                <e p="EnemyBehavior_Flank.cs" t="Include" />
+                <e p="EnemyBehavior_Idle.cs" t="Include" />
+                <e p="SO_EnemyBehavior.cs" t="Include" />
+              </e>
+            </e>
+            <e p="EnemyArmorController.cs" t="Include" />
+            <e p="EnemyBrain.cs" t="Include" />
+            <e p="EnemyController.cs" t="Include" />
+          </e>
+          <e p="Health.cs" t="Include" />
+          <e p="HealthBar.cs" t="Include" />
+          <e p="Hitbox.cs" t="Include" />
+          <e p="Hurtbox.cs" t="Include" />
           <e p="LookAtMouse.cs" t="Include" />
-          <e p="PlayerAttack.cs" t="Include" />
-          <e p="PlayerController.cs" t="Include" />
+          <e p="LookAtObject.cs" t="Include" />
+          <e p="Player" t="Include">
+            <e p="PlayerAttack.cs" t="Include" />
+            <e p="PlayerController.cs" t="Include" />
+          </e>
           <e p="Scriptable_Objects" t="Include">
             <e p="Bool Input" t="Include">
               <e p="SO_BoolInput.cs" t="Include" />

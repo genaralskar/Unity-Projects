@@ -15,13 +15,13 @@ TagManager:
   - 
   - PostProcessing
   - Player
-  - PlayerHitbox
+  - PlayerSwordHitbox
+  - PlayerBulletHitbox
   - PlayerHurtbox
   - Enemy
   - EnemyHitbox
-  - EnemyHurtbox
-  - 
-  - 
+  - EnemyArmorHurtbox
+  - EnemyBodyHurtbox
   - 
   - 
   - 

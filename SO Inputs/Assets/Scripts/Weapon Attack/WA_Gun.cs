@@ -22,7 +22,6 @@ public class WA_Gun : WeaponAttack
 		GameObject tempBullet = Instantiate((Bullet));
 		tempBullet.transform.rotation = BulletSpawnPoint.transform.rotation;
 		tempBullet.transform.position = BulletSpawnPoint.transform.position;
-		tempBullet.GetComponent<BulletController>().InheritVelocity = gameObj.GetComponent<CharacterController>().velocity;
 	}
 	
 }
