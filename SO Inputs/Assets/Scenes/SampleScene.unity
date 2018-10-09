@@ -1917,7 +1917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30bcb4634896214b871115e6099891e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Behavior: {fileID: 11400000, guid: 41d2eb686fe6d4f4dbffc376dbe8b6dd, type: 2}
+  Behavior: {fileID: 11400000, guid: 87ff3e52c8e59584ca79334139205016, type: 2}
   ChaseTarget: {fileID: 1333872424}
   Agent: {fileID: 631653871}
 --- !u!114 &631653873
@@ -2776,7 +2776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30bcb4634896214b871115e6099891e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Behavior: {fileID: 11400000, guid: 41d2eb686fe6d4f4dbffc376dbe8b6dd, type: 2}
+  Behavior: {fileID: 11400000, guid: 87ff3e52c8e59584ca79334139205016, type: 2}
   ChaseTarget: {fileID: 1333872424}
   Agent: {fileID: 855651596}
 --- !u!1 &922004197
@@ -3602,7 +3602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30bcb4634896214b871115e6099891e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Behavior: {fileID: 11400000, guid: 41d2eb686fe6d4f4dbffc376dbe8b6dd, type: 2}
+  Behavior: {fileID: 11400000, guid: 87ff3e52c8e59584ca79334139205016, type: 2}
   ChaseTarget: {fileID: 1333872424}
   Agent: {fileID: 1244704657}
 --- !u!114 &1244704659
@@ -4048,10 +4048,10 @@ GameObject:
   - component: {fileID: 1333872423}
   - component: {fileID: 1333872422}
   - component: {fileID: 1333872425}
+  - component: {fileID: 1333872427}
   - component: {fileID: 1333872426}
   - component: {fileID: 1333872421}
   - component: {fileID: 1333872420}
-  - component: {fileID: 1333872427}
   - component: {fileID: 1333872428}
   m_Layer: 9
   m_Name: Player
@@ -5001,7 +5001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30bcb4634896214b871115e6099891e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Behavior: {fileID: 11400000, guid: 41d2eb686fe6d4f4dbffc376dbe8b6dd, type: 2}
+  Behavior: {fileID: 11400000, guid: 87ff3e52c8e59584ca79334139205016, type: 2}
   ChaseTarget: {fileID: 1333872424}
   Agent: {fileID: 1601608102}
 --- !u!114 &1601608104
@@ -5477,7 +5477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30bcb4634896214b871115e6099891e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Behavior: {fileID: 11400000, guid: 41d2eb686fe6d4f4dbffc376dbe8b6dd, type: 2}
+  Behavior: {fileID: 11400000, guid: 87ff3e52c8e59584ca79334139205016, type: 2}
   ChaseTarget: {fileID: 1333872424}
   Agent: {fileID: 1734296278}
 --- !u!114 &1734296280
@@ -6078,7 +6078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30bcb4634896214b871115e6099891e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Behavior: {fileID: 11400000, guid: 41d2eb686fe6d4f4dbffc376dbe8b6dd, type: 2}
+  Behavior: {fileID: 11400000, guid: 87ff3e52c8e59584ca79334139205016, type: 2}
   ChaseTarget: {fileID: 1333872424}
   Agent: {fileID: 1940594483}
 --- !u!114 &1940594485

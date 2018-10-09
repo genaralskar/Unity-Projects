@@ -1,0 +1,969 @@
+fileFormatVersion: 2
+guid: 9326835e8fefa8c429b5101bd7f07e0c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Body
+    100002: cape
+    100004: Cog_FK_Ctrl
+    100006: Cog_FK_Ctrl_Grp
+    100008: Cog_FK_Jnt
+    100010: Cog_RK_Jnt
+    100012: Controls
+    100014: Geo
+    100016: Hip_FK_Ctrl
+    100018: Hip_FK_Ctrl_Grp
+    100020: Hip_FK_Jnt
+    100022: Hip_RK_Jnt
+    100024: L_Arm_01_FK_Ctrl
+    100026: L_Arm_01_FK_Ctrl_Grp
+    100028: L_Arm_01_FK_Jnt
+    100030: L_Arm_01_RK_Jnt
+    100032: L_Arm_02_FK_Ctrl
+    100034: L_Arm_02_FK_Ctrl_Grp
+    100036: L_Arm_02_FK_Jnt
+    100038: L_Arm_02_RK_Jnt
+    100040: L_Arm_03_FK_Ctrl
+    100042: L_Arm_03_FK_Ctrl_Grp
+    100044: L_Arm_03_FK_Jnt
+    100046: L_Arm_03_RK_Jnt
+    100048: L_Arm_Ctrl_Grp
+    100050: L_Arm_Shoulder_FK_Ctrl
+    100052: L_Arm_Shoulder_FK_Ctrl_Grp
+    100054: L_Arm_Shoulder_FK_Jnt
+    100056: L_Arm_Shoulder_RK_Jnt
+    100058: L_Leg_01_FK_Ctrl
+    100060: L_Leg_01_FK_Ctrl_Grp
+    100062: L_Leg_01_FK_Jnt
+    100064: L_Leg_01_RK_Jnt
+    100066: L_Leg_02_FK_Ctrl
+    100068: L_Leg_02_FK_Ctrl_Grp
+    100070: L_Leg_02_FK_Jnt
+    100072: L_Leg_02_RK_Jnt
+    100074: L_Leg_03_FK_Ctrl
+    100076: L_Leg_03_FK_Ctrl_Grp
+    100078: L_Leg_03_FK_Jnt
+    100080: L_Leg_03_RK_Jnt
+    100082: L_Leg_Ctrl_Grp
+    100084: Neck_FK_Ctrl
+    100086: Neck_FK_Ctrl_Grp
+    100088: Neck_FK_Jnt
+    100090: Neck_RK_Jnt
+    100092: //RootNode
+    100094: R_Arm_01_FK_Ctrl
+    100096: R_Arm_01_FK_Ctrl_Grp
+    100098: R_Arm_01_FK_Jnt
+    100100: R_Arm_01_RK_Jnt
+    100102: R_Arm_02_FK_Ctrl
+    100104: R_Arm_02_FK_Ctrl_Grp
+    100106: R_Arm_02_FK_Jnt
+    100108: R_Arm_02_RK_Jnt
+    100110: R_Arm_03_FK_Ctrl
+    100112: R_Arm_03_FK_Ctrl_Grp
+    100114: R_Arm_03_FK_Jnt
+    100116: R_Arm_03_RK_Jnt
+    100118: R_Arm_Ctrl_Grp
+    100120: R_Arm_Shoulder_FK_Ctrl
+    100122: R_Arm_Shoulder_FK_Ctrl_Grp
+    100124: R_Arm_Shoulder_FK_Jnt
+    100126: R_Arm_Shoulder_RK_Jnt
+    100128: R_Leg_01_FK_Ctrl
+    100130: R_Leg_01_FK_Ctrl_Grp
+    100132: R_Leg_01_FK_Jnt
+    100134: R_Leg_01_RK_Jnt
+    100136: R_Leg_02_FK_Ctrl
+    100138: R_Leg_02_FK_Ctrl_Grp
+    100140: R_Leg_02_FK_Jnt
+    100142: R_Leg_02_RK_Jnt
+    100144: R_Leg_03_FK_Ctrl
+    100146: R_Leg_03_FK_Ctrl_Grp
+    100148: R_Leg_03_FK_Jnt
+    100150: R_Leg_03_RK_Jnt
+    100152: R_Leg_Ctrl_Grp
+    100154: Skeleton
+    100156: Spine_01_FK_Ctrl
+    100158: Spine_01_FK_Ctrl_Grp
+    100160: Spine_01_FK_Jnt
+    100162: Spine_01_RK_Jnt
+    100164: Spine_02_FK_Ctrl
+    100166: Spine_02_FK_Ctrl_Grp
+    100168: Spine_02_FK_Jnt
+    100170: Spine_02_RK_Jnt
+    100172: Spine_03_FK_Ctrl
+    100174: Spine_03_FK_Ctrl_Grp
+    100176: Spine_03_FK_Jnt
+    100178: Spine_03_RK_Jnt
+    100180: Spine_Ctrl_Grp
+    400000: Body
+    400002: cape
+    400004: Cog_FK_Ctrl
+    400006: Cog_FK_Ctrl_Grp
+    400008: Cog_FK_Jnt
+    400010: Cog_RK_Jnt
+    400012: Controls
+    400014: Geo
+    400016: Hip_FK_Ctrl
+    400018: Hip_FK_Ctrl_Grp
+    400020: Hip_FK_Jnt
+    400022: Hip_RK_Jnt
+    400024: L_Arm_01_FK_Ctrl
+    400026: L_Arm_01_FK_Ctrl_Grp
+    400028: L_Arm_01_FK_Jnt
+    400030: L_Arm_01_RK_Jnt
+    400032: L_Arm_02_FK_Ctrl
+    400034: L_Arm_02_FK_Ctrl_Grp
+    400036: L_Arm_02_FK_Jnt
+    400038: L_Arm_02_RK_Jnt
+    400040: L_Arm_03_FK_Ctrl
+    400042: L_Arm_03_FK_Ctrl_Grp
+    400044: L_Arm_03_FK_Jnt
+    400046: L_Arm_03_RK_Jnt
+    400048: L_Arm_Ctrl_Grp
+    400050: L_Arm_Shoulder_FK_Ctrl
+    400052: L_Arm_Shoulder_FK_Ctrl_Grp
+    400054: L_Arm_Shoulder_FK_Jnt
+    400056: L_Arm_Shoulder_RK_Jnt
+    400058: L_Leg_01_FK_Ctrl
+    400060: L_Leg_01_FK_Ctrl_Grp
+    400062: L_Leg_01_FK_Jnt
+    400064: L_Leg_01_RK_Jnt
+    400066: L_Leg_02_FK_Ctrl
+    400068: L_Leg_02_FK_Ctrl_Grp
+    400070: L_Leg_02_FK_Jnt
+    400072: L_Leg_02_RK_Jnt
+    400074: L_Leg_03_FK_Ctrl
+    400076: L_Leg_03_FK_Ctrl_Grp
+    400078: L_Leg_03_FK_Jnt
+    400080: L_Leg_03_RK_Jnt
+    400082: L_Leg_Ctrl_Grp
+    400084: Neck_FK_Ctrl
+    400086: Neck_FK_Ctrl_Grp
+    400088: Neck_FK_Jnt
+    400090: Neck_RK_Jnt
+    400092: //RootNode
+    400094: R_Arm_01_FK_Ctrl
+    400096: R_Arm_01_FK_Ctrl_Grp
+    400098: R_Arm_01_FK_Jnt
+    400100: R_Arm_01_RK_Jnt
+    400102: R_Arm_02_FK_Ctrl
+    400104: R_Arm_02_FK_Ctrl_Grp
+    400106: R_Arm_02_FK_Jnt
+    400108: R_Arm_02_RK_Jnt
+    400110: R_Arm_03_FK_Ctrl
+    400112: R_Arm_03_FK_Ctrl_Grp
+    400114: R_Arm_03_FK_Jnt
+    400116: R_Arm_03_RK_Jnt
+    400118: R_Arm_Ctrl_Grp
+    400120: R_Arm_Shoulder_FK_Ctrl
+    400122: R_Arm_Shoulder_FK_Ctrl_Grp
+    400124: R_Arm_Shoulder_FK_Jnt
+    400126: R_Arm_Shoulder_RK_Jnt
+    400128: R_Leg_01_FK_Ctrl
+    400130: R_Leg_01_FK_Ctrl_Grp
+    400132: R_Leg_01_FK_Jnt
+    400134: R_Leg_01_RK_Jnt
+    400136: R_Leg_02_FK_Ctrl
+    400138: R_Leg_02_FK_Ctrl_Grp
+    400140: R_Leg_02_FK_Jnt
+    400142: R_Leg_02_RK_Jnt
+    400144: R_Leg_03_FK_Ctrl
+    400146: R_Leg_03_FK_Ctrl_Grp
+    400148: R_Leg_03_FK_Jnt
+    400150: R_Leg_03_RK_Jnt
+    400152: R_Leg_Ctrl_Grp
+    400154: Skeleton
+    400156: Spine_01_FK_Ctrl
+    400158: Spine_01_FK_Ctrl_Grp
+    400160: Spine_01_FK_Jnt
+    400162: Spine_01_RK_Jnt
+    400164: Spine_02_FK_Ctrl
+    400166: Spine_02_FK_Ctrl_Grp
+    400168: Spine_02_FK_Jnt
+    400170: Spine_02_RK_Jnt
+    400172: Spine_03_FK_Ctrl
+    400174: Spine_03_FK_Ctrl_Grp
+    400176: Spine_03_FK_Jnt
+    400178: Spine_03_RK_Jnt
+    400180: Spine_Ctrl_Grp
+    2100000: lambert1
+    2300000: cape
+    3300000: cape
+    4300000: Body
+    4300002: cape
+    7400000: Walk
+    7400002: Idle
+    7400004: Slide
+    9500000: //RootNode
+    13700000: Body
+    13700002: cape
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'Hip_FK_Jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Spine_03_FK_Jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 5
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 4
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Slide
+      takeName: Take 001
+      firstFrame: 32
+      lastFrame: 61
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.5
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 0.5
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: Cog_FK_Jnt
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Leg_01_FK_Jnt
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Leg_01_FK_Jnt
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Leg_02_FK_Jnt
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Leg_02_FK_Jnt
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine_01_FK_Jnt
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine_02_FK_Jnt
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Arm_Shoulder_FK_Jnt
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Arm_Shoulder_FK_Jnt
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Arm_01_FK_Jnt
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Arm_01_FK_Jnt
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Arm_02_FK_Jnt
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Arm_02_FK_Jnt
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Arm_03_FK_Jnt
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Arm_03_FK_Jnt
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Leg_03_FK_Jnt
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Leg_03_FK_Jnt
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Neck_FK_Jnt
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Player(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Controls
+      parentName: Player(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cog_FK_Ctrl_Grp
+      parentName: Controls
+      position: {x: -0, y: 1, z: -1.3877788e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cog_FK_Ctrl
+      parentName: Cog_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hip_FK_Ctrl_Grp
+      parentName: Controls
+      position: {x: -0, y: 1, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hip_FK_Ctrl
+      parentName: Hip_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arm_Ctrl_Grp
+      parentName: Controls
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arm_01_FK_Ctrl_Grp
+      parentName: L_Arm_Ctrl_Grp
+      position: {x: -0.1568626, y: 1.386007, z: -0.0029334053}
+      rotation: {x: 0.08562, y: 0.05103029, z: 0.5244421, w: 0.8455919}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arm_01_FK_Ctrl
+      parentName: L_Arm_01_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.0052565695, y: 0.044615522, z: 0.11689184, w: 0.9921281}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arm_02_FK_Ctrl_Grp
+      parentName: L_Arm_Ctrl_Grp
+      position: {x: -0.22327176, y: 1.0796689, z: 0.009197856}
+      rotation: {x: 0.06306787, y: 0.07559007, z: 0.62324476, w: 0.7758058}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arm_02_FK_Ctrl
+      parentName: L_Arm_02_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arm_03_FK_Ctrl_Grp
+      parentName: L_Arm_Ctrl_Grp
+      position: {x: -0.28493965, y: 0.79520166, z: 0.020463008}
+      rotation: {x: 0.7758058, y: 0.62324476, z: -0.07558981, w: -0.06306755}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arm_03_FK_Ctrl
+      parentName: L_Arm_03_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arm_Shoulder_FK_Ctrl_Grp
+      parentName: L_Arm_Ctrl_Grp
+      position: {x: 0.0010765332, y: 1.5219314, z: -0.01865355}
+      rotation: {x: 0.76795197, y: 0.0028676286, z: 0.0029597871, w: 0.6404942}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arm_Shoulder_FK_Ctrl
+      parentName: L_Arm_Shoulder_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.010633426, y: 0.33157164, z: -0.09765497, w: 0.93830204}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Leg_Ctrl_Grp
+      parentName: Controls
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Leg_01_FK_Ctrl_Grp
+      parentName: L_Leg_Ctrl_Grp
+      position: {x: -0.133737, y: 1.007735, z: -1.2160276e-17}
+      rotation: {x: -0.7071068, y: 0.7071068, z: -8.7157646e-33, w: 8.659561e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Leg_01_FK_Ctrl
+      parentName: L_Leg_01_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 0.05836378, z: -0, w: 0.99829537}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Leg_02_FK_Ctrl_Grp
+      parentName: L_Leg_Ctrl_Grp
+      position: {x: -0.133737, y: 0.58277994, z: 0.049859084}
+      rotation: {x: -0.70590144, y: 0.70590144, z: -0.041269448, w: -0.041269448}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Leg_02_FK_Ctrl
+      parentName: L_Leg_02_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0.10399815, z: -0, w: 0.9945775}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Leg_03_FK_Ctrl_Grp
+      parentName: L_Leg_Ctrl_Grp
+      position: {x: -0.133737, y: 0.00052224466, z: -0.0036131286}
+      rotation: {x: -0.70636564, y: 0.70636564, z: 0.03236682, w: 0.03236682}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Leg_03_FK_Ctrl
+      parentName: L_Leg_03_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Neck_FK_Ctrl_Grp
+      parentName: Controls
+      position: {x: 0.0011080847, y: 1.7196175, z: 0.017420651}
+      rotation: {x: -0.7041934, y: 0.7042649, z: 0.06394933, w: 0.06350767}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Neck_FK_Ctrl
+      parentName: Neck_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Arm_Ctrl_Grp
+      parentName: Controls
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Arm_01_FK_Ctrl_Grp
+      parentName: R_Arm_Ctrl_Grp
+      position: {x: 0.1590249, y: 1.3859942, z: -0.003132352}
+      rotation: {x: 0.8456006, y: -0.5245336, z: 0.05050035, w: -0.08528667}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Arm_01_FK_Ctrl
+      parentName: R_Arm_01_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.0052565695, y: 0.044615522, z: 0.11689184, w: 0.9921281}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Arm_02_FK_Ctrl_Grp
+      parentName: R_Arm_Ctrl_Grp
+      position: {x: 0.22542043, y: 1.0796484, z: 0.00891476}
+      rotation: {x: 0.7758256, y: -0.6233189, z: 0.07510317, w: -0.0626711}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Arm_02_FK_Ctrl
+      parentName: R_Arm_02_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Arm_03_FK_Ctrl_Grp
+      parentName: R_Arm_Ctrl_Grp
+      position: {x: 0.28707585, y: 0.7951772, z: 0.020101817}
+      rotation: {x: 0.06267088, y: -0.07510299, z: -0.6233189, w: 0.7758256}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Arm_03_FK_Ctrl
+      parentName: R_Arm_03_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Arm_Shoulder_FK_Ctrl_Grp
+      parentName: R_Arm_Ctrl_Grp
+      position: {x: 0.0010765335, y: 1.5219316, z: -0.018653505}
+      rotation: {x: -0.6404958, y: 0.0034729545, z: -0.002497479, w: 0.7679498}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Arm_Shoulder_FK_Ctrl
+      parentName: R_Arm_Shoulder_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.010633426, y: 0.33157164, z: -0.09765497, w: 0.93830204}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Leg_Ctrl_Grp
+      parentName: Controls
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Leg_01_FK_Ctrl_Grp
+      parentName: R_Leg_Ctrl_Grp
+      position: {x: 0.13373713, y: 1.007736, z: -1.2160073e-17}
+      rotation: {x: 5.551115e-17, y: -2.2204463e-16, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Leg_01_FK_Ctrl
+      parentName: R_Leg_01_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 0.05836378, z: -0, w: 0.99829537}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Leg_02_FK_Ctrl_Grp
+      parentName: R_Leg_Ctrl_Grp
+      position: {x: 0.13373713, y: 0.58277845, z: 0.049859364}
+      rotation: {x: -0.041269425, y: 0.041269425, z: 0.70590144, w: 0.70590144}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Leg_02_FK_Ctrl
+      parentName: R_Leg_02_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0.10399815, z: -0, w: 0.9945775}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Leg_03_FK_Ctrl_Grp
+      parentName: R_Leg_Ctrl_Grp
+      position: {x: 0.13373713, y: 0.0005222557, z: -0.0036127085}
+      rotation: {x: 0.032366794, y: -0.032366794, z: 0.70636564, w: 0.70636564}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Leg_03_FK_Ctrl
+      parentName: R_Leg_03_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_Ctrl_Grp
+      parentName: Controls
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_01_FK_Ctrl_Grp
+      parentName: Spine_Ctrl_Grp
+      position: {x: -7.7036417e-34, y: 1, z: -1.3877788e-17}
+      rotation: {x: -0.7055119, y: 0.7086981, z: -8.659539e-17, w: -1.9509693e-19}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_01_FK_Ctrl
+      parentName: Spine_01_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 0.070211485, z: -0, w: 0.9975321}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_02_FK_Ctrl_Grp
+      parentName: Spine_Ctrl_Grp
+      position: {x: 0.0010546185, y: 1.2340478, z: -0.03311137}
+      rotation: {x: 0.7053617, y: -0.7053617, z: 0.049422797, w: 0.04987021}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_02_FK_Ctrl
+      parentName: Spine_02_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0.0952136, z: -0, w: 0.9954569}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_03_FK_Ctrl_Grp
+      parentName: Spine_Ctrl_Grp
+      position: {x: 0.0010765332, y: 1.5219314, z: -0.01865355}
+      rotation: {x: -0.70686287, y: 0.70690554, z: 0.017961798, w: 0.017516417}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_03_FK_Ctrl
+      parentName: Spine_03_FK_Ctrl_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0.0651126, z: -0, w: 0.9978779}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Geo
+      parentName: Player(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Body
+      parentName: Geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cape
+      parentName: Geo
+      position: {x: -0, y: 1.3389633, z: -0.09390994}
+      rotation: {x: -0.67940205, y: 0, z: -0, w: 0.73376626}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton
+      parentName: Player(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cog_FK_Jnt
+      parentName: Skeleton
+      position: {x: -0, y: 1, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hip_FK_Jnt
+      parentName: Cog_FK_Jnt
+      position: {x: -0, y: 0, z: -6.162976e-33}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Leg_01_FK_Jnt
+      parentName: Hip_FK_Jnt
+      position: {x: -0.133737, y: 1.6229736e-18, z: 0.007735}
+      rotation: {x: -0.5283296, y: 0.5283296, z: 0.4699658, w: 0.4699658}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Leg_02_FK_Jnt
+      parentName: L_Leg_01_FK_Jnt
+      position: {x: 0.42787, y: 1.9428903e-16, z: 4.1633363e-17}
+      rotation: {x: 0, y: -0.10399815, z: -0, w: 0.9945775}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Leg_03_FK_Jnt
+      parentName: L_Leg_02_FK_Jnt
+      position: {x: 0.58470786, y: 6.661338e-16, z: -0.0000000037127004}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Leg_01_FK_Jnt
+      parentName: Hip_FK_Jnt
+      position: {x: 0.13373713, y: 1.8122663e-18, z: 0.007735915}
+      rotation: {x: 0.4699658, y: -0.4699658, z: 0.5283296, w: 0.5283296}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Leg_02_FK_Jnt
+      parentName: R_Leg_01_FK_Jnt
+      position: {x: -0.42787242, y: 0, z: -5.551115e-17}
+      rotation: {x: 0, y: -0.10399815, z: -0, w: 0.9945775}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Leg_03_FK_Jnt
+      parentName: R_Leg_02_FK_Jnt
+      position: {x: -0.58470637, y: 5.551115e-17, z: 0.000000003712698}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_01_FK_Jnt
+      parentName: Cog_FK_Jnt
+      position: {x: -8.759346e-21, y: 0, z: 1.3682535e-19}
+      rotation: {x: -0.70377076, y: 0.7069491, z: -0.04953509, w: -0.049758792}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_02_FK_Jnt
+      parentName: Spine_01_FK_Jnt
+      position: {x: -0.23638074, y: 6.639745e-10, z: 2.7755576e-17}
+      rotation: {x: -0.00021451457, y: -0.09521337, z: -0.0022427468, w: 0.9954544}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_03_FK_Jnt
+      parentName: Spine_02_FK_Jnt
+      position: {x: -0.2882464, y: -2.8990021e-10, z: 2.5668356e-13}
+      rotation: {x: 0, y: -0.0651126, z: -0, w: 0.9978779}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arm_Shoulder_FK_Jnt
+      parentName: Spine_03_FK_Jnt
+      position: {x: -0, y: -8.6736174e-19, z: 0}
+      rotation: {x: 0.35502923, y: -0.5929182, z: 0.67948544, w: -0.24637729}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arm_01_FK_Jnt
+      parentName: L_Arm_Shoulder_FK_Jnt
+      position: {x: -0.20896733, y: -9.753327e-10, z: 3.4918735e-10}
+      rotation: {x: -0.6804087, y: 0.25276315, z: 0.19246824, w: 0.6603868}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arm_02_FK_Jnt
+      parentName: L_Arm_01_FK_Jnt
+      position: {x: -0.31368837, y: -1.7036478e-10, z: -0.000000003201964}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arm_03_FK_Jnt
+      parentName: L_Arm_02_FK_Jnt
+      position: {x: -0.29129264, y: -1.5820217e-10, z: -0.0000000029733602}
+      rotation: {x: 1, y: -0, z: 0, w: 0.0000002663161}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Neck_FK_Jnt
+      parentName: Spine_03_FK_Jnt
+      position: {x: -0.20095055, y: -7.233694e-10, z: 1.7902346e-13}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Arm_Shoulder_FK_Jnt
+      parentName: Spine_03_FK_Jnt
+      position: {x: -0.00000024803617, y: -1.00420304e-10, z: -5.551115e-17}
+      rotation: {x: 0.67948544, y: -0.24637733, z: -0.35502926, w: 0.5929182}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Arm_01_FK_Jnt
+      parentName: R_Arm_Shoulder_FK_Jnt
+      position: {x: 0.20896786, y: -9.753839e-10, z: 0.0000018670478}
+      rotation: {x: -0.6804087, y: 0.25276318, z: 0.19246824, w: 0.66038686}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Arm_02_FK_Jnt
+      parentName: R_Arm_01_FK_Jnt
+      position: {x: 0.31368983, y: 0.000002054477, z: -0.0000000032246665}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Arm_03_FK_Jnt
+      parentName: R_Arm_02_FK_Jnt
+      position: {x: 0.29129088, y: 0.0000010290032, z: -0.0000000029943998}
+      rotation: {x: 1, y: -1.0755285e-16, z: 6.051323e-17, w: 0.0000002663161}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cog_RK_Jnt
+      parentName: Skeleton
+      position: {x: -0, y: 1, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hip_RK_Jnt
+      parentName: Cog_RK_Jnt
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Leg_01_RK_Jnt
+      parentName: Hip_RK_Jnt
+      position: {x: -0.133737, y: 1.7175183e-18, z: 0.007735}
+      rotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Leg_02_RK_Jnt
+      parentName: L_Leg_01_RK_Jnt
+      position: {x: 0.42787, y: 8.326673e-17, z: -2.375084e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Leg_03_RK_Jnt
+      parentName: L_Leg_02_RK_Jnt
+      position: {x: 0.58470786, y: 1.3877788e-16, z: -0.0000000037127004}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Leg_01_RK_Jnt
+      parentName: Hip_RK_Jnt
+      position: {x: 0.13373713, y: 1.7177215e-18, z: 0.007735915}
+      rotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Leg_02_RK_Jnt
+      parentName: R_Leg_01_RK_Jnt
+      position: {x: -0.42787242, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Leg_03_RK_Jnt
+      parentName: R_Leg_02_RK_Jnt
+      position: {x: -0.58470637, y: 0, z: 0.000000003712698}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_01_RK_Jnt
+      parentName: Cog_RK_Jnt
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.70551187, y: 0.7086981, z: -0.000000007105678, w: 0.000000007073732}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_02_RK_Jnt
+      parentName: Spine_01_RK_Jnt
+      position: {x: -0.23638074, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0.002252981, w: 0.9999975}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_03_RK_Jnt
+      parentName: Spine_02_RK_Jnt
+      position: {x: -0.2882464, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arm_Shoulder_RK_Jnt
+      parentName: Spine_03_RK_Jnt
+      position: {x: -0, y: 0, z: -9.62965e-35}
+      rotation: {x: 0.4979015, y: -0.50208974, z: 0.50208974, w: -0.4979015}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arm_01_RK_Jnt
+      parentName: L_Arm_Shoulder_RK_Jnt
+      position: {x: -0.20896733, y: -1.2063357e-16, z: 9.0522325e-17}
+      rotation: {x: -0.6925401, y: 0.14278746, z: 0.14278746, w: 0.6925401}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arm_02_RK_Jnt
+      parentName: L_Arm_01_RK_Jnt
+      position: {x: -0.31368837, y: 1.5454218e-16, z: 9.907926e-31}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arm_03_RK_Jnt
+      parentName: L_Arm_02_RK_Jnt
+      position: {x: -0.29129264, y: -2.0212487e-18, z: 1.12201845e-33}
+      rotation: {x: 1, y: -0, z: 0, w: 0.00000030398803}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Neck_RK_Jnt
+      parentName: Spine_03_RK_Jnt
+      position: {x: -0.20095055, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Arm_Shoulder_RK_Jnt
+      parentName: Spine_03_RK_Jnt
+      position: {x: -0.00000024803617, y: -1.0041941e-10, z: 1.8874602e-25}
+      rotation: {x: 0.50208974, y: -0.4979015, z: -0.4979015, w: 0.50208974}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Arm_01_RK_Jnt
+      parentName: R_Arm_Shoulder_RK_Jnt
+      position: {x: 0.20896786, y: 9.6391866e-17, z: 0.0000018666987}
+      rotation: {x: -0.6925401, y: 0.14278746, z: 0.14278746, w: 0.6925401}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Arm_02_RK_Jnt
+      parentName: R_Arm_01_RK_Jnt
+      position: {x: 0.31368983, y: 0.0000020546472, z: 1.8994706e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Arm_03_RK_Jnt
+      parentName: R_Arm_02_RK_Jnt
+      position: {x: 0.29129088, y: 0.0000010291614, z: 1.7634015e-17}
+      rotation: {x: 1, y: -0, z: 0, w: 0.0000003038339}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
