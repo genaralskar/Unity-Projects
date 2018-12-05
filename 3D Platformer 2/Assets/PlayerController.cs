@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Globalization;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.Networking;
 
 public class PlayerController : MonoBehaviour {
 
@@ -24,7 +26,6 @@ public class PlayerController : MonoBehaviour {
 	public LayerMask raycastCollisionMask;
 
 	private float dragMultiplier;
-	private PhysicMaterial pm;
 
 	public Animator anims;
 	[Range(0, 1)]
@@ -32,14 +33,33 @@ public class PlayerController : MonoBehaviour {
 
 	public bool isSliding;
 
+	public bool grounded = true;
+	public bool ledgeGrabbed = false;
+
+	public CapsuleCollider bumperCollider;
+	public SphereCollider groundedCollider;
+
+	public Transform wallNormalRay;
+	public Transform wallEndDetect;
+
 	// Use this for initialization
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>();
-		pm = GetComponent<SphereCollider>().material;
 		dragMultiplier = groundedDrag;
 	}
-	
+
+	private void Update()
+	{
+		//Jump
+		if (grounded && Input.GetButtonDown("Jump"))
+		{
+			Vector3 jumpVector = new Vector3(0, jumpForce, 0);
+			//	print(jumpVector);
+			rb.AddForce(jumpVector);
+		}
+	}
+
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
@@ -56,16 +76,21 @@ public class PlayerController : MonoBehaviour {
 		//print("Grounded: " + IsGrounded());
 		
 		//if velocity is low, set physics mat to stick
-		bool grounded = IsGrounded();
+		grounded = IsGrounded();
 		
 		
-		if (grounded)
+		if (grounded && !ledgeGrabbed)
 		{
 			Move();
 		}
-		else
+		else if(!grounded && !ledgeGrabbed)
 		{
 			AirMove();
+		}
+		else if(!grounded && ledgeGrabbed)
+		{
+			LedgeMove();
+			WallNormalRaycast();
 		}
 		Drag();
 
@@ -92,13 +117,7 @@ public class PlayerController : MonoBehaviour {
 			//art.transform.rotation = Quaternion.Euler(rotDirection);
 		}
 		
-		//Jump
-		if (grounded && Input.GetButtonDown("Jump"))
-		{
-			Vector3 jumpVector = new Vector3(0, jumpForce, 0);
-		//	print(jumpVector);
-			rb.AddForce(jumpVector);
-		}
+		
 		
 		
 		//do grounded check, then do this with like rb.velocity.y < 5 or something
@@ -173,9 +192,111 @@ public class PlayerController : MonoBehaviour {
 		rb.AddForce(forceVector * moveSpeed * .25f);
 	}
 
+	#region LedgeMoveStuff
+
+	public void StartLedgeMove(Vector3 ledgePoint, Vector3 grabOffset, Quaternion ledgeRotation)
+	{
+		ledgeGrabbed = true;
+		//disable colliders
+		bumperCollider.enabled = false;
+		groundedCollider.enabled = false;
+		//rb kinematic
+		rb.isKinematic = true;
+		//move player to correct spot
+		grabOffset = art.TransformDirection(grabOffset);
+		art.rotation = ledgeRotation;
+		
+		transform.position = ledgePoint + grabOffset;
+		
+		//play grab animation
+	}
+
+	private void WallNormalRaycast()
+	{
+		RaycastHit hit;
+		if(Physics.Raycast(wallNormalRay.position, art.forward, out hit, 1f, raycastCollisionMask))
+		{
+			Vector3 rotate = Vector3.RotateTowards(art.forward, hit.normal * -1, .1f, 0);
+			art.rotation = Quaternion.LookRotation(rotate);
+			//set players distance from the wall
+			Vector3 newPos = new Vector3(hit.point.x, transform.position.y, hit.point.z);
+			//print(art.TransformDirection(newPos));
+			//newPos -= art.TransformDirection(newPos) - hit.point * .5f;
+		//	print("wall normal = " + hit.normal);
+			//newPos.x += hit.point.x * .5f;
+			//newPos.z += hit.point.z * .5f;
+
+			Vector3.Lerp(transform.position, newPos, .5f);
+			
+			//transform.position = newPos + (hit.normal * .5f);
+//			print("Normal: " + hit.normal + " Rotate: " + rotate);
+		}
+	}
+
+	private void LedgeMove()
+	{
+		//raycast wall face, snap rotation to that normal
+		//raycast ledge on right and left side of character, move raycast backwards to find the edge
+		//raycast wall of left and right side of character, to find the end of the walls
+		
+		
+		//move left and right with controls (animation!)
+		//rotate move direction to player direction
+		//Vector3 sideMove = 
+		float xForce = Input.GetAxis("Horizontal");
+
+		float yForce = Input.GetAxis("Vertical");
+		
+		Vector3 forceVector = new Vector3(xForce, 0, yForce);
+		forceVector.z = 0;
+		forceVector = art.TransformDirection(forceVector);
+		
+//		print(forceVector);
+
+		transform.position += forceVector * Time.deltaTime;
+		//press jump play climb animation
+		//press back ungrab ledge
+		if (Input.GetAxis("Vertical") < 0)
+		{
+			EndLedgeMove();
+		}
+
+		if (Input.GetButtonDown("Jump"))
+		{
+			EndLedgeMove();
+			rb.AddForce(Vector3.up * jumpForce * 1.5f);
+		}
+	}
+
+	private bool WallEndCheck(Vector3 input)
+	{
+		Vector3 inp = input.normalized;
+		
+
+		return false;
+	}
+
+	public void EndLedgeMove()
+	{
+		ledgeGrabbed = false;
+		//enable colliders
+		bumperCollider.enabled = true;
+		groundedCollider.enabled = true;
+		//rb kinematic
+		rb.isKinematic = false;
+	}
+	
+	#endregion
+	
+	
+
 	private bool IsGrounded()
 	{
 		//return true;
+		if (ledgeGrabbed)
+		{
+			return false;
+		}
 		return Physics.Raycast(transform.position + (Vector3.up * .1f), Vector3.down, raycastDistance, raycastCollisionMask);
 		
 	}

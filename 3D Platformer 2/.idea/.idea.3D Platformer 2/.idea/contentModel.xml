@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\genar\.Rider2018.1\system\resharper-host\Local\Transient\ReSharperHost\v12\SolutionCaches\_3D Platformer 2.1250862209.00" t="ExcludeRecursive" />
-    <e p="E:\GIT\Unity-Projects\3D Platformer 2" t="IncludeRecursive">
+    <e p="C:\Users\genar\.Rider2018.1\system\resharper-host\Local\Transient\ReSharperHost\v12\SolutionCaches\_3D Platformer 2.620403584.00" t="ExcludeRecursive" />
+    <e p="D:\GIT\Unity-Projects\3D Platformer 2" t="IncludeRecursive">
       <e p="3D Platformer 2.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="FadeIn.cs" t="Include" />
+        <e p="LedgeFinder.cs" t="Include" />
         <e p="NextLevel.cs" t="Include" />
         <e p="PlayerController.cs" t="Include" />
         <e p="PlayerControllerCC.cs" t="Include" />
