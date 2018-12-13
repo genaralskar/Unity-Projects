@@ -2,12 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GatherPoint : MonoBehaviour, IClickableObject {
+public class GatherPoint : MonoBehaviour, IClickableObject
+{
 
-	//private gatherItem
+	[SerializeField] private Item gatherItem;
 	
-	public void OnClicked()
+	public void OnClicked(PlayerController player)
 	{
-		print("Gathering!?!?!");
+		if (gatherItem == null)
+		{
+			Debug.LogWarning("Item for " + this + " is null!");
+			return;
+		}
+		Inventory playerInventory = player.inventory;
+		playerInventory.AddItem(gatherItem, 1);
+		Debug.Log("Tried adding item " + gatherItem + " to inventory " + playerInventory);
 	}
 }

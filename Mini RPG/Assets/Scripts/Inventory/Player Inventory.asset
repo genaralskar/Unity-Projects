@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b66e7d0ba091a4aa54e0d60561d5d2, type: 3}
+  m_Name: Player Inventory
+  m_EditorClassIdentifier: 
+  inventorySize: 20
+  inventory:
+  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 10
+  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 0
+  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 0
+  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 0
+  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 0
+  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 0
+  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 0
+  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 0
+  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 0
+  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 0
+  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 0
+  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 0
+  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 0
+  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 0
+  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 0
+  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 0
+  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 0
+  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 0

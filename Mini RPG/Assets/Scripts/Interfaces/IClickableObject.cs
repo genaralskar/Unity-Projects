@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IClickableObject
 {
-	void OnClicked();
+	void OnClicked(PlayerController player);
 }

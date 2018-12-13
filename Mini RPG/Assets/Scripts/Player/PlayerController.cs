@@ -1,13 +1,17 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
-
+	private const float locomotioonAnimationSmoothTime = .1f;
+	[SerializeField] private float runSpeed = 5;
+	
 	private NavMeshAgent agent;
 	[SerializeField] private float interactDistance = 2;
+	[SerializeField] Animator anims;
+
+	public Inventory inventory;
 	
 	// Use this for initialization
 	void Start ()
@@ -22,6 +26,7 @@ public class PlayerController : MonoBehaviour
 		{
 			MovePlayer();
 		}	
+		UpdateAnimation();
 	}
 
 	private void MovePlayer()
@@ -48,7 +53,7 @@ public class PlayerController : MonoBehaviour
 				//else interact with object
 				else
 				{
-					obj.OnClicked();
+					obj.OnClicked(this);
 				}
 					
 			}
@@ -59,7 +64,13 @@ public class PlayerController : MonoBehaviour
 			}	
 		}
 	}
-	
+
+	//probably move to different script
+	private void UpdateAnimation()
+	{
+		float movementPercent = agent.velocity.magnitude / runSpeed;
+		anims.SetFloat("speedPercent", movementPercent, locomotioonAnimationSmoothTime, Time.deltaTime);
+	}
 	
 	//maybe just use stopping distance? different distances for different times though?
 	private IEnumerator MoveInRange(Vector3 position, float range, IClickableObject obj)
@@ -71,6 +82,6 @@ public class PlayerController : MonoBehaviour
 		}
 		
 		agent.SetDestination(transform.position);
-		obj.OnClicked();
+		obj.OnClicked(this);
 	}
 }
