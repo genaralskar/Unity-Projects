@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -35,15 +34,16 @@ public class Inventory : ScriptableObject
                 }
                 
                 //if it is, stackit
-                inventory[ItemIndexInInventory(newItem)].amount += amount; 
+                inventory[ItemIndexInInventory(newItem)].amount += amount;
             }
             
         }
         //if item not in inventory, find an empty slot
         else if(FindEmptySlotIndex() != -1)
         {
-            inventory[FindEmptySlotIndex()].item = newItem;
-            inventory[FindEmptySlotIndex()].amount = amount;
+            int emptyIndex = FindEmptySlotIndex();
+            inventory[emptyIndex].item = newItem;
+            inventory[emptyIndex].amount = amount;
         }
         //if no empy slot found
         else
@@ -76,6 +76,16 @@ public class Inventory : ScriptableObject
         return false;
     }
 
+    public InventorySlot ReturnItem(Item itemToCheck)
+    {
+        foreach (var inventorySlot in inventory)
+        {
+            if (inventorySlot.item == itemToCheck)
+                return inventorySlot;
+        }
+        return null;
+    }
+
     private int ItemIndexInInventory(Item itemToCheck)
     {
         foreach (var inventorySlot in inventory)
@@ -104,7 +114,7 @@ public class Inventory : ScriptableObject
 
 }
 
-[Serializable]
+[System.Serializable]
 public class InventorySlot
 {
     public Item item;

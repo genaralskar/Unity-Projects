@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feeb081e6b75b454c8b5d7300f41164b, type: 3}
+  m_Name: Doughnut Pigs
+  m_EditorClassIdentifier: 
+  questName: Doughnut Pig
+  questDescription: Farmer brown is having some problems with his pigs
+  skillReqs: []
+  currentQuestStep: 0
+  questSteps:
+  - questStepName: Quest Start
+    quesetStepDescription: Talk to farmer brown to start
+  - questStepName: Investigate pigs
+    quesetStepDescription: Farmer brown doesn't believe you believe him. He wants
+      you to spy on the pigs from the bushes to see what he's talking about
+  - questStepName: The pigs are up to something
+    quesetStepDescription: From the bushes you saw some very suspisious looking pigs
+      disappear behind a bush and not come back. Report back to Farmer Brown with
+      what you saw
+  - questStepName: I KNEW IT
+    quesetStepDescription: Farmer Brown is extatic to finally find someone else who
+      believes him! Now you just need to infiltrate and see what's going on. Farmer
+      Brown suggests you find a pink tarp, a curly tail, and to roll yourself in mud
+      to sneak in. Find a way to disguse yourself as a pig to sneak into their secret
+      layer
+  - questStepName: I'm in
+    quesetStepDescription: After entering they're secet lair, you need to find out
+      what the pigs are hiding. Find out what's going on with the pigs
+  - questStepName: Get some dough
+    quesetStepDescription: Turns out the pigs are planning a revolt against the surface
+      world. The only thing that can stop them is if their demand for doughnts is
+      met. Find a way to get enough doughnuts to feed all the pigs
+  - questStepName: Dough for wheat
+    quesetStepDescription: The doughnut baker won't give you the doughnuts you want,
+      it's too many and he'll run out for the other customers. If you can convince
+      his demotivated workers to pick up the slack so he can make more doughnuts,
+      then he might just consider your offer.
+  - questStepName: Get the doughnuts
+    quesetStepDescription: All the workers seem in high spirits, you should go back
+      to the baker for those doughnuts.
+  - questStepName: Satiate the pigs!
+    quesetStepDescription: The doughnut worker says he'll deliver the doughnuts as
+      soon as possible. Better get them back to the pigs before they start to riot.
+  - questStepName: Save the day!
+    quesetStepDescription: The pigs are happy! Talk to Farmer Brown and tell him what
+      happened.
+  rewards: []

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
 		//on mouse down
-		if (Input.GetMouseButtonDown(0))
+		if (!EventSystem.current.IsPointerOverGameObject(-1) && Input.GetMouseButtonDown(0))
 		{
 			MovePlayer();
 		}	

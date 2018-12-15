@@ -14,42 +14,42 @@ MonoBehaviour:
   inventorySize: 20
   inventory:
   - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
-    amount: 10
-  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+    amount: 13
+  - item: {fileID: 11400000, guid: 33b228f965c5b2040a4a6b4c97223ae7, type: 2}
+    amount: 1
+  - item: {fileID: 0}
     amount: 0
   - item: {fileID: 0}
     amount: 0
-  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+  - item: {fileID: 0}
     amount: 0
-  - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
     amount: 0
