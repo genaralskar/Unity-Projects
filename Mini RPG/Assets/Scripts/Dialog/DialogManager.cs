@@ -12,8 +12,11 @@ public class DialogManager : MonoBehaviour
 	private Queue<string> dialog;
 	public TextMeshProUGUI nameText;
 	public TextMeshProUGUI dialogText;
+	public GameObject leftChatHead;
+	public RawImage leftChatHeadRawImage;
+	public GameObject rightChatHead;
+	public RawImage rightChatHeadRawImage;
 
-	//changed it to a list!
 	public List<GameObject> optionButtons;
 	private List<TextMeshProUGUI> optionButtonText;
 	
@@ -78,6 +81,25 @@ public class DialogManager : MonoBehaviour
 		{
 			optionButtons[i].SetActive(true);
 			optionButtonText[i].text = newOptions[i];
+		}
+
+		//set proper image for chat heads
+		if (newDialog.chatHead == null)
+		{
+			rightChatHead.SetActive(false);
+			leftChatHead.SetActive(false);
+		}
+		else if (newDialog.chatHeadSide)
+		{
+			rightChatHead.SetActive(true);
+			leftChatHead.SetActive(false);
+			rightChatHeadRawImage.texture = newDialog.chatHead;
+		}
+		else
+		{
+			leftChatHead.SetActive(true);
+			rightChatHead.SetActive(false);
+			leftChatHeadRawImage.texture = newDialog.chatHead;
 		}
 		
 		if (!dialogWindow.activeSelf)

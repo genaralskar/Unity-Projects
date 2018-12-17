@@ -64,6 +64,16 @@ public class Inventory : ScriptableObject
         
     }
 
+    public void SetItem(Item newItem, int newAmount, int index)
+    {
+        inventory[index].item = newItem;
+        inventory[index].amount = newAmount;
+        if (UpdateInventory != null)
+        {
+            UpdateInventory(index);
+        }
+    }
+
     private bool ItemInInventory(Item itemToCheck)
     {
         //check to see if item is in inventory
@@ -123,4 +133,6 @@ public class InventorySlot
         get { return item.name; }
     }
     public int amount;
+    [Tooltip("Only items of this type may go in this slot.\nLeave blank to allow all items")]
+    public ItemType itemType;
 }

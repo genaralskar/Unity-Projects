@@ -11,7 +11,8 @@ public class Item : ScriptableObject
 	public bool stackable = true;
 
 	public Sprite image;
-	//item type
+
+	public ItemType itemType;
 	//item value
 	//item 
 

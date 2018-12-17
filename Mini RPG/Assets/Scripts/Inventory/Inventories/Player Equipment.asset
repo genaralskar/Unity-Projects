@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b66e7d0ba091a4aa54e0d60561d5d2, type: 3}
+  m_Name: Player Equipment
+  m_EditorClassIdentifier: 
+  inventorySize: 7
+  inventory:
+  - item: {fileID: 0}
+    amount: 0
+    itemType: {fileID: 11400000, guid: 9be1c4d5f73b2c348933e746a2319d8f, type: 2}
+  - item: {fileID: 0}
+    amount: 0
+    itemType: {fileID: 11400000, guid: ebadd39a6e43755499c949937d6b89c8, type: 2}
+  - item: {fileID: 0}
+    amount: 0
+    itemType: {fileID: 11400000, guid: b10fe70ccf986824695e4b70decf12f6, type: 2}
+  - item: {fileID: 0}
+    amount: 0
+    itemType: {fileID: 11400000, guid: fc1987b34e7dc3441b80c378781d0958, type: 2}
+  - item: {fileID: 0}
+    amount: 0
+    itemType: {fileID: 11400000, guid: eab385ce9fff99648904f04f77aa6c6b, type: 2}
+  - item: {fileID: 0}
+    amount: 0
+    itemType: {fileID: 11400000, guid: 2097064fc502978468318a2f011d6414, type: 2}
+  - item: {fileID: 0}
+    amount: 0
+    itemType: {fileID: 11400000, guid: 3d42d0255b0ee204da9deb67fe322e46, type: 2}

@@ -12,7 +12,10 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] private float interactDistance = 2;
 	[SerializeField] Animator anims;
 
+	public string playerName;
+	
 	public Inventory inventory;
+	public Inventory equipmentMenu;
 	
 	// Use this for initialization
 	void Start ()
@@ -84,5 +87,17 @@ public class PlayerController : MonoBehaviour
 		
 		agent.SetDestination(transform.position);
 		obj.OnClicked(this);
+	}
+
+	public void ToggleRun(bool run)
+	{
+		if (run)
+		{
+			agent.speed = runSpeed;
+		}
+		else
+		{
+			agent.speed = 2;
+		}
 	}
 }

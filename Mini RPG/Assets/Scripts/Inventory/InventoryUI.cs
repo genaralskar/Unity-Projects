@@ -25,24 +25,6 @@ public class InventoryUI : MonoBehaviour
 		//this is probably a bad idea
 		inventory.UpdateInventory += newInvController.UpdateInventoryHandler;
 
-//		//create inventory slots in window
-//		for (int i = 0; i < inventory.inventorySize; i++)
-//		{
-//			GameObject newSlot = Instantiate(inventorySlotPrefab);
-//			
-//			//parent to invWindow
-//			newSlot.transform.SetParent(invWindow.transform);
-//			
-//			//add item to slots
-//			InventorySlotUI newSlotUI = newSlot.GetComponent<InventorySlotUI>();
-//			newSlotUI.item = inventory.inventory[i].item;
-//			newSlotUI.amount = inventory.inventory[i].amount;
-//			newSlotUI.slotID = i;
-//			newSlotUI.inventory = inventory;
-//			
-//			//add newSlot to invSlot list
-//			invSlots.Add(newSlotUI);
-//		}
 	}
 
 	public void CloseInventory()

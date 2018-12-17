@@ -24,7 +24,12 @@ public class InventoryUIController : MonoBehaviour {
 	}
 
 
-	private void Start()
+	public void Start()
+	{
+		SpawnInventoryPanels();
+	}
+
+	protected virtual void SpawnInventoryPanels()
 	{
 		//spawn in proper number of inventory slots
 		
@@ -37,12 +42,11 @@ public class InventoryUIController : MonoBehaviour {
 			inventorySlots.Add(newSlotUI);
 			newSlotUI.UpdateItem();
 		}
-		
-		//update all items/gold
 	}
 
 	public void UpdateInventoryHandler(int index)
 	{
+		print("Updating inventory on " + this);
 		inventorySlots[index].UpdateItem();
 	}
 }

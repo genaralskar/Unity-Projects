@@ -7,6 +7,7 @@
       <e p="Assets" t="Include">
         <e p="CompleteQuestStateBehavior.cs" t="Include" />
         <e p="InventorySlotEditor.cs" t="Include" />
+        <e p="ItemDragHandler.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Dialog" t="Include">
             <e p="CheckItemStateBehavior.cs" t="Include" />
@@ -24,12 +25,14 @@
             <e p="IClickableObject.cs" t="Include" />
           </e>
           <e p="Inventory" t="Include">
+            <e p="EquipmentInventoryUI.cs" t="Include" />
+            <e p="EquipmentItem.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
             <e p="InventorySlotUI.cs" t="Include" />
             <e p="InventoryUI.cs" t="Include" />
             <e p="InventoryUIController.cs" t="Include" />
             <e p="Item.cs" t="Include" />
-            <e p="UnityEventOnClick.cs" t="Include" />
+            <e p="ItemType.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="CameraController.cs" t="Include" />
@@ -42,6 +45,7 @@
           </e>
           <e p="Utils" t="Include">
             <e p="DestroyGameObject.cs" t="Include" />
+            <e p="UnityEventOnClick.cs" t="Include" />
           </e>
         </e>
         <e p="SetQuestStepStateBehavior.cs" t="Include" />

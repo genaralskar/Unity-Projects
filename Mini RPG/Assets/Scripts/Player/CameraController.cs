@@ -1,35 +1,46 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
 
-	public CinemachineVirtualCamera camera;
-	public float rotateSpeed = 5f;
+	public Transform player;
+	public Camera cam;
+	public float rotateSpeed = 1.5f;
+	public float horizontalRotateSpeed = 1.5f;
+	public float verticalRotateSpeed = 1f;
 	public float zoomSpeed = 20f;
 	public float maxCameraDist = 20f;
 
-	private CinemachineFramingTransposer framingTransposer;
+	private Vector3 offset;
 
 	private void Start()
 	{
-		framingTransposer = camera.GetCinemachineComponent<CinemachineFramingTransposer>();
+		offset = transform.position - player.transform.position;
 	}
 
 	// Update is called once per frame
-	void Update ()
+	void LateUpdate ()
 	{
+		transform.position = player.transform.position + offset;
+		
 		//camera rotation
-		Vector3 newRot = camera.transform.rotation.eulerAngles;
-		newRot.x += Input.GetAxis("Vertical") * rotateSpeed;
-		newRot.y += Input.GetAxis("Horizontal") * -rotateSpeed;
+		Vector3 newRot = transform.rotation.eulerAngles;
+		newRot.x += Input.GetAxis("Vertical") * verticalRotateSpeed * Time.deltaTime;
+		newRot.y += Input.GetAxis("Horizontal") * -horizontalRotateSpeed * Time.deltaTime;
 		newRot.x = Mathf.Clamp(newRot.x, 1, 89);
-		camera.transform.rotation = Quaternion.Euler(newRot);
+//		print(newRot);
+		transform.rotation = Quaternion.Euler(newRot);
 		
 		//camera zoom
-		framingTransposer.m_CameraDistance += Input.GetAxis("Mouse ScrollWheel") * -zoomSpeed;
-		framingTransposer.m_CameraDistance = Mathf.Clamp(framingTransposer.m_CameraDistance, 2, maxCameraDist);
+		float cameraDist = cam.transform.localPosition.z + (Input.GetAxis("Mouse ScrollWheel") * zoomSpeed * Time.deltaTime);
+//		print(cameraDist);
+		cameraDist = Mathf.Clamp(cameraDist, -maxCameraDist, -2);
+		Vector3 zoomTransform = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, cameraDist);
+		cam.transform.localPosition = zoomTransform;
 	}
 }
