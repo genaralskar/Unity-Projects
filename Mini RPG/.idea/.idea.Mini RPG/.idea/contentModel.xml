@@ -6,9 +6,12 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="CompleteQuestStateBehavior.cs" t="Include" />
+        <e p="CutscenePlayer.cs" t="Include" />
         <e p="InventorySlotEditor.cs" t="Include" />
         <e p="ItemDragHandler.cs" t="Include" />
+        <e p="QuestStepCheckEvent.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="ClickableObjectBase.cs" t="Include" />
           <e p="Dialog" t="Include">
             <e p="CheckItemStateBehavior.cs" t="Include" />
             <e p="CheckQuestStepStateBehavior.cs" t="Include" />

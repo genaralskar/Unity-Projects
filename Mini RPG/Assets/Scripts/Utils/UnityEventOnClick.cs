@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class UnityEventOnClick : MonoBehaviour, IClickableObject
+public class UnityEventOnClick : ClickableObjectBase, IClickableObject
 {
 	
 	public UnityEvent Event;

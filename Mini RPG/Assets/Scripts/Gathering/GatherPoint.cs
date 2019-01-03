@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GatherPoint : MonoBehaviour, IClickableObject
+public class GatherPoint : ClickableObjectBase, IClickableObject
 {
 
 	[SerializeField] private Item gatherItem;

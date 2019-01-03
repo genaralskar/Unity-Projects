@@ -26,6 +26,7 @@ public class DialogManager : MonoBehaviour
 	
 	// Use this for initialization
 	void Start () {
+		//create list of text fields and add to them for easier access later
 		optionButtonText = new List<TextMeshProUGUI>();
 		foreach (var button in optionButtons)
 		{
@@ -49,27 +50,36 @@ public class DialogManager : MonoBehaviour
 	public void CloseDialogWindow()
 	{
 		dialogWindow.SetActive(false);
+		currentDialog.GetBehaviour<DialogStateInfoContainer>().manager = null;
 		currentDialog = null;
 	}
 
 	public void StartConv(Animator newDialog)
 	{
+		//disconnect previous dialog state info if not already done
 		if(currentDialog != null)
 			currentDialog.GetBehaviour<DialogStateInfoContainer>().manager = null;
 		currentDialog = newDialog;
+		//set DialogStateInfoContainer's manager to this
 		currentDialog.GetBehaviour<DialogStateInfoContainer>().manager = this;
+		//call reset trigger to reset conversation
 		newDialog.SetTrigger("Reset");
 	}
 
+	//used to trigger which dialog option was chosen
 	public void CallOption(int option)
 	{
 		currentDialog.SetTrigger("Option " + option);
 	}
 
+	//sets the text of the dialog box, text of the option buttons, and set proper chatheads
 	public void SetOptionBoxes(List<string> newOptions, int newNumOptions, Dialog newDialog)
 	{
+		//set dialog text and dialog name
+		//maybe change to coroutine so text scrolls in
 		dialogText.text = newDialog.dialog;
 		nameText.text = newDialog.name;
+		
 		int numOptions = newNumOptions;
 
 		foreach (var button in optionButtons)

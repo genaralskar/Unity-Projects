@@ -9,7 +9,7 @@ public class CameraController : MonoBehaviour
 {
 
 	public Transform player;
-	public Camera cam;
+	public GameObject cam;
 	public float rotateSpeed = 1.5f;
 	public float horizontalRotateSpeed = 1.5f;
 	public float verticalRotateSpeed = 1f;

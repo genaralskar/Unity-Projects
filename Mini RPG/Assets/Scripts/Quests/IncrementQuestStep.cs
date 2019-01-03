@@ -6,10 +6,10 @@ public class IncrementQuestStep : MonoBehaviour
 {
 
 	public Quest quest;
-	public int questStep;
+	//public int questStep;
 
 	public void Increment()
 	{
-		
+		quest.currentQuestStep++;
 	}
 }
