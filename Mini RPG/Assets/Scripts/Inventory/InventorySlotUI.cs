@@ -73,7 +73,7 @@ public class InventorySlotUI : MonoBehaviour, IDropHandler
 	{
 		print("Item Dropped On " + this);
 		//gets the item being dropped
-		ItemDragHandler tempItem = e.pointerDrag.GetComponent<ItemDragHandler>();
+		ItemUI tempItem = e.pointerDrag.GetComponent<ItemUI>();
 		InventorySlotUI tempSlotUI = tempItem.inventorySlot.GetComponent<InventorySlotUI>();
 		//gets the inventory for the item being dropped
 		Inventory newItemInv = tempSlotUI.inventory;

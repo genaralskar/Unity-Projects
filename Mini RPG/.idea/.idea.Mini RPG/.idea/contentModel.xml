@@ -8,7 +8,7 @@
         <e p="CompleteQuestStateBehavior.cs" t="Include" />
         <e p="CutscenePlayer.cs" t="Include" />
         <e p="InventorySlotEditor.cs" t="Include" />
-        <e p="ItemDragHandler.cs" t="Include" />
+        <e p="ItemUI.cs" t="Include" />
         <e p="QuestStepCheckEvent.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ClickableObjectBase.cs" t="Include" />
@@ -34,7 +34,12 @@
             <e p="InventorySlotUI.cs" t="Include" />
             <e p="InventoryUI.cs" t="Include" />
             <e p="InventoryUIController.cs" t="Include" />
+            <e p="Item Actions" t="Include">
+              <e p="EquipItemAction.cs" t="Include" />
+              <e p="UnequipItemAction.cs" t="Include" />
+            </e>
             <e p="Item.cs" t="Include" />
+            <e p="ItemAction.cs" t="Include" />
             <e p="ItemType.cs" t="Include" />
           </e>
           <e p="Player" t="Include">

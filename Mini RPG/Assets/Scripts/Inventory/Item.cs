@@ -14,6 +14,9 @@ public class Item : ScriptableObject
 
 	public ItemType itemType;
 	//item value
-	//item 
+	
+	
+	//item actions
+	public List<ItemAction> actions;
 
 }

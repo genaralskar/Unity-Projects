@@ -59,6 +59,24 @@ public class Inventory : ScriptableObject
             UpdateInventory(index);
     }
 
+    //use for equipment inventory to equip new items
+    //newItemInventory is the inventory the new item is coming from
+    public void EquipItem(Item newItem, Inventory newItemInventory, int newItemIndex)
+    {
+        foreach (var slot in inventory)
+        {
+            if (slot.itemType == newItem.itemType)
+            {
+                //swap item
+                //set item in newItemInventory
+                newItemInventory.SetItem(slot.item, 1, newItemIndex);
+                //set item in this inventory
+                SetItem(newItem, 1, inventory.IndexOf(slot));
+                return;
+            }
+        }
+    }
+
     public void RemoveItem(Item newItem, int amount)
     {
         
@@ -73,6 +91,9 @@ public class Inventory : ScriptableObject
             UpdateInventory(index);
         }
     }
+
+
+    #region Utility Methods
 
     private bool ItemInInventory(Item itemToCheck)
     {
@@ -121,6 +142,8 @@ public class Inventory : ScriptableObject
 
         return -1;
     }
+    
+    #endregion
 
 }
 

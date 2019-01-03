@@ -4,7 +4,8 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -14,13 +15,13 @@ MonoBehaviour:
   inventorySize: 20
   inventory:
   - item: {fileID: 11400000, guid: 730af732ced42664988a23aaee2f8c6a, type: 2}
-    amount: 3
+    amount: 1
     itemType: {fileID: 0}
   - item: {fileID: 11400000, guid: 139a4256fd6a2da4abf16eedabf785f4, type: 2}
     amount: 1
     itemType: {fileID: 0}
   - item: {fileID: 11400000, guid: 31f50b3cf93c404499874270f9995b70, type: 2}
-    amount: 0
+    amount: 1
     itemType: {fileID: 0}
   - item: {fileID: 0}
     amount: 0
