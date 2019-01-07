@@ -71,7 +71,7 @@ public class InventorySlotUI : MonoBehaviour, IDropHandler
 
 	public void OnDrop(PointerEventData e)
 	{
-		print("Item Dropped On " + this);
+//		print("Item Dropped On " + this);
 		//gets the item being dropped
 		ItemUI tempItem = e.pointerDrag.GetComponent<ItemUI>();
 		InventorySlotUI tempSlotUI = tempItem.inventorySlot.GetComponent<InventorySlotUI>();
@@ -90,11 +90,11 @@ public class InventorySlotUI : MonoBehaviour, IDropHandler
 			newItemInv.inventory[tempSlotUI.slotID].item = inventory.inventory[slotID].item;
 			newItemInv.inventory[tempSlotUI.slotID].amount = inventory.inventory[slotID].amount;
 			//update inventory ui stuff
-			print(newItemInv);
+//			print(newItemInv);
 			newItemInv.UpdateInventory(tempSlotUI.slotID);
 
 			//set this inventory item to the new item
-			print("tempSlot's Item is " + tempSlot.item);
+//			print("tempSlot's Item is " + tempSlot.item);
 			inventory.inventory[slotID].item = tempSlotItem;
 			inventory.inventory[slotID].amount = tempAmount;
 			//update inventory ui stuff

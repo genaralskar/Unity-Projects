@@ -46,7 +46,7 @@ public class InventoryUIController : MonoBehaviour {
 
 	public void UpdateInventoryHandler(int index)
 	{
-		print("Updating inventory on " + this);
+//		print("Updating inventory on " + this);
 		inventorySlots[index].UpdateItem();
 	}
 }

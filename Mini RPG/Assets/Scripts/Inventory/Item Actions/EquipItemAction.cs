@@ -16,13 +16,24 @@ public class EquipItemAction : ItemAction
         Debug.Log("InvSlot = " + invSlot);
         Debug.Log(invSlot.inventory);
         if(invSlot.inventory == playerInventory)
-            equipInventory.EquipItem(invSlot.item, equipInventory, invSlot.slotID);
+            equipInventory.EquipItem(invSlot.item, playerInventory, invSlot.slotID);
         if (invSlot.inventory == equipInventory)
         {
             //unequip
             //check if playerInventory has space for new item
-            //add item to playerInventory
-            //remove item from equipInventory
+            if (playerInventory.FindEmptySlotIndex() != -1)
+            {
+                //add item to playerInventory
+                playerInventory.AddItem(invSlot.item, 1);
+                //remove item from equipInventory
+                equipInventory.RemoveItem(invSlot.item);
+            }
+            else
+            {
+                //inventory full
+                Debug.Log("Cannot equip, inventory full");
+            }
+            
         }
     }
 }

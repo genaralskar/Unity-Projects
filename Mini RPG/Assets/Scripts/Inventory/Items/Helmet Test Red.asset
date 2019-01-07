@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12bd4fe7744429441b7ad6f345c79b9a, type: 3}
-  m_Name: Helmet Test
+  m_Name: Helmet Test Red
   m_EditorClassIdentifier: 
-  title: Helmet Test
+  title: Helmet Test Red
   stackable: 0
-  image: {fileID: 21300000, guid: 5cb172e2dfb5eae4cbd37f592083c6eb, type: 3}
+  image: {fileID: 21300000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
   itemType: {fileID: 11400000, guid: 9be1c4d5f73b2c348933e746a2319d8f, type: 2}
   actions:
   - {fileID: 11400000, guid: b5282d12a15909146bcb48cc8d0fc523, type: 2}

@@ -68,18 +68,58 @@ public class Inventory : ScriptableObject
             if (slot.itemType == newItem.itemType)
             {
                 //swap item
+                
+                Debug.Log("equip inventory: " + inventory);
+                Debug.Log("equip slot's current item: " + slot.item);
+                Debug.Log("equip slot's index: " + inventory.IndexOf(slot));
+                
+                Debug.Log("newItemInventory: " + newItemInventory);
+                Debug.Log("inventory slot's current item: " + newItem);
+                Debug.Log("inventory slot's index: " + newItemIndex);
+                
                 //set item in newItemInventory
-                newItemInventory.SetItem(slot.item, 1, newItemIndex);
+                newItemInventory.SetItem(slot.item, 1, newItemIndex); //item inventory
+                
                 //set item in this inventory
-                SetItem(newItem, 1, inventory.IndexOf(slot));
+                SetItem(newItem, 1, inventory.IndexOf(slot)); //equipment inventory
                 return;
             }
         }
     }
 
-    public void RemoveItem(Item newItem, int amount)
+    public void RemoveItem(Item itemToRemove)
     {
-        
+        if (ItemInInventory(itemToRemove))
+        {
+            int itemIndex = ItemIndexInInventory(itemToRemove);
+            
+            inventory[itemIndex].item = null;
+            inventory[itemIndex].amount = 0;
+            
+            if(UpdateInventory != null)
+                UpdateInventory(itemIndex);
+        }
+    }
+    
+    public void RemoveItem(Item itemToRemove, int amount)
+    {
+        if (ItemInInventory(itemToRemove))
+        {
+            int itemIndex = ItemIndexInInventory(itemToRemove);
+            
+            //reduce amount of item
+            inventory[itemIndex].amount -= amount;
+            
+            //if amount is less than 1, remove it
+            if (inventory[itemIndex].amount < 1)
+            {
+                inventory[itemIndex].item = null;
+                inventory[itemIndex].amount = 0;
+            }
+            
+            if(UpdateInventory != null)
+                UpdateInventory(itemIndex);
+        }
     }
 
     public void SetItem(Item newItem, int newAmount, int index)
@@ -130,7 +170,7 @@ public class Inventory : ScriptableObject
         return -1;
     }
 
-    private int FindEmptySlotIndex()
+    public int FindEmptySlotIndex()
     {
         foreach (var inventorySlot in inventory)
         {
@@ -151,11 +191,14 @@ public class Inventory : ScriptableObject
 public class InventorySlot
 {
     public Item item;
+    
     public string ItemName
     {
         get { return item.name; }
     }
+    
     public int amount;
+    
     [Tooltip("Only items of this type may go in this slot.\nLeave blank to allow all items")]
     public ItemType itemType;
 }

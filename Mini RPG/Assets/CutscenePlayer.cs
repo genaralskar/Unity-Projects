@@ -39,7 +39,7 @@ public class CutscenePlayer : MonoBehaviour
 			obj.SetActive(false);
 		}
 		
-		double duration = playable.duration - 1;
+		double duration = playable.duration;
 		playable.Play();
 
 		while (duration > 0)
