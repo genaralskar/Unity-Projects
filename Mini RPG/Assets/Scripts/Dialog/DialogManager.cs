@@ -22,6 +22,9 @@ public class DialogManager : MonoBehaviour
 	
 	
 	public Animator currentDialog;
+	public DialogContainer currentDialogContainer;
+
+	public PlayerInfo player;
 	
 	
 	// Use this for initialization
@@ -52,18 +55,22 @@ public class DialogManager : MonoBehaviour
 		dialogWindow.SetActive(false);
 		currentDialog.GetBehaviour<DialogStateInfoContainer>().manager = null;
 		currentDialog = null;
+		currentDialogContainer = null;
 	}
 
-	public void StartConv(Animator newDialog)
+	public void StartConv(DialogContainer newDialog)
 	{
 		//disconnect previous dialog state info if not already done
 		if(currentDialog != null)
 			currentDialog.GetBehaviour<DialogStateInfoContainer>().manager = null;
-		currentDialog = newDialog;
+		currentDialog = newDialog.animator;
+		currentDialogContainer = newDialog;
+		
 		//set DialogStateInfoContainer's manager to this
 		currentDialog.GetBehaviour<DialogStateInfoContainer>().manager = this;
+		
 		//call reset trigger to reset conversation
-		newDialog.SetTrigger("Reset");
+		newDialog.animator.SetTrigger("Reset");
 	}
 
 	//used to trigger which dialog option was chosen
@@ -78,7 +85,17 @@ public class DialogManager : MonoBehaviour
 		//set dialog text and dialog name
 		//maybe change to coroutine so text scrolls in
 		dialogText.text = newDialog.dialog;
-		nameText.text = newDialog.name;
+
+		string newName = newDialog.name;
+		if (newName == "[npc_name]")
+		{
+			newName = currentDialogContainer.dialogName;
+		}
+		else if (newName == "[player_name]")
+		{
+			newName = player.playerName;
+		}
+		nameText.text = newName;
 		
 		int numOptions = newNumOptions;
 

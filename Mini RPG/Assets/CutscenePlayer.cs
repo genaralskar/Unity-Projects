@@ -14,6 +14,8 @@ public class CutscenePlayer : MonoBehaviour
 	public List<GameObject> thingsToDisable;
 	//public UnityEvent cutsceneStartEvent;
 	public UnityEvent cutsceneEndEvent;
+
+	public float cameraTransitionDelay = 2f;
 	
 	public void StartCutscene(PlayableDirector playable)
 	{
@@ -39,7 +41,7 @@ public class CutscenePlayer : MonoBehaviour
 			obj.SetActive(false);
 		}
 		
-		double duration = playable.duration;
+		double duration = playable.duration + cameraTransitionDelay;
 		playable.Play();
 
 		while (duration > 0)

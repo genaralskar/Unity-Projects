@@ -7,6 +7,8 @@ public class CheckQuestStepStateBehavior : StateMachineBehaviour
 
 	public Quest quest;
 	public int questStep;
+	[Tooltip("false: if on or past questStep\ntrue: only if on questStep")]
+	public bool checkIfOnStep;
 
 	// OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
@@ -15,7 +17,9 @@ public class CheckQuestStepStateBehavior : StateMachineBehaviour
 			animator.SetTrigger("Option 3");
 			return;
 		}
-		if (quest.currentQuestStep >= questStep)
+
+		if ((checkIfOnStep && quest.currentQuestStep == questStep) 
+		    || (!checkIfOnStep && quest.currentQuestStep >= questStep))
 		{
 			animator.SetTrigger("Option 1");
 		}

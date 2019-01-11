@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] private float defaultInteractDistance = 2;
 	[SerializeField] Animator anims;
 
-	public string playerName;
+	public PlayerInfo playerInfo;
 	
 	public Inventory inventory;
 	public Inventory equipmentMenu;

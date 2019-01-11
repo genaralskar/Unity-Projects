@@ -7,6 +7,7 @@
       <e p="Assets" t="Include">
         <e p="CompleteQuestStateBehavior.cs" t="Include" />
         <e p="CutscenePlayer.cs" t="Include" />
+        <e p="DialogContainer.cs" t="Include" />
         <e p="InventorySlotEditor.cs" t="Include" />
         <e p="ItemUI.cs" t="Include" />
         <e p="QuestStepCheckEvent.cs" t="Include" />
@@ -45,6 +46,7 @@
           <e p="Player" t="Include">
             <e p="CameraController.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
+            <e p="PlayerInfo.cs" t="Include" />
           </e>
           <e p="Quests" t="Include">
             <e p="IncrementQuestStep.cs" t="Include" />
@@ -56,6 +58,7 @@
             <e p="UnityEventOnClick.cs" t="Include" />
           </e>
         </e>
+        <e p="SetObjectRotation.cs" t="Include" />
         <e p="SetQuestStepStateBehavior.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Resources" t="Include">
