@@ -6,4 +6,5 @@ using UnityEngine;
 public class PlayerInfo : ScriptableObject
 {
     public string playerName;
+    public Texture chatHead;
 }

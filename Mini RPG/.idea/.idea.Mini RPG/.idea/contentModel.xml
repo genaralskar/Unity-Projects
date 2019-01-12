@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\genar\.Rider2018.1\system\resharper-host\Local\Transient\ReSharperHost\v12\SolutionCaches\_Mini RPG.600289462.00" t="ExcludeRecursive" />
-    <e p="D:\GIT\Unity-Projects\Mini RPG" t="IncludeRecursive">
+    <e p="C:\Users\genar\.Rider2018.1\system\resharper-host\Local\Transient\ReSharperHost\v12\SolutionCaches\_Mini RPG.151592823.00" t="ExcludeRecursive" />
+    <e p="E:\GIT\Unity-Projects\Mini RPG" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="CompleteQuestStateBehavior.cs" t="Include" />
         <e p="CutscenePlayer.cs" t="Include" />
-        <e p="DialogContainer.cs" t="Include" />
+        <e p="DialogCutscenePlayer.cs" t="Include" />
         <e p="InventorySlotEditor.cs" t="Include" />
         <e p="ItemUI.cs" t="Include" />
         <e p="QuestStepCheckEvent.cs" t="Include" />
@@ -17,6 +17,7 @@
             <e p="CheckItemStateBehavior.cs" t="Include" />
             <e p="CheckQuestStepStateBehavior.cs" t="Include" />
             <e p="Dialog.cs" t="Include" />
+            <e p="DialogContainer.cs" t="Include" />
             <e p="DialogExitStateBehavior.cs" t="Include" />
             <e p="DialogManager.cs" t="Include" />
             <e p="DialogStateBehavior.cs" t="Include" />

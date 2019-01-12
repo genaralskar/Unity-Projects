@@ -80,6 +80,7 @@ MonoBehaviour:
     name: '[player_name]'
     chatHead: {fileID: 2800000, guid: b0cdcdd78a7893b4baa5e1780bc8b9fb, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: Oh no, they were entirely prepared to take over the surface world, and
       to be honest I don't think we would have been prepared for it.
   options:
@@ -100,6 +101,7 @@ MonoBehaviour:
     name: '[player_name]'
     chatHead: {fileID: 2800000, guid: b0cdcdd78a7893b4baa5e1780bc8b9fb, type: 3}
     chatHeadSide: 1
+    chatHeadLocation: 2
     dialog: No not yet.
   options:
   - Continue
@@ -119,6 +121,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: '...'
   options:
   - '...'
@@ -138,6 +141,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: There's something strange goin' on with those pigs.
   options:
   - Continue
@@ -154,9 +158,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Farmer Brown
+    name: '[npc_name]'
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 1
+    chatHeadLocation: 1
     dialog: Well what are you still doing here! Go find out! The world might be in
       mortal danger for all we know!
   options:
@@ -177,6 +182,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA!!!!
   options:
   - Continue
@@ -196,6 +202,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: Also you'll need to something something curly for a tail.
   options:
   - Continue
@@ -215,6 +222,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: You think I'm crazy don't you! They all think I'm crazy!
   options:
   - Continue
@@ -234,6 +242,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: Well first you're going to need a disguise! Pigs aren't that smart, so
       something simple will probably work.
   options:
@@ -254,6 +263,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: Have you figured out what the pigs want yet?
   options:
   - Continue
@@ -273,6 +283,7 @@ MonoBehaviour:
     name: '[player_name]'
     chatHead: {fileID: 2800000, guid: b0cdcdd78a7893b4baa5e1780bc8b9fb, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: But they said if I gave them a bunch of doughnuts they wouldn't end the
       world.
   options:
@@ -308,6 +319,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: YOU CAN'T HIDE FROM THE TRUTH FOREVER!
   options:
   - Continue
@@ -342,6 +354,7 @@ MonoBehaviour:
     name: '[player_name]'
     chatHead: {fileID: 2800000, guid: b0cdcdd78a7893b4baa5e1780bc8b9fb, type: 3}
     chatHeadSide: 1
+    chatHeadLocation: 0
     dialog: Yeah, they said they want doughnuts.
   options:
   - Continue
@@ -392,6 +405,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: Perfect! There's a place that makes doughnuts right up the road!
   options:
   - Continue
@@ -411,6 +425,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: b0cdcdd78a7893b4baa5e1780bc8b9fb, type: 3}
     chatHeadSide: 1
+    chatHeadLocation: 0
     dialog: '...'
   options:
   - '...'
@@ -430,6 +445,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: Well? What did ya' see?
   options:
   - Continue
@@ -462,6 +478,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: b0cdcdd78a7893b4baa5e1780bc8b9fb, type: 3}
     chatHeadSide: 1
+    chatHeadLocation: 0
     dialog: '...'
   options:
   - '...'
@@ -481,6 +498,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: Once you've got all that you should be able to walk right in, the pigs
       none the wiser.
   options:
@@ -517,6 +535,7 @@ MonoBehaviour:
     name: '[player_name]'
     chatHead: {fileID: 2800000, guid: b0cdcdd78a7893b4baa5e1780bc8b9fb, type: 3}
     chatHeadSide: 1
+    chatHeadLocation: 0
     dialog: Ok, but don't you think it's a bit odd how...
   options:
   - Continue
@@ -536,6 +555,7 @@ MonoBehaviour:
     name: '[player_name]'
     chatHead: {fileID: 2800000, guid: b0cdcdd78a7893b4baa5e1780bc8b9fb, type: 3}
     chatHeadSide: 1
+    chatHeadLocation: 0
     dialog: No
   options:
   - Continue
@@ -555,6 +575,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: See for yourself! Good hide in that bush near the pig pen and see what
       I'm talking about for yourself!
   options:
@@ -575,6 +596,7 @@ MonoBehaviour:
     name: '[player_name]'
     chatHead: {fileID: 2800000, guid: b0cdcdd78a7893b4baa5e1780bc8b9fb, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: I guess pigs just love doughnuts.
   options:
   - Exit
@@ -594,6 +616,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: Well go on into that bush and spy one them for cripes sake!
   options:
   - Exit
@@ -613,6 +636,7 @@ MonoBehaviour:
     name: '[player_name]'
     chatHead: {fileID: 2800000, guid: b0cdcdd78a7893b4baa5e1780bc8b9fb, type: 3}
     chatHeadSide: 1
+    chatHeadLocation: 0
     dialog: Uhh...
   options:
   - Continue
@@ -632,6 +656,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: So they didn't want to take over the world in piggy fashion?
   options:
   - Continue
@@ -651,6 +676,7 @@ MonoBehaviour:
     name: '[player_name]'
     chatHead: {fileID: 2800000, guid: b0cdcdd78a7893b4baa5e1780bc8b9fb, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: So I guess the pigs just wanted a bunch of doughnuts.
   options:
   - Continue
@@ -670,6 +696,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: '...'
   options:
   - Hello!
@@ -691,6 +718,7 @@ MonoBehaviour:
     name: '[player_name]'
     chatHead: {fileID: 2800000, guid: b0cdcdd78a7893b4baa5e1780bc8b9fb, type: 3}
     chatHeadSide: 1
+    chatHeadLocation: 0
     dialog: Uh...
   options:
   - Continue
@@ -735,6 +763,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: Right! Now all you've gotta do is sneak into their little secret hideout
       and find out what they're up to!
   options:
@@ -755,6 +784,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: I KNEW IT!!!
   options:
   - Continue
@@ -774,6 +804,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: But those swing are up to something and I can prove it!
   options:
   - How?
@@ -809,6 +840,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: There's no time for questions right now! The world is at stake! Get going!
   options:
   - Exit
@@ -828,6 +860,7 @@ MonoBehaviour:
     name: '[player_name]'
     chatHead: {fileID: 2800000, guid: b0cdcdd78a7893b4baa5e1780bc8b9fb, type: 3}
     chatHeadSide: 1
+    chatHeadLocation: 0
     dialog: Ok. How do you supposed I go about that?
   options:
   - Continue
@@ -859,6 +892,7 @@ MonoBehaviour:
     name: '[player_name]'
     chatHead: {fileID: 2800000, guid: b0cdcdd78a7893b4baa5e1780bc8b9fb, type: 3}
     chatHeadSide: 1
+    chatHeadLocation: 0
     dialog: Ok. Something pink, something smelly, and something curly. Got it.
   options:
   - Exit
@@ -878,6 +912,7 @@ MonoBehaviour:
     name: '[player_name]'
     chatHead: {fileID: 2800000, guid: b0cdcdd78a7893b4baa5e1780bc8b9fb, type: 3}
     chatHeadSide: 1
+    chatHeadLocation: 0
     dialog: How can you prove it?
   options:
   - Continue
@@ -897,6 +932,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: Have you spied on them pigs yet?
   options:
   - Continue
@@ -913,9 +949,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Farmer Brown
+    name: '[npc_name]'
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 1
+    chatHeadLocation: 1
     dialog: Have you figured out what the pigs want yet?
   options:
   - Continue
@@ -935,6 +972,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: '...'
   options:
   - '...'
@@ -954,6 +992,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: '...'
   options:
   - Continue
@@ -973,6 +1012,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: Well, as long as you saved the world I guess. That's not really something
       you'd think a pig would be craving though.
   options:
@@ -993,6 +1033,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: I'd say you need something to make yourself pink. Also, do something to
       cover up your smell. They may not be smart, but they've got a heck of a schnoz.
   options:
@@ -1029,6 +1070,7 @@ MonoBehaviour:
     name: '[player_name]'
     chatHead: {fileID: 2800000, guid: b0cdcdd78a7893b4baa5e1780bc8b9fb, type: 3}
     chatHeadSide: 1
+    chatHeadLocation: 0
     dialog: Uhhh...
   options:
   - Continue
@@ -1048,6 +1090,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: They're just up to something. I know it!
   options:
   - Uhhh...
@@ -1068,6 +1111,7 @@ MonoBehaviour:
     name: Farmer Brown
     chatHead: {fileID: 2800000, guid: 7c28806b685a72a49bc1465b947a8e6f, type: 3}
     chatHeadSide: 0
+    chatHeadLocation: 0
     dialog: THEY ALL SAID I WAS CRAZY BUT WHO'S CRAZY NOW!? HAHAHAHAHAHAHAHAHA!
   options:
   - Continue
@@ -1114,6 +1158,7 @@ MonoBehaviour:
     name: '[player_name]'
     chatHead: {fileID: 2800000, guid: b0cdcdd78a7893b4baa5e1780bc8b9fb, type: 3}
     chatHeadSide: 1
+    chatHeadLocation: 0
     dialog: There was definietly something suspisious going on with those pigs. I
       think you might be right!
   options:
@@ -1134,6 +1179,7 @@ MonoBehaviour:
     name: '[player_name]'
     chatHead: {fileID: 2800000, guid: b0cdcdd78a7893b4baa5e1780bc8b9fb, type: 3}
     chatHeadSide: 1
+    chatHeadLocation: 0
     dialog: You are crazy
   options:
   - Continue

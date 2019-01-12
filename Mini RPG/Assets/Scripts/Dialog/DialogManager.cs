@@ -87,6 +87,7 @@ public class DialogManager : MonoBehaviour
 		dialogText.text = newDialog.dialog;
 
 		string newName = newDialog.name;
+		bool playerDialog = false;
 		if (newName == "[npc_name]")
 		{
 			newName = currentDialogContainer.dialogName;
@@ -94,6 +95,7 @@ public class DialogManager : MonoBehaviour
 		else if (newName == "[player_name]")
 		{
 			newName = player.playerName;
+			playerDialog = true;
 		}
 		nameText.text = newName;
 		
@@ -111,22 +113,24 @@ public class DialogManager : MonoBehaviour
 		}
 
 		//set proper image for chat heads
-		if (newDialog.chatHead == null)
+		switch (newDialog.chatHeadLocation)
 		{
-			rightChatHead.SetActive(false);
-			leftChatHead.SetActive(false);
-		}
-		else if (newDialog.chatHeadSide)
-		{
-			rightChatHead.SetActive(true);
-			leftChatHead.SetActive(false);
-			rightChatHeadRawImage.texture = newDialog.chatHead;
-		}
-		else
-		{
-			leftChatHead.SetActive(true);
-			rightChatHead.SetActive(false);
-			leftChatHeadRawImage.texture = newDialog.chatHead;
+			case Dialog.ChatHeadLoc.Right:
+				rightChatHead.SetActive(true);
+				leftChatHead.SetActive(false);
+				rightChatHeadRawImage.texture = playerDialog ? player.chatHead : currentDialogContainer.chatHead;
+				break;
+			
+			case Dialog.ChatHeadLoc.Left:
+				leftChatHead.SetActive(true);
+				rightChatHead.SetActive(false);
+				leftChatHeadRawImage.texture = playerDialog ? player.chatHead : currentDialogContainer.chatHead;
+				break;
+			
+			default:
+				rightChatHead.SetActive(false);
+				leftChatHead.SetActive(false);
+				break;
 		}
 		
 		if (!dialogWindow.activeSelf)

@@ -9,6 +9,7 @@ public class DialogStateInfoContainer : StateMachineBehaviour
 //	public List<string> options = new List<string> {"Continue"};
 //	public Dialog dialog;
 
+	[HideInInspector]
 	public DialogManager manager;
 
 	public void UpdateInfo(List<string> newOptions, int newNumOptions, Dialog newDialog)

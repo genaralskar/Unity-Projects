@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: PlayerInfo
   m_EditorClassIdentifier: 
   playerName: Pibbles McDibbles
+  chatHead: {fileID: 8400000, guid: e01fd386d6dd49c4d965c7b08d610b10, type: 2}
